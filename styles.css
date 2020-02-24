@@ -373,6 +373,15 @@ section h2 {
     margin: 0;
   }
 
+  .experience-name {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .image-container > i {
+      font-size: 14px;
+  }
+
   .modal-content {
     width: 100%;
   }
