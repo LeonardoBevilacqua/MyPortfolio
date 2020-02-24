@@ -82,6 +82,22 @@ p {
   line-height: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--tertiary-1);
+}
+
+i {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: var(--tertiary-1);
+  word-break: break-all;
+}
+
+a:hover {
+  color: var(--tertiary-2);
+}
+
 body {
   height: 100vh;
   background-color: var(--primary-4);
@@ -141,11 +157,6 @@ section h2 {
   margin-right: 5px;
 }
 
-.user > ul > li > a {
-  text-decoration: none;
-  color: var(--tertiary-1);
-}
-
 .user-icon {
   background-image: url(Assets/user_icon.svg);
   background-repeat: no-repeat;
@@ -183,6 +194,21 @@ section h2 {
   background-position: bottom;
   background-size: cover;
   padding: 75px 0;
+}
+
+.image-container {
+  width: 75%;
+  margin: auto;
+}
+
+.image-container > img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.image-container > i {
+  text-align: center;
+  display: block;
 }
 
 .experience-icon {
