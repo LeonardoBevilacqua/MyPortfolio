@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+:root {
+  --primary-1: #9775aa;
+  --primary-2: #764b8e;
+  --primary-3: #582a72;
+  --primary-4: #3d1255;
+  --primary-5: #260339;
+  --secondary-1: #d4ee9f;
+  --secondary-2: #a5c663;
+  --secondary-3: #7b9f35;
+  --secondary-4: #567714;
+  --secondary-5: #354f00;
+  --tertiary-1: #fff0aa;
+  --tertiary-2: #d4c26a;
+  --tertiary-3: #aa9739;
+  --tertiary-4: #806d15;
+  --tertiary-5: #554600;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+  background-color: var(--primary-3);
+  background-image: url(Assets/header_background.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 25%;
+  display: flex;
+}
+
+.user-image {
+    background-color: var(--primary-2);
+}
+
+.user-image > img {
+    height: 100%;
+}
+
+.user {
+    flex-grow: 1;
+}
+
+.user-name {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.user-icon {
+    background-image: url(Assets/user_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    display: block;
+}
+
+.user-name > h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    text-align: center;
+    color: var(--tertiary-1);
+    line-height: 38px;
+    margin: 0 10px;
+}
+
+.user-name > span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: var(--tertiary-2);
+    line-height: 22px;
+}
+
+hr.primary {
+    height: 1.5px;
+    background-color: var(--tertiary-3);
+
+    margin: 5px 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.user > p {
+    margin: 4px 20px;
+}
