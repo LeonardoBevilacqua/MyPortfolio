@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- Header section -->
     <header>
         <div class="user-image">
             <img src="Assets/leonardo_bevilacqua.jpg" height="280" alt="Leonardo Bevilacqua">
@@ -46,11 +47,13 @@
     </header>
 
     <div class="content">
+        <!-- Experiences section -->
         <section class="experiences">
             <div class="experience-title">
                 <em class="experience-icon"></em>
                 <h2>Experiências profissionais</h2>
             </div>
+            <!-- Experience -->
             <div class="experience">
                 <div class="experience-name">
                     <h3>Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini</h3>
@@ -67,6 +70,7 @@
                 </p>
                 <hr class="secondary">
             </div>
+            <!-- Experience -->
             <div class="experience">
                 <div class="experience-name">
                     <h3>Centro Universitário UniMetrocamp Wyden</h3>
@@ -78,6 +82,7 @@
                 </p>
                 <hr class="secondary">
             </div>
+            <!-- Experience -->
             <div class="experience">
                 <div class="experience-name">
                     <h3>Visio Tecnologia</h3>
@@ -91,6 +96,7 @@
                 </p>
                 <hr class="secondary">
             </div>
+            <!-- Experience -->
             <div class="experience">
                 <div class="experience-name">
                     <h3>Instituto de Pesquisas Eldorado</h3>
@@ -107,11 +113,13 @@
             </div>
         </section>
 
+        <!-- Projects section -->
         <section class="projects">
             <div class="project-title">
                 <em class="project-icon"></em>
                 <h2>Portfólio</h2>
             </div>
+            <!-- Project -->
             <div class="project">
                 <div class="project-name">
                     <h3>Choose Your Game | Uma rede social para gamers</h3>
@@ -128,14 +136,15 @@
                     Logo após, foi iniciado o processo de desenvolvimento, utilizando o <i>.net core</i>.
                 </p>
                 <div class="image-container">
-                    <img src="Assets/choose_your_game_01.PNG" alt="choose your game | página principal">
+                    <img src="Assets/choose_your_game_01.PNG" alt="choose your game | página principal" onclick="setModalImage(this)" id="teste" class="modal-triger">
                     <i>choose your game | página principal</i>
 
-                    <img src="Assets/choose_your_game_02.PNG" alt="choose your game | página de perfil">
+                    <img src="Assets/choose_your_game_02.PNG" alt="choose your game | página de perfil" onclick="setModalImage(this)" class="modal-triger">
                     <i>choose your game | página de perfil</i>
                 </div>
                 <hr class="secondary">
             </div>
+            <!-- Project -->
             <div class="project">
                 <div class="project-name">
                     <h3>Projeto 2</h3>
@@ -157,6 +166,19 @@
             </div>
         </section>
     </div>
+
+    <!-- Image modal -->
+    <div id="imageModal" class="modal">
+        <!-- Close button -->
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <!-- Image content -->
+        <img class="modal-content" id="modal-content">
+
+        <!-- Image caption -->
+        <div id="caption"></div>
+    </div>
+    <script src="modal_script.js"></script>
 </body>
 
 </html>
