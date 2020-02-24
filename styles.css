@@ -143,17 +143,17 @@ section h2 {
   display: block;
 }
 
-.experience-title {
+.experience-title, .project-title {
   display: flex;
 }
 
-.experience {
+.experience, .project {
   margin-top: 20px;
   margin-left: 50px;
 }
 
-.experience > p {
-    margin: 10px;
+.experience > p, project > p {
+  margin: 10px;
 }
 
 .experience-name {
@@ -179,7 +179,17 @@ h3 {
 }
 
 hr.secondary {
-    height: 1px;
-    background-color: var(--secondary-2);
-    margin: 5px;
+  height: 1px;
+  background-color: var(--secondary-2);
+  margin: 5px;
+}
+
+.project-icon {
+  background-image: url(Assets/project_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  display: block;
 }
