@@ -125,7 +125,7 @@ section {
 }
 
 section h2 {
-  margin: 0 10px;
+  margin-left: 10px;
   border-bottom: 1.5px solid var(--tertiary-3);
   flex-grow: 1;
 }
