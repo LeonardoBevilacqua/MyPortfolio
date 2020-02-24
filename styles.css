@@ -85,17 +85,18 @@ p {
 a {
   text-decoration: none;
   color: var(--tertiary-1);
+  word-break: break-all;
 }
+
+a:hover {
+    color: var(--tertiary-2);
+  }
 
 i {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   color: var(--tertiary-1);
   word-break: break-all;
-}
-
-a:hover {
-  color: var(--tertiary-2);
 }
 
 body {
