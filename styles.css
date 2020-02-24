@@ -96,6 +96,7 @@ header {
   min-height: 25%;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
 }
 
 section {
@@ -113,9 +114,36 @@ section h2 {
 }
 
 /* Classes style */
-.user {
+.user-image {
+  background-color: var(--primary-2);
   flex-grow: 1;
+  display: flex;
+}
+
+.user-image > img {
+  margin: auto;
+  vertical-align: middle;
+}
+
+.user {
+  flex-grow: 2;
   padding: 20px;
+}
+
+.user > p,
+.user > ul {
+  margin: 4px 0;
+}
+
+.user > ul > li > span {
+  font-weight: bold;
+  color: var(--tertiary-2);
+  margin-right: 5px;
+}
+
+.user > ul > li > a {
+  text-decoration: none;
+  color: var(--tertiary-1);
 }
 
 .user-icon {
@@ -146,32 +174,6 @@ section h2 {
   text-align: center;
   color: var(--tertiary-2);
   line-height: 22px;
-}
-
-.user-image {
-  background-color: var(--primary-2);
-}
-
-.user-image > img {
-  height: 100%;
-  margin: auto;
-  display: block;
-}
-
-.user > p,
-.user > ul {
-  margin: 4px 0;
-}
-
-.user > ul > li > span {
-  font-weight: bold;
-  color: var(--tertiary-2);
-  margin-right: 5px;
-}
-
-.user > ul > li > a {
-  text-decoration: none;
-  color: var(--tertiary-1);
 }
 
 .content {
@@ -267,5 +269,13 @@ section h2 {
   .experience > p,
   .project > p {
     margin: 0;
+  }
+}
+
+/* Tablet style */
+@media screen and (max-width: 992px) {
+  .user-name > div > h1 {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
