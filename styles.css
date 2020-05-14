@@ -209,6 +209,8 @@ section h2 {
 }
 
 .video-container > iframe {
+  width: 560px;
+  height: 315px;
   display: block;
   margin: auto;
   margin-top: 20px;
@@ -401,5 +403,10 @@ section h2 {
   .user-name > div > h1 {
     font-size: 24px;
     line-height: 28px;
+  }
+
+  .video-container > iframe {
+    width: 100%;
+    height: auto;
   }
 }
