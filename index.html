@@ -17,7 +17,7 @@
     <!-- Header section -->
     <header>
         <div class="user-image">
-            <img src="Assets/leonardo_bevilacqua.jpg" height="280" alt="Leonardo Bevilacqua">
+            <img src="Assets/leonardo_bevilacqua.jpg" height="200" alt="Leonardo Bevilacqua">
         </div>
 
         <div class="user">
@@ -35,18 +35,12 @@
 
             <hr class="primary">
 
-            <ul class="user-info">
+            <ul class="user-info"> 
                 <li>
-                    Formado em técnico em informatica, na Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini e Ciências da
-                    computação, na faculdade DeVry Metrocamp. 
+                    Cientistas da Computação - UniMetrocamp.
                 </li>
                 <li>
-                    Trabalhei como estagiário e funcionário na Empresa VISIO TECNOLOGIA, trabalhando com a linguagem de
-                    programação 4GL e os bancos de dados Oracle, Informix e SQLServer. 
-                </li>
-                <li>
-                    Atuei como estagiário, no Instituto Eldorado Campinas, e atualmente contratado como análista de
-                    software.
+                    Instituto de Pesquisa Eldorado Campinas.
                 </li>
             </ul>
             
@@ -56,6 +50,87 @@
             </ul>
         </div>
     </header>
+
+    <!-- content -->
+    <div class="content">
+        <!-- navbar -->
+        <nav>
+            <ul>
+                <li class="currentTab" id="experiences-tab">
+                    <a onclick="toggleTab('experiences')"><em class="experience-icon"></em>Experiências profissionais</a>
+                </li>
+                <li id="projects-tab">
+                    <a onclick="toggleTab('projects')"><em class="project-icon"></em>Portfólio</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Experiences section -->
+        <section id="experiences" class="currentSection">
+            <!-- Experience -->
+            <div class="experience">
+                <div class="experience-name">
+                    <h3>Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini</h3>
+                    <span>2015 - 2016</span>
+                </div>
+                <p>
+                    Formação em técnico em informática, aprendendo sobre hardware e software, redes de computadores,
+                    programação básica em C, C++, C#, java e javacript e criação de web sites com html e css.
+                </p>
+                <p>
+                    Recebi a premiação de aluno ouro no 2.º semestre. Premiação que ocorre a cada semestre para
+                    parabenizar o aluno que se destacou durante o semestre. Recebi a premiação de aluno destaque ao fim
+                    do curso. Premiação dada para  que se mantém com notas altas e se dedicam ao máximo.
+                </p>
+                <hr class="secondary">
+            </div>
+            <!-- Experience -->
+            <div class="experience">
+                <div class="experience-name">
+                    <h3>Centro Universitário UniMetrocamp Wyden</h3>
+                    <span>2016 - 2020</span>
+                </div>
+                <p>
+                    Formação em ciências da computação, aprendizado sobre programação avançada, conhecimento aprofundado
+                    em sistemas operacionais e arquitetura de software.
+                </p>
+                <hr class="secondary">
+            </div>
+            <!-- Experience -->
+            <div class="experience">
+                <div class="experience-name">
+                    <h3>Visio Tecnologia</h3>
+                    <span>maio de 2017 - março de 2019</span>
+                </div>
+                <p>
+                    Trabalhei com diversos bancos de dados como oracle, sql server e informix e programação 4gl.
+                </p>
+                <p>
+                    Comecei como estagiário até maio de 2018, sendo efetivado após esse período.
+                </p>
+                <hr class="secondary">
+            </div>
+            <!-- Experience -->
+            <div class="experience">
+                <div class="experience-name">
+                    <h3>Instituto de Pesquisas Eldorado</h3>
+                    <span>abril de 2019 - atualmente</span>
+                </div>
+                <p>
+                    Trabalhando com tecnologias atuais no mercado, como angular, spring boot e postgresql, focando em
+                    devops.
+                </p>
+                <p>
+                    Comecei como estagiário em abril de 2019, sendo efetivado como analista de software júnior em
+                    janeiro de 2020.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="hidden">
+        </section>
+    </div>
+    <script src="page_script.js"></script>
 </body>
 
 </html>

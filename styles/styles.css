@@ -5,3 +5,87 @@
 @import "global.css";
 @import "header.css";
 
+.content {
+	background-color: var(--primary-2);
+	padding: 25px;
+	margin: 25px auto;
+	width: 90%;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+.content nav {
+	text-align: center;
+}
+
+.content nav > ul {
+	position: relative;
+	display: flex;
+	margin: 0 auto;
+	flex-flow: row wrap;
+}
+
+.content nav > ul > li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	flex: 1;
+}
+
+.content nav > ul > li.currentTab {
+    background-color: var(--primary-1);
+}
+
+.content nav > ul > li.currentTab > a {
+	color: var(--tertiary-2);
+}
+
+.content nav > ul > li > a {
+	position: relative;
+	display: inline-flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 2.5;
+    overflow: visible;
+	width: 100%;
+	justify-content: center;
+	cursor: pointer;
+}
+
+section {
+	background-color: var(--primary-1);
+	padding: 25px;
+    margin-top: 0;
+    flex-grow: 1;
+}
+
+.experience,
+.project {
+	margin-top: 25px;
+}
+
+.experience > p,
+.project > p {
+	margin: 10px 0;
+}
+
+.experience-name {
+	display: flex;
+	align-items: flex-end;
+}
+
+.experience-name > span {
+	font-family: "Oswald", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	text-align: left;
+	color: var(--tertiary-1);
+}
+
+.hidden {
+	display: none;
+}

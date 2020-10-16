@@ -26,6 +26,19 @@
 	--tertiary-5: #554600;
 }
 
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: var(--primary-4);
+	background-image: url(../Assets/background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+    flex-flow: column;
+}
+
 /* --- Global --- */
 hr {
 	margin: 5px 0;
@@ -93,9 +106,4 @@ i {
 	font-weight: normal;
 	color: var(--tertiary-1);
 	word-break: break-all;
-}
-
-body {
-	height: 100vh;
-	background-color: var(--primary-4);
 }
