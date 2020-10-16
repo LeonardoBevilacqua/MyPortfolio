@@ -106,7 +106,7 @@ body {
 
 header {
 	background-color: var(--primary-3);
-	background-image: url(Assets/header_background.svg);
+	background-image: url(../Assets/header_background.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right bottom;
@@ -159,7 +159,7 @@ section h2 {
 }
 
 .user-icon {
-	background-image: url(Assets/user_icon.svg);
+	background-image: url(../Assets/user_icon.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 40px;
@@ -190,7 +190,7 @@ section h2 {
 
 .content {
 	background-color: var(--primary-4);
-	background-image: url(Assets/background.svg);
+	background-image: url(../Assets/background.svg);
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: cover;
@@ -225,7 +225,7 @@ section h2 {
 }
 
 .experience-icon {
-	background-image: url(Assets/experience_icon.svg);
+	background-image: url(../Assets/experience_icon.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 40px;
@@ -264,7 +264,7 @@ section h2 {
 }
 
 .project-icon {
-	background-image: url(Assets/project_icon.svg);
+	background-image: url(../Assets/project_icon.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 40px;
