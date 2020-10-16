@@ -1,0 +1,28 @@
+.user-icon {
+	background-image: url(../Assets/user_icon.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 40px;
+	width: 40px;
+	font-size: 40px;
+	display: block;
+}
+
+.github-icon {
+    background-image: url(../Assets/github-square-brands.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 40px;
+	width: 40px;
+	font-size: 40px;
+	display: block;
+}
+.linkedin-icon {
+    background-image: url(../Assets/linkedin-brands.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 40px;
+	width: 40px;
+	font-size: 40px;
+	display: block;
+}

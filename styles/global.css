@@ -1,0 +1,101 @@
+/* --- Reset the css --- */
+* {
+	padding: 0;
+	margin: 0;
+	vertical-align: baseline;
+	list-style: none;
+	border: 0;
+}
+
+/* --- Set variables --- */
+:root {
+	--primary-1: #9775aa;
+	--primary-2: #764b8e;
+	--primary-3: #582a72;
+	--primary-4: #3d1255;
+	--primary-5: #260339;
+	--secondary-1: #d4ee9f;
+	--secondary-2: #a5c663;
+	--secondary-3: #7b9f35;
+	--secondary-4: #567714;
+	--secondary-5: #354f00;
+	--tertiary-1: #fff0aa;
+	--tertiary-2: #d4c26a;
+	--tertiary-3: #aa9739;
+	--tertiary-4: #806d15;
+	--tertiary-5: #554600;
+}
+
+/* --- Global --- */
+hr {
+	margin: 5px 0;
+}
+
+hr.primary {
+	height: 1.5px;
+	background-color: var(--tertiary-3);
+}
+
+hr.secondary {
+	height: 1px;
+	background-color: var(--secondary-2);
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Oswald", sans-serif;
+	font-weight: normal;
+	text-align: left;
+}
+
+h1 {
+	font-size: 36px;
+	text-align: center;
+	color: var(--tertiary-1);
+}
+
+h2 {
+	font-size: 24px;
+	color: var(--tertiary-1);
+}
+
+h3 {
+	font-size: 18px;
+	color: var(--tertiary-2);
+	margin-right: 5px;
+}
+
+p,
+ul {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	color: #fff;
+	text-align: justify;
+}
+
+p {
+	line-height: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--tertiary-1);
+	word-break: break-all;
+}
+
+a:hover {
+	color: var(--tertiary-2);
+}
+
+i {
+	font-family: "Oswald", sans-serif;
+	font-weight: normal;
+	color: var(--tertiary-1);
+	word-break: break-all;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--primary-4);
+}
