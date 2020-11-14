@@ -1,3 +1,12 @@
+/* 
+============================
+set the modal and attributes
+============================
+*/
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modal-content");
+const captionText = document.getElementById("caption");
+
 /**
  * Method responsible to handle the tabs
  * @param {the tab identification} id 
@@ -25,11 +34,11 @@ function loadExperiencesContent() {
         // set total
         let iterations = experiencesData.length;
         // loop the data
-        for (const experienceData of experiencesData) {            
+        for (const experienceData of experiencesData) {
             /* === create experience div === */
             var experience = document.createElement("div");
             experience.className = "experience";
-            
+
             /* === create experience name div === */
             var experienceName = document.createElement("div");
             experienceName.className = "experience-name";
@@ -39,29 +48,48 @@ function loadExperiencesContent() {
             // period
             var period = document.createElement("span");
             period.innerHTML = experienceData.period
-            // append
+                // append
             experienceName.append(title, period);
             experience.append(experienceName);
-            
+
             /* === create paragraphs === */
             for (const content of experienceData.content) {
                 var paragraph = document.createElement("p");
                 paragraph.innerHTML = content;
-        
+
                 experience.append(paragraph);
             }
-        
+
             /* === create end line if is not last === */
             if (--iterations) {
                 var endline = document.createElement("hr");
                 endline.className = "secondary";
                 experience.append(endline);
             }
-        
+
             document.getElementById("experiences").append(experience);
         }
 
     });
+}
+
+/**
+ * Method responsible to open modal with selected image
+ * @param {selected image} img 
+ */
+function setModalImage(img) {
+    // display modal
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+
+}
+
+/**
+ * Method responsible to close modal
+ */
+function closeModal() {
+    modal.style.display = "none";
 }
 
 /*
@@ -76,17 +104,16 @@ UTILS
  */
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open("GET", file, true); 
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
+    xobj.overrideMimeType("application/json");
+    xobj.open("GET", file, true);
+    xobj.onreadystatechange = function() {
+        if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
             callback(JSON.parse(xobj.responseText));
-          }
+        }
     };
-    xobj.send(null);  
- }
-
+    xobj.send(null);
+}
 /* 
 =========
 AUTO LOAD
@@ -96,9 +123,11 @@ AUTO LOAD
  * Executed when the page is loaded
  */
 (function() {
-    var path = window.location.href.split("#");
+    // load experiences content
     loadExperiencesContent();
+    // toggle tab
+    var path = window.location.href.split("#");
     if (path[1]) {
         toggleTab(path[1]);
     }
- })();
+})();
