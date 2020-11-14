@@ -17,6 +17,9 @@ function toggleTab(id) {
     newCurrentSection.classList.replace("hidden", "currentSection");
 }
 
+/**
+ * Method repsonsible to load the experiences content
+ */
 function loadExperiencesContent() {
     loadJSON("experiences.json", (experiencesData) => {
         // set total
@@ -66,6 +69,11 @@ function loadExperiencesContent() {
 UTILS
 =====
 */
+/**
+ * Method responsible to load a json content from file and execute a callback function
+ * @param {the file path} file 
+ * @param {callback function} callback 
+ */
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
@@ -84,6 +92,13 @@ function loadJSON(file, callback) {
 AUTO LOAD
 =========
  */
+/**
+ * Executed when the page is loaded
+ */
 (function() {
+    var path = window.location.href.split("#");
     loadExperiencesContent();
+    if (path[1]) {
+        toggleTab(path[1]);
+    }
  })();
