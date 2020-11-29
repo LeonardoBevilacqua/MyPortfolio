@@ -37,11 +37,11 @@
     flex: 1;
 }
 
-.content nav>ul>li.currentTab {
+.content nav>ul>li.current-tab {
     background-color: var(--primary-1);
 }
 
-.content nav>ul>li.currentTab>a {
+.content nav>ul>li.current-tab>a {
     color: var(--tertiary-2);
 }
 
