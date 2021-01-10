@@ -9,267 +9,82 @@
     <meta name="author" content="Leonardo Bevilacqua">
 
     <title>Leonardo A. Bevilacqua | Análista de software</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
     <!-- Header section -->
     <header>
         <div class="user-image">
-            <img src="Assets/leonardo_bevilacqua.jpg" height="280" alt="Leonardo Bevilacqua">
+            <img src="Assets/leonardo_bevilacqua.jpg" height="200" alt="Leonardo Bevilacqua">
         </div>
 
         <div class="user">
             <div class="user-name">
-                <em class="user-icon"></em>
                 <div>
+                    <em class="user-icon"></em>
                     <h1>Leonardo Almeida Bevilacqua</h1>
+                </div>
+                <div>
                     <span>Análista de software</span>
+                </div>
+                <div class="contact-icons">
+                    <a href="https://github.com/LeonardoBevilacqua" target="_blank"><em class="github-icon"></em></a>
+                    <a href="https://linkedin.com/in/leonardo-almeida-bevilacqua-3662a712b" target="_blank"><em
+                            class="linkedin-icon"></em></a>
                 </div>
             </div>
 
             <hr class="primary">
 
-            <p>
-                Formado em técnico em informatica, na Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini e Ciências da
-                computação, na faculdade DeVry Metrocamp. <br>
-                Trabalhei como estagiário e funcionário na Empresa VISIO TECNOLOGIA, trabalhando com a linguagem de
-                programação 4GL e os bancos de dados Oracle, Informix e SQLServer. <br>
-                Atuei como estagiário, no Instituto Eldorado Campinas, e atualmente contratado como análista de
-                software.
-            </p>
-            <ul>
+            <ul class="user-info">
+                <li>
+                    Cientistas da Computação - UniMetrocamp.
+                </li>
+                <li>
+                    Instituto de Pesquisa Eldorado Campinas.
+                </li>
+            </ul>
+
+            <ul class="user-contact">
                 <li><span>E-mail:</span> leonardo_bevilacqua@hotmail.com</li>
                 <li><span>Telefone:</span> (19) 99582-8664 (Celular)</li>
-                <li><span>Github:</span> <a
-                        href="https://github.com/LeonardoBevilacqua">github.com/LeonardoBevilacqua</a> </li>
-                <li><span>LinkedIn:</span> <a
-                        href="https://linkedin.com/in/leonardo-almeida-bevilacqua-3662a712b">linkedin.com/in/leonardo-almeida-bevilacqua-3662a712b</a>
-                </li>
             </ul>
         </div>
     </header>
 
+    <!-- content -->
     <div class="content">
+        <!-- navbar -->
+        <nav>
+            <ul>
+                <li class="current-tab" id="experiences-tab">
+                    <a onclick="toggleTab('experiences')" href="#experiences"><em
+                            class="experience-icon"></em>Experiências profissionais</a>
+                </li>
+                <li id="projects-tab">
+                    <a onclick="toggleTab('projects')" href="#projects"><em class="project-icon"></em>Portfólio</a>
+                </li>
+            </ul>
+        </nav>
         <!-- Experiences section -->
-        <section class="experiences">
-            <div class="experience-title">
-                <em class="experience-icon"></em>
-                <h2>Experiências profissionais</h2>
-            </div>
-            <!-- Experience -->
-            <div class="experience">
-                <div class="experience-name">
-                    <h3>Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini</h3>
-                    <span>2015 - 2016</span>
-                </div>
-                <p>
-                    Formação em técnico em informática, aprendendo sobre hardware e software, redes de computadores,
-                    programação básica em C, C++, C#, java e javacript e criação de web sites com html e css.
-                </p>
-                <p>
-                    Recebi a premiação de aluno ouro no 2.º semestre. Premiação que ocorre a cada semestre para
-                    parabenizar o aluno que se destacou durante o semestre. Recebi a premiação de aluno destaque ao fim
-                    do curso. Premiação dada para  que se mantém com notas altas e se dedicam ao máximo.
-                </p>
-                <hr class="secondary">
-            </div>
-            <!-- Experience -->
-            <div class="experience">
-                <div class="experience-name">
-                    <h3>Centro Universitário UniMetrocamp Wyden</h3>
-                    <span>2016 - 2020</span>
-                </div>
-                <p>
-                    Formação em ciências da computação, aprendizado sobre programação avançada, conhecimento aprofundado
-                    em sistemas operacionais e arquitetura de software.
-                </p>
-                <hr class="secondary">
-            </div>
-            <!-- Experience -->
-            <div class="experience">
-                <div class="experience-name">
-                    <h3>Visio Tecnologia</h3>
-                    <span>maio de 2017 - março de 2019</span>
-                </div>
-                <p>
-                    Trabalhei com diversos bancos de dados como oracle, sql server e informix e programação 4gl.
-                </p>
-                <p>
-                    Comecei como estagiário até maio de 2018, sendo efetivado após esse período.
-                </p>
-                <hr class="secondary">
-            </div>
-            <!-- Experience -->
-            <div class="experience">
-                <div class="experience-name">
-                    <h3>Instituto de Pesquisas Eldorado</h3>
-                    <span>abril de 2019 - atualmente</span>
-                </div>
-                <p>
-                    Trabalhando com tecnologias atuais no mercado, como angular, spring boot e postgresql, focando em
-                    devops.
-                </p>
-                <p>
-                    Comecei como estagiário em abril de 2019, sendo efetivado como analista de software júnior em
-                    janeiro de 2020.
-                </p>
-            </div>
+        <section id="experiences" class="currentSection">
+            <!-- Loaded by json file -->
         </section>
 
         <!-- Projects section -->
-        <section class="projects">
-            <div class="project-title">
-                <em class="project-icon"></em>
-                <h2>Portfólio</h2>
-            </div>
-            <!-- Project -->
-            <div class="project">
-                <div class="project-name">
-                    <h3>Replica do site Maze-Bank | GTA V</h3>
-                </div>
-                <p>
-                    Projeto criado para praticar criação de <i>web pages</i> utilizando html e pré-processador de css,
-                    utilizando scss. A página se trata de uma réplica de um site dentro do jogo <i>grand theft auto
-                        V</i>, se tratando de uma página de banco onde o jogador tivesse a possibilidade de verificar
-                    seu saldo, sacar e depositar dinheiro dentro do jogo. O projeto se encontra disponível para
-                    navegação neste link: <a
-                        href="https://leonardobevilacqua.github.io/Maze-Bank/">https://leonardobevilacqua.github.io/Maze-Bank</a>.
-                </p>
-                <div class="image-container">
-                    <img src="Assets/maze-bank-01.png" alt="Maze bank | página principal" onclick="setModalImage(this)"
-                        class="modal-triger">
-                    <i>Maze bank | página principal</i>
-                    <img src="Assets/maze-bank-02.png" alt="Maze bank | histórico de transações"
-                        onclick="setModalImage(this)" class="modal-triger">
-                    <i>Maze bank | histórico de transações</i>
-                </div>
-                <hr class="secondary">
-            </div>
-            <!-- Project -->
-            <div class="project">
-                <div class="project-name">
-                    <h3>Lista interativa | Mini projeto CSS</h3>
-                </div>
-                <p>
-                    Este projeto pequeno se trata de uma lista de itens, na qual existe a possibilidade de editar e
-                    excluir de forma fácil e minimalista, utilizando apenas ícones, e adicionar itens sem atualizar a
-                    pagina atual. O projeto se encontra disponível para navegação neste link: <a
-                        href="https://leonardobevilacqua.github.io/Lista-interativa/index.html">https://leonardobevilacqua.github.io/Lista-interativa/index.html</a>
-                </p>
-                <div class="image-container">
-                    <img src="Assets/lista-interativa.png" alt="Lista interativa | página principal"
-                        onclick="setModalImage(this)" class="modal-triger">
-                    <i>Lista interativa | página principal</i>
-                </div>
-                <hr class="secondary">
-            </div>
-            <!-- Project -->
-            <div class="project">
-                <div class="project-name">
-                    <h3>Choose Your Game | Uma rede social para gamers</h3>
-                </div>
-                <p>Projeto do 5º semestre de CCO, com foco de criar uma aplicação web.</p>
-                <p>
-                    O projeto se trata de uma Rede social com foco em games, voltado para discussão sobre o assunto,
-                    analises e outros. Foi realizado todo o planejamento como funcionaria o site usando a ferramenta
-                    "Trello", logo após foi criado todo o front-end, disponível para visualização e interação no
-                    seguinte link:
-                    <a
-                        href="https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages">https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages</a>,
-                    podendo clicar em "ENTRAR" e navegar nas páginas.
-                    Logo após, foi iniciado o processo de desenvolvimento, utilizando o <i>.net core</i>.
-                </p>
-                <div class="image-container">
-                    <img src="Assets/choose_your_game_01.PNG" alt="Choose your game | página principal"
-                        onclick="setModalImage(this)" class="modal-triger">
-                    <i>Choose your game | página principal</i>
+        <section id="projects" class="hidden">
+            <!-- Slideshow container -->
+            <div id="slideshow-container" class="slideshow-container">
 
-                    <img src="Assets/choose_your_game_02.PNG" alt="Choose your game | página de perfil"
-                        onclick="setModalImage(this)" class="modal-triger">
-                    <i>Choose your game | página de perfil</i>
-                </div>
-                <hr class="secondary">
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="navigateToSlide(-1)">&#10094;</a>
+                <a class="next" onclick="navigateToSlide(1)">&#10095;</a>
             </div>
-            <!-- Project -->
-            <div class="project">
-                <div class="project-name">
-                    <h3>Java 2D Engine | Game development</h3>
-                </div>
-                <p>
-                    Projeto criado para entender o funcionamento básico de uma engine, renderizando em 2D com suporte a
-                    multi jogador. A engine possui elementos baseados nas playlists do youtube de
-                    <a href="https://www.youtube.com/playlist?list=PL8CAB66181A502179"><i>Ryan van Zeben</i></a>, e <a
-                        href="https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ"><i>CodeNMore</i></a>.
-                </p>
+            <br>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/rSEbEGXkw3E" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <i>Teste com multi jogador</i>
-
-                    <iframe src="https://www.youtube.com/embed/rDvPbmYpiJ4" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <i>Teste com interação com cenário</i>
-
-                    <iframe src="https://www.youtube.com/embed/0USSEYA7gwI" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <i>Alteração da arte</i>
-                </div>
-                <hr class="secondary">
-            </div>
-            <!-- Project -->
-            <div class="project">
-                <div class="project-name">
-                    <h3>Blood-clicker | Jogo educativo</h3>
-                </div>
-                <p>
-                    Em 2019, ocorreu na faculdade UniMetrocamp a <b>"mostra de responsabilidade social"</b>, na qual
-                    fomos
-                    incentivados a realizar a criação de um jogo para conscientizar a doação de sangue. O meu jogo foi
-                    inspirado no jogo <i>"cookie clicker"</i>, no qual seu objetivo é juntar pontos e comprar melhorias.
-                    No
-                    jogo, a cada melhoria comprada, uma mensagem é exibida dando informações sobre doação de sangue. O jogo
-                    foi criado utilizando a <i>Godot Engine</i> e se encontra disponível no link: <a
-                        href="https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html">https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html</a>.
-                </p>
-                <div class="image-container">
-                    <img src="Assets/blood-clicker.png" alt="Jogo blood clicker" onclick="setModalImage(this)"
-                        class="modal-triger">
-                    <i>Jogo blood clicker</i>
-                </div>
-                <hr class="secondary">
-            </div>
-            <!-- Project -->
-            <div class="project">
-                <div class="project-name">
-                    <h3>3 jobs | Trabalho de conclusão de curso</h3>
-                </div>
-                <p>                    
-                    3 jobs é um projeto com a intenção de ser um facilitador para candidatos e vagas de emprego. 
-                    Permitindo que os headhunters encontrem, avaliem e indiquem com facilidade, ao Departamento de 
-                    Recursos Humanos (RH), os candidatos que melhor se adequam à determinada vaga.
-                </p>
-                <p>
-                    O projeto foi organizado utilizando Kaban, no qual eu fiquei responsavel em gerenciar as tarefas dos
-                    outros membros do grupo e também da criação do frontend do sistema.
-                </p>
-
-                <div class="image-container">
-                    <img src="Assets/3jobs-01.png" alt="3 jobs | página inicial" onclick="setModalImage(this)"
-                        class="modal-triger">
-                    <i>3 jobs | página inicial</i>
-                    <img src="Assets/3jobs-02.png" alt="3 jobs | página principal após login"
-                        onclick="setModalImage(this)" class="modal-triger">
-                    <i>3 jobs | página principal após login</i>
-                    <img src="Assets/3jobs-03.png" alt="3 jobs | página de perfil" onclick="setModalImage(this)"
-                        class="modal-triger">
-                    <i>3 jobs | página de perfil</i>
-                </div>
-            </div>
+            <!-- The dots/circles -->
+            <div id="project-selector" style="text-align:center"></div>
         </section>
     </div>
 
@@ -278,13 +93,16 @@
         <!-- Close button -->
         <span class="close" onclick="closeModal()">&times;</span>
 
-        <!-- Image content -->
-        <img class="modal-content" id="modal-content">
-
-        <!-- Image caption -->
-        <div id="caption"></div>
+        <div class="modalDisplay">
+            <!-- Image content -->
+            <img class="modal-content" id="modal-content">
+    
+            <!-- Image caption -->
+            <div id="caption"></div>
+        </div>
     </div>
-    <script src="modal_script.js"></script>
+
+    <script src="page_script.js"></script>
 </body>
 
 </html>
