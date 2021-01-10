@@ -124,7 +124,7 @@ section {
 }
 
 /* MOBILE */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     .content {
         padding: 0px;
         width: 95%;
