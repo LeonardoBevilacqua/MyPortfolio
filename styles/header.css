@@ -51,7 +51,7 @@ header {
 .user-name > div > span {
 	font-family: "Oswald", sans-serif;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 1.2rem;
 	text-align: center;
 	color: var(--tertiary-2);
 	line-height: 22px;
@@ -68,4 +68,40 @@ header {
 
 .user-contact {
     margin-top: auto;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 576px) {
+	header {
+		flex-direction: column;
+	}
+
+	.user-name {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.user-name > div > .user-icon {
+		align-self: center;
+	}
+
+	.user-name > div {
+		margin-top: 5px;
+	}
+
+	.user-name > div > span {
+		font-size: 1rem;
+	}
+
+	.contact-icons {
+		margin-left: 0;
+	}
+
+	.user ul {
+		margin-top: 6px;
+	}
+
+	.user ul > li {
+		margin-top: 2px;
+	}
 }

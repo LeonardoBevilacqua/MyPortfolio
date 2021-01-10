@@ -112,3 +112,10 @@
         opacity: 1
     }
 }
+
+/* MOBILE */
+@media only screen and (max-width: 576px) {
+    .prev, .next {
+        display: none;
+    }
+}

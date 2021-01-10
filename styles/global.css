@@ -63,7 +63,7 @@ h3 {
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 2rem;
 	text-align: center;
 	color: var(--tertiary-1);
 }
@@ -74,7 +74,7 @@ h2 {
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 1.3rem;
 	color: var(--tertiary-2);
 	margin-right: 5px;
 }
@@ -106,4 +106,23 @@ i {
 	font-weight: normal;
 	color: var(--tertiary-1);
 	word-break: break-all;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 576px) {
+	h1 {
+		font-size: 1.3rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	p, ul {
+		font-size: 14px;
+	}
+
+	p {
+		line-height: 18px;
+	}
 }

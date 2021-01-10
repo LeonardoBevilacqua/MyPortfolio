@@ -171,7 +171,7 @@ function loadProjectsContent() {
  */
 function setModalImage(img) {
     // display modal
-    modal.style.display = "block";
+    modal.style.display = "flex";
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
 
