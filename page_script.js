@@ -264,8 +264,8 @@ function onTouchStart(event) {
  */
 function onTouchEnd(event) {
     var touchEnd = event.changedTouches[0].clientX;
-
-    var swipeDirection = - Math.sign(touchEnd - touchStart);
+    var offset = 50;
+    var swipeDirection = touchStart > touchEnd + offset ? 1 : touchStart < touchEnd - offset ? -1 : 0;
     
     if (swipeDirection) {
         this.navigateToSlide(swipeDirection);
