@@ -7,6 +7,7 @@ const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modal-content");
 const captionText = document.getElementById("caption");
 var slideIndex = 1;
+var touchStart;
 
 /**
  * Method responsible to handle the tabs
@@ -247,6 +248,28 @@ function loadJSON(file, callback) {
         }
     };
     xobj.send(null);
+}
+
+/**
+ * Method responsible to get the touch start position
+ * @param {touch event} event 
+ */
+function onTouchStart(event) {
+    touchStart = event.touches[0].clientX;
+}
+
+/**
+ * Method responsible to get the touch end position
+ * @param {touch event} event 
+ */
+function onTouchEnd(event) {
+    var touchEnd = event.changedTouches[0].clientX;
+
+    var swipeDirection = - Math.sign(touchEnd - touchStart);
+    
+    if (swipeDirection) {
+        this.navigateToSlide(swipeDirection);
+    }
 }
 /* 
 =========
