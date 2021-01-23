@@ -47,5 +47,16 @@
             { "image": "Assets/3jobs-02.png", "description": "3Jobs | página principal após login" },
             { "image": "Assets/3jobs-03.png", "description": "3Jobs | página de perfil" }
         ]
+    },
+    {
+        "name": "Prop Hunt 2D | Jogo multiplayer",
+        "content": [
+            { "text": "No inicio de 2020 iniciei um estudo e criação de um jogo simples em 2D, utilizando a <i>engine Godot</i>" },
+            { "text": "O projeto teve como foco permitir o aprendizado da <i>engine</i> e o entendimento sobre o funcionamento básico de jogos multi jogador, sendo realizado o registro de cada evolução obtida durante o desenvolvimento. O projeto foi finalizado no fim de 2020." },
+            { "text": "O jogo funciona de forma simples, duas equipes, onde uma deve ser esconder e a outra deve procurar." },
+            { "video": "https://www.youtube.com/embed/K82m5CMF42M", "description": "Inicio do projeto" },
+            { "video": "https://www.youtube.com/embed/ToQd3chaHd8", "description": "Fim do projeto" },
+            { "text": "Foi criado uma <a href=\"https://youtube.com/playlist?list=PL-OBuwg5uiFIGYAxFF3GRB57KsoBDg6Hl\">playlist</a> com pequenos videos da evolução do projeto." }
+        ]
     }
 ]
