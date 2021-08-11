@@ -1,0 +1,98 @@
+/* --- Imports --- */
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* --- Set variables --- */
+/* --- Reset the css --- */
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  font-family: Oswald;
+}
+
+h1 {
+  font-size: 1.375em;
+  line-height: 33px;
+  letter-spacing: 0.05em;
+  color: #fff0aa;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.profile-panel {
+  background-color: #764b8e;
+  display: flex;
+  flex-direction: column;
+}
+.profile-panel img {
+  object-fit: cover;
+  width: 100%;
+  height: 380px;
+  object-position: 100% 0;
+  object-position: 0 top;
+}
+.profile-panel h2 {
+  font-size: 1.25em;
+  line-height: 30px;
+  color: #d4c26a;
+  align-items: center;
+  text-align: center;
+}
+.profile-panel h1,
+.profile-panel h2 {
+  margin-top: 10px;
+}
+.profile-panel .profile-infos {
+  padding: 15px 10px;
+}
+.profile-panel .profile-infos .personal-info, .profile-panel .profile-infos .contact-info {
+  margin-top: 10px;
+}
+.profile-panel .profile-infos h3 {
+  font-size: 1.5em;
+  line-height: 36px;
+  color: #a5c663;
+}
+.profile-panel .profile-infos .info {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.profile-panel .profile-infos .info span:first-child {
+  color: #7b9f35;
+}
+.profile-panel .profile-infos .info i {
+  color: #d4ee9f;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 5px;
+}
+.profile-panel .profile-infos .info span:last-child {
+  color: white;
+}
+.profile-panel .profile-infos .info span,
+.profile-panel .profile-infos .info i {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 30px;
+}
+.profile-panel .collapse-button {
+  color: #d4c26a;
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+/* --- Importing styles --- */
+
+/*# sourceMappingURL=style.css.map */
