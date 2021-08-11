@@ -1,8 +1,29 @@
 @use '../global';
-@use 'skill-card';
 
 .skills {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .skill {
+        background-color: global.$primary-1;
+        width: 160px;
+        height: 160px;
+        border-radius: 25px;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 3px 4px rgba(38, 3, 57, 0.25);
+    
+        img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+        }
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
