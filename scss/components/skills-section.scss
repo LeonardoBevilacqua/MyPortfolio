@@ -1,0 +1,22 @@
+@use '../global';
+@use 'skill-card';
+
+section {
+    padding: 10px;
+
+    h2 {
+        font-weight: 600;
+        font-size: 1.625em;
+        line-height: 39px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: global.$primary-2;
+        border-bottom: solid #333;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

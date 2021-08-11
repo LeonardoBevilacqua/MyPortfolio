@@ -1,0 +1,19 @@
+@use '../global';
+
+.skill {
+    background-color: global.$primary-1;
+    width: 160px;
+    height: 160px;
+    border-radius: 25px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 4px rgba(38, 3, 57, 0.25);
+
+    img {
+        width: 75%;
+        height: 75%;
+        object-fit: contain;
+    }
+}
