@@ -109,19 +109,7 @@ h1 {
   margin-bottom: 0;
 }
 
-section {
-  padding: 10px;
-}
-section h2 {
-  font-weight: 600;
-  font-size: 1.625em;
-  line-height: 39px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #764b8e;
-  border-bottom: solid #333;
-}
-section .skills {
+.skills {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,6 +182,19 @@ section .skills {
 
 body {
   background-color: #efefef;
+}
+
+section {
+  padding: 10px;
+}
+section h2 {
+  font-weight: 600;
+  font-size: 1.625em;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #764b8e;
+  border-bottom: solid #333;
 }
 
 /* --- Importing styles --- */
