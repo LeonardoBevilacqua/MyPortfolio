@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Leonardo Bevilacqua, Bevilacqua, Portfólio, projetos, java, javascript, UniMetrocamp, css, html, godot engine">
+    <meta name="keywords"
+        content="Leonardo Bevilacqua, Bevilacqua, Portfólio, projetos, java, javascript, UniMetrocamp, css, html, godot engine">
     <meta name="description" content="Portfólio de Leonardo Bevilacqua, contendo suas experiências e projetos">
     <meta name="author" content="Leonardo Bevilacqua">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome-free-5.15.4-web/css/all.min.css">
     <title>Leonardo A. Bevilacqua | Análista de software</title>
 </head>
+
 <body>
     <div class="profile-panel">
         <img src="imgs/profile-picture.jpeg" alt="Leonardo Almeida Bevilacqua picture">
@@ -62,7 +65,10 @@
         </div>
 
         <!-- expand/collapse button -->
-        <i class="collapse-button fas fa-chevron-down"></i>
+        <button id="profile-panel-button" onclick="toggle_profile_panel(this)"> 
+            <i id="collapse-button-open" class="collapse-button fas fa-chevron-down"></i>
+            <i id="collapse-button-close" class="collapse-button fas fa-chevron-up d-none"></i>
+        </button>
     </div>
 
     <!-- skills section -->
@@ -145,5 +151,7 @@
             </div>
         </div>
     </section>
+    <script src="scripts/page-effects.js"></script>
 </body>
+
 </html>

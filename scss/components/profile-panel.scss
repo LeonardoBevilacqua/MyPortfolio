@@ -29,7 +29,12 @@
     .profile-infos {
         padding: 15px 10px;
 
-        .personal-info, .contact-info {
+        &.hidden {
+            display: none;
+        }
+
+        .personal-info,
+        .contact-info {
             margin-top: 10px;
         }
 
@@ -71,10 +76,14 @@
         }
     }
 
-    .collapse-button {
-        color: global.$tertiary-2;
-        margin: auto;
-        margin-bottom: 15px;
-        font-size: 2em;
+    button {
+        background-color: transparent;
+        margin-bottom: 10px;
+
+        .collapse-button {
+            color: global.$tertiary-2;
+            margin: auto;
+            font-size: 2em;
+        }
     }
 }

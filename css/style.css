@@ -22,6 +22,10 @@ h1 {
   text-align: center;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .profile-panel {
   background-color: #764b8e;
   display: flex;
@@ -48,7 +52,11 @@ h1 {
 .profile-panel .profile-infos {
   padding: 15px 10px;
 }
-.profile-panel .profile-infos .personal-info, .profile-panel .profile-infos .contact-info {
+.profile-panel .profile-infos.hidden {
+  display: none;
+}
+.profile-panel .profile-infos .personal-info,
+.profile-panel .profile-infos .contact-info {
   margin-top: 10px;
 }
 .profile-panel .profile-infos h3 {
@@ -82,10 +90,13 @@ h1 {
   font-size: 1.25em;
   line-height: 30px;
 }
-.profile-panel .collapse-button {
+.profile-panel button {
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+.profile-panel button .collapse-button {
   color: #d4c26a;
   margin: auto;
-  margin-bottom: 15px;
   font-size: 2em;
 }
 
