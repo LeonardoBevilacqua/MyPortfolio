@@ -105,6 +105,9 @@ h1 {
   height: 75%;
   object-fit: contain;
 }
+.skill:last-child {
+  margin-bottom: 0;
+}
 
 section {
   padding: 10px;
