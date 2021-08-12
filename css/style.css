@@ -51,9 +51,12 @@ h1 {
 }
 .profile-panel .profile-infos {
   padding: 15px 10px;
+  max-height: 1000px;
+  transition: max-height 0.7s ease-in-out;
+  overflow: hidden;
 }
 .profile-panel .profile-infos.hidden {
-  display: none;
+  max-height: 0;
 }
 .profile-panel .profile-infos .personal-info,
 .profile-panel .profile-infos .contact-info {

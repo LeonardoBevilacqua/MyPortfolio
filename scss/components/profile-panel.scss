@@ -28,9 +28,12 @@
 
     .profile-infos {
         padding: 15px 10px;
+        max-height: 1000px;
+        transition: max-height .7s ease-in-out;
+        overflow: hidden;
 
         &.hidden {
-            display: none;
+            max-height: 0;
         }
 
         .personal-info,
