@@ -75,13 +75,12 @@ h1 {
 .profile-panel .profile-infos .info span:first-child {
   color: #7b9f35;
 }
+.profile-panel .profile-infos .info a {
+  text-decoration: none;
+}
 .profile-panel .profile-infos .info i {
   color: #d4ee9f;
   line-height: 23px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
   margin-right: 5px;
 }
 .profile-panel .profile-infos .info span:last-child {

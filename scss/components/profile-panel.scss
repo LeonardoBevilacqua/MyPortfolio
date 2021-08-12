@@ -56,13 +56,13 @@
                 color: global.$secondary-3;
             }
 
+            a {
+                text-decoration: none;
+            }
+
             i {
                 color: global.$secondary-1;
                 line-height: 23px;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                margin-left: auto;
                 margin-right: 5px;
             }
 
