@@ -96,11 +96,20 @@ h1 {
 .profile-panel button {
   background-color: transparent;
   margin: auto;
+  display: flex;
+}
+.profile-panel button span {
+  font-size: 1.5em;
+  line-height: 30px;
+  color: #d4c26a;
 }
 .profile-panel button .collapse-button {
   color: #d4c26a;
   margin: auto;
   font-size: 2em;
+}
+.profile-panel button .collapse-button.fa-chevron-down {
+  margin-left: 5px;
 }
 .profile-panel button .collapse-button.fa-chevron-up {
   padding-bottom: 10px;

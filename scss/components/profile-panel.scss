@@ -83,11 +83,22 @@
     button {
         background-color: transparent;
         margin: auto;
+        display: flex;
+
+        span {
+            font-size: 1.5em;
+            line-height: 30px;
+            color: global.$tertiary-2;
+        }
 
         .collapse-button {
             color: global.$tertiary-2;
             margin: auto;
             font-size: 2em;
+
+            &.fa-chevron-down {
+                margin-left: 5px;
+            }
 
             &.fa-chevron-up {
                 padding-bottom: 10px;
