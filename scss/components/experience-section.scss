@@ -5,6 +5,10 @@
     padding-top: 20px;
     padding-left: 50px;
 
+    &.hidden {
+        padding: 0;
+    }
+
     &::after {
         content: "";
         position: absolute;

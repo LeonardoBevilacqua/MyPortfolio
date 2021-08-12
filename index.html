@@ -77,13 +77,13 @@
 
     <!-- skills section -->
     <section>
-        <h2>
+        <h2 onclick="toggle_section(this, 'skills')">
             Competências
             <!-- expand/collapse -->
-            <i class="collapse-button fas fa-chevron-down"></i>
-            <i class="collapse-button fas fa-chevron-up d-none"></i>
+            <i class="collapse-button fas fa-chevron-down d-none"></i>
+            <i class="collapse-button fas fa-chevron-up"></i>
         </h2>
-        <div class="skills">
+        <div id="skills" class="skills">
             <div class="skill">
                 <img src="imgs/spring-framework.png" alt="Spring Framework">
             </div>
@@ -101,13 +101,13 @@
 
     <!-- experience section -->
     <section>
-        <h2>
+        <h2 onclick="toggle_section(this, 'experiences')">
             experiências
             <!-- expand/collapse -->
             <i class="collapse-button fas fa-chevron-down"></i>
             <i class="collapse-button fas fa-chevron-up d-none"></i>
         </h2>
-        <div class="experiences">
+        <div id="experiences" class="experiences hidden">
             <div class="experience left">
                 <div class="content">
                     <h3>Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini</h3>
@@ -137,13 +137,13 @@
 
     <!-- portfolio section -->
     <section>
-        <h2>
+        <h2 onclick="toggle_section(this, 'portfolio-cards')">
             Portfólio
             <!-- expand/collapse -->
             <i class="collapse-button fas fa-chevron-down"></i>
             <i class="collapse-button fas fa-chevron-up d-none"></i>
         </h2>
-        <div class="portfolio-cards">
+        <div id="portfolio-cards" class="portfolio-cards hidden">
             <div class="card">
                 <img src="imgs/3jobs-01.png" alt="3 Jobs">
                 <h3>Title</h3>

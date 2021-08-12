@@ -136,6 +136,9 @@ h1 {
   padding-top: 20px;
   padding-left: 50px;
 }
+.experiences.hidden {
+  padding: 0;
+}
 .experiences::after {
   content: "";
   position: absolute;
@@ -266,6 +269,14 @@ section h2 {
 section h2 .collapse-button {
   margin-left: auto;
   align-self: center;
+}
+section .skills, section .experiences, section .portfolio-cards {
+  max-height: 1000px;
+  transition: max-height 0.7s ease-in-out;
+  overflow: hidden;
+}
+section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hidden {
+  max-height: 0;
 }
 
 /* --- Importing styles --- */
