@@ -19,7 +19,13 @@ section {
         text-transform: uppercase;
         color: global.$primary-2;
         border-bottom: solid #333;
+        display: inline-flex;
+        width: 100%;
+        cursor: pointer;
+
+        .collapse-button {
+            margin-left: auto;
+            align-self: center;
+        }
     }
 }
-
-

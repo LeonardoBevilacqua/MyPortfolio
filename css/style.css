@@ -30,6 +30,7 @@ h1 {
   background-color: #764b8e;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 .profile-panel img {
   object-fit: cover;
@@ -94,12 +95,15 @@ h1 {
 }
 .profile-panel button {
   background-color: transparent;
-  margin-bottom: 10px;
+  margin: auto;
 }
 .profile-panel button .collapse-button {
   color: #d4c26a;
   margin: auto;
   font-size: 2em;
+}
+.profile-panel button .collapse-button.fa-chevron-up {
+  padding-bottom: 10px;
 }
 
 .skills {
@@ -255,6 +259,13 @@ section h2 {
   text-transform: uppercase;
   color: #764b8e;
   border-bottom: solid #333;
+  display: inline-flex;
+  width: 100%;
+  cursor: pointer;
+}
+section h2 .collapse-button {
+  margin-left: auto;
+  align-self: center;
 }
 
 /* --- Importing styles --- */
