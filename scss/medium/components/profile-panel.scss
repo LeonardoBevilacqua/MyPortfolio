@@ -1,0 +1,17 @@
+@use '../../global';
+
+@media only screen and (min-width: 768px) {
+    .profile-panel {
+min-height: auto;
+
+        .profile-infos {
+            &.hidden {
+                max-height: 1000px;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+}

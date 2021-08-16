@@ -288,6 +288,32 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
   max-height: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .profile-panel {
+    min-height: auto;
+  }
+  .profile-panel .profile-infos.hidden {
+    max-height: 1000px;
+  }
+  .profile-panel button {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .portfolio-cards .card {
+    min-width: 300px;
+    margin: 10px;
+  }
+  .portfolio-cards .card:last-child {
+    margin-bottom: 10px;
+  }
+}
 /* --- Importing styles --- */
 
 /*# sourceMappingURL=style.css.map */

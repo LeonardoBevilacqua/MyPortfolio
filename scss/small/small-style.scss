@@ -1,8 +1,8 @@
 @use '../global';
-@use '../components/profile-panel';
-@use '../components/skills-section';
-@use '../components/experience-section';
-@use '../components/portfolio-section';
+@use 'components/profile-panel';
+@use 'components/skills-section';
+@use 'components/experience-section';
+@use 'components/portfolio-section';
 
 body {
     background-color: #efefef;
