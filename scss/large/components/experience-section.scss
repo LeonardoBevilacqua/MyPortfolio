@@ -1,0 +1,23 @@
+@use '../../global';
+
+@media only screen and (min-width: 992px) {
+    .experiences {
+        padding-top: 20px;
+        padding-left: 50px;
+
+        .experience {
+            &.left {
+                .content {
+                    border-left: solid 5px global.$secondary-3;
+                }
+            }
+
+            &.right {
+                .content {
+                    border-left: none;
+                    border-right: solid 5px global.$secondary-3;
+                }
+            }
+        }
+    }
+}

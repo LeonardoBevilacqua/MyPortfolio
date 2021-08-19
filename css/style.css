@@ -314,6 +314,52 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     margin-bottom: 10px;
   }
 }
+@media only screen and (min-width: 992px) {
+  .profile-panel {
+    width: auto;
+    position: fixed;
+    height: 100vh;
+    grid-area: profile;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .experiences {
+    padding-top: 20px;
+    padding-left: 50px;
+  }
+  .experiences .experience.left .content {
+    border-left: solid 5px #7b9f35;
+  }
+  .experiences .experience.right .content {
+    border-left: none;
+    border-right: solid 5px #7b9f35;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "profile skills" "profile experience" "profile portfolio";
+  }
+  body section.skills-section {
+    grid-area: skills;
+  }
+  body section.experience-section {
+    grid-area: experience;
+  }
+  body section.portfolio-section {
+    grid-area: portfolio;
+  }
+  body section.skills-section h2, body section.experience-section h2, body section.portfolio-section h2 {
+    cursor: auto;
+  }
+  body section.skills-section h2 i, body section.experience-section h2 i, body section.portfolio-section h2 i {
+    display: none;
+  }
+  body section.skills-section div.hidden, body section.experience-section div.hidden, body section.portfolio-section div.hidden {
+    max-height: 1000px;
+  }
+}
 /* --- Importing styles --- */
 
 /*# sourceMappingURL=style.css.map */

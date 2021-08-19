@@ -1,0 +1,42 @@
+@use 'components/profile-panel';
+@use 'components/experience-section';
+
+@media only screen and (min-width: 992px) {
+    body {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:
+            "profile skills"
+            "profile experience"
+            "profile portfolio";
+
+        section {
+            &.skills-section {
+                grid-area: skills;
+            }
+            &.experience-section {
+                grid-area: experience;
+            }
+            &.portfolio-section {
+                grid-area: portfolio;
+            }
+
+            &.skills-section,
+            &.experience-section,
+            &.portfolio-section {
+                h2 {
+                    cursor: auto;
+                    i {
+                        display: none;
+                    }
+                }
+
+                div {
+                    &.hidden {
+                        max-height: 1000px;
+                    }
+                }
+            }
+        }
+    }
+}
