@@ -362,6 +362,8 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
   }
   .experiences::after, .experiences.hidden::after {
     left: 50%;
+    top: 0;
+    bottom: 0;
   }
   .experiences .experience, .experiences.hidden .experience {
     width: 325px;
