@@ -73,7 +73,7 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.profile-panel .profile-infos .info span:first-child {
+.profile-panel .profile-infos .info > span:first-child {
   color: #7b9f35;
 }
 .profile-panel .profile-infos .info a {
@@ -84,8 +84,11 @@ h1 {
   line-height: 23px;
   margin-right: 5px;
 }
-.profile-panel .profile-infos .info span:last-child {
+.profile-panel .profile-infos .info span {
   color: white;
+}
+.profile-panel .profile-infos .info span > span {
+  font-size: 1em;
 }
 .profile-panel .profile-infos .info span,
 .profile-panel .profile-infos .info i {

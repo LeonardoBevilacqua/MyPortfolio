@@ -53,7 +53,7 @@
             display: flex;
             justify-content: space-between;
 
-            span:first-child {
+            & > span:first-child {
                 color: global.$secondary-3;
             }
 
@@ -67,8 +67,11 @@
                 margin-right: 5px;
             }
 
-            span:last-child {
+            span {
                 color: white;
+                & > span {
+                    font-size: 1em;
+                }
             }
 
             span,
