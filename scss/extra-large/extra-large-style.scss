@@ -1,7 +1,6 @@
-@use 'components/profile-panel';
 @use 'components/experience-section';
 
-@media only screen and (min-width: 1082px) {
+@media only screen and (min-width: 1200px) {
     body {
         display: grid;
         grid-template-columns: 30% 70%;

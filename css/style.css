@@ -314,7 +314,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     margin-bottom: 10px;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1082px) {
   .profile-panel {
     width: auto;
     position: fixed;
@@ -322,20 +322,73 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     grid-area: profile;
   }
 }
-@media only screen and (min-width: 992px) {
-  .experiences {
+@media only screen and (min-width: 1082px) {
+  .experiences, .experiences.hidden {
     padding-top: 20px;
     padding-left: 50px;
   }
-  .experiences .experience.left .content {
+}
+@media only screen and (min-width: 1082px) {
+  body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "profile skills" "profile experience" "profile portfolio";
+  }
+  body section.skills-section {
+    grid-area: skills;
+  }
+  body section.experience-section {
+    grid-area: experience;
+  }
+  body section.portfolio-section {
+    grid-area: portfolio;
+  }
+  body section.skills-section h2, body section.experience-section h2, body section.portfolio-section h2 {
+    cursor: auto;
+  }
+  body section.skills-section h2 i, body section.experience-section h2 i, body section.portfolio-section h2 i {
+    display: none;
+  }
+  body section.skills-section div.hidden, body section.experience-section div.hidden, body section.portfolio-section div.hidden {
+    max-height: 1000px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .experiences, .experiences.hidden {
+    padding-top: 20px;
+    padding-left: 0;
+    width: 800px;
+    margin: auto;
+  }
+  .experiences::after, .experiences.hidden::after {
+    left: 50%;
+  }
+  .experiences .experience, .experiences.hidden .experience {
+    width: 325px;
+  }
+  .experiences .experience.left, .experiences.hidden .experience.left {
+    left: calc(800px / 2 + 32px);
+  }
+  .experiences .experience.left .content, .experiences.hidden .experience.left .content {
     border-left: solid 5px #7b9f35;
   }
-  .experiences .experience.right .content {
+  .experiences .experience.right, .experiences.hidden .experience.right {
+    left: calc(800px / 2 - 325px - 32px);
+  }
+  .experiences .experience.right .content, .experiences.hidden .experience.right .content {
     border-left: none;
     border-right: solid 5px #7b9f35;
   }
+  .experiences .experience.right .content::before, .experiences.hidden .experience.right .content::before {
+    left: auto;
+    right: -35px;
+  }
+  .experiences .experience.right::before, .experiences.hidden .experience.right::before {
+    left: auto;
+    right: -50px;
+  }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   body {
     display: grid;
     grid-template-columns: 30% 70%;
