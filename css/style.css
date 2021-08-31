@@ -184,9 +184,9 @@ h1 {
   letter-spacing: 0.05em;
 }
 .experiences .experience .content span {
-  font-size: 0.75em;
+  font-size: 0.85em;
   line-height: 18px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 .experiences .experience .content::before {
   content: "";
@@ -197,6 +197,13 @@ h1 {
   top: 35px;
   bottom: 35px;
   left: -35px;
+}
+.experiences .experience .content .experience-description {
+  padding: 10px 0;
+  line-height: 21px;
+}
+.experiences .experience .content .experience-description p {
+  padding: 5px 0;
 }
 .experiences .experience::before {
   content: "";
