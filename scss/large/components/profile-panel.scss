@@ -2,6 +2,12 @@
 
 @media only screen and (min-width: 1082px) {
     .profile-panel {
+        flex-direction: column;
+
+        & > img, & > div {
+            width: auto;
+       }
+
         height: 100%;
         grid-area: profile;
     }

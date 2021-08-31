@@ -2,7 +2,16 @@
 
 @media only screen and (min-width: 768px) {
     .profile-panel {
-min-height: auto;
+        min-height: auto;
+        flex-direction: row;
+
+        & > img, & > div {
+             width: 50%;
+        }
+
+        & > img {
+            height: 415px;
+        }
 
         .profile-infos {
             &.hidden {
