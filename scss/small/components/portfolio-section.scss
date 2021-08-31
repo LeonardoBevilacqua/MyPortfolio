@@ -8,6 +8,7 @@
         box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
         margin: 10px 0;
+        padding-bottom: 40px;
 
         &:last-child {
             margin-bottom: 0;
@@ -26,12 +27,8 @@
             color: global.$tertiary-2;
         }
 
-        span {
-            color: global.$tertiary-1;
-        }
-
         button {
-            margin: 40px auto;
+            margin: auto auto 0 auto;
             width: 140px;
             font-weight: 600;
             font-size: 22px;
@@ -53,6 +50,11 @@
         button {
             font-size: 1.375em;
             line-height: 33px;
+        }
+
+        span {
+            color: global.$tertiary-1;
+            margin-bottom: 40px;
         }
     }
 }

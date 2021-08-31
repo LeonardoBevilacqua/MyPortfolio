@@ -54,7 +54,7 @@
             justify-content: space-between;
 
             & > span:first-child {
-                color: global.$secondary-3;
+                color: global.$secondary-1;
             }
 
             a {
@@ -91,11 +91,11 @@
         span {
             font-size: 1.5em;
             line-height: 30px;
-            color: global.$tertiary-2;
+            color: global.$tertiary-1;
         }
 
         .collapse-button {
-            color: global.$tertiary-2;
+            color: global.$tertiary-1;
             margin: auto;
             font-size: 2em;
 

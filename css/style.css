@@ -74,7 +74,7 @@ h1 {
   justify-content: space-between;
 }
 .profile-panel .profile-infos .info > span:first-child {
-  color: #7b9f35;
+  color: #d4ee9f;
 }
 .profile-panel .profile-infos .info a {
   text-decoration: none;
@@ -104,10 +104,10 @@ h1 {
 .profile-panel button span {
   font-size: 1.5em;
   line-height: 30px;
-  color: #d4c26a;
+  color: #fff0aa;
 }
 .profile-panel button .collapse-button {
-  color: #d4c26a;
+  color: #fff0aa;
   margin: auto;
   font-size: 2em;
 }
@@ -225,6 +225,7 @@ h1 {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin: 10px 0;
+  padding-bottom: 40px;
 }
 .portfolio-cards .card:last-child {
   margin-bottom: 0;
@@ -240,11 +241,8 @@ h1 {
   line-height: 39px;
   color: #d4c26a;
 }
-.portfolio-cards .card span {
-  color: #fff0aa;
-}
 .portfolio-cards .card button {
-  margin: 40px auto;
+  margin: auto auto 0 auto;
   width: 140px;
   font-weight: 600;
   font-size: 22px;
@@ -264,6 +262,10 @@ h1 {
 .portfolio-cards .card button {
   font-size: 1.375em;
   line-height: 33px;
+}
+.portfolio-cards .card span {
+  color: #fff0aa;
+  margin-bottom: 40px;
 }
 
 body {
@@ -318,6 +320,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
   }
   .portfolio-cards .card {
     min-width: 300px;
+    width: 350px;
     margin: 10px;
   }
   .portfolio-cards .card:last-child {
@@ -358,7 +361,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     display: none;
   }
   body section.skills-section div.hidden, body section.experience-section div.hidden, body section.portfolio-section div.hidden {
-    max-height: 1000px;
+    max-height: 5000px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -396,31 +399,6 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
   .experiences .experience.right::before, .experiences.hidden .experience.right::before {
     left: auto;
     right: -50px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  body {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-areas: "profile skills" "profile experience" "profile portfolio";
-  }
-  body section.skills-section {
-    grid-area: skills;
-  }
-  body section.experience-section {
-    grid-area: experience;
-  }
-  body section.portfolio-section {
-    grid-area: portfolio;
-  }
-  body section.skills-section h2, body section.experience-section h2, body section.portfolio-section h2 {
-    cursor: auto;
-  }
-  body section.skills-section h2 i, body section.experience-section h2 i, body section.portfolio-section h2 i {
-    display: none;
-  }
-  body section.skills-section div.hidden, body section.experience-section div.hidden, body section.portfolio-section div.hidden {
-    max-height: 5000px;
   }
 }
 /* --- Importing styles --- */
