@@ -326,9 +326,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
 }
 @media only screen and (min-width: 1082px) {
   .profile-panel {
-    width: auto;
-    position: fixed;
-    height: 100vh;
+    height: 100%;
     grid-area: profile;
   }
 }
@@ -341,7 +339,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
 @media only screen and (min-width: 1082px) {
   body {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 380px auto;
     grid-template-areas: "profile skills" "profile experience" "profile portfolio";
   }
   body section.skills-section {
@@ -422,7 +420,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     display: none;
   }
   body section.skills-section div.hidden, body section.experience-section div.hidden, body section.portfolio-section div.hidden {
-    max-height: 1000px;
+    max-height: 5000px;
   }
 }
 /* --- Importing styles --- */

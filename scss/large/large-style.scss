@@ -4,7 +4,7 @@
 @media only screen and (min-width: 1082px) {
     body {
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 380px auto;
         grid-template-areas:
             "profile skills"
             "profile experience"
