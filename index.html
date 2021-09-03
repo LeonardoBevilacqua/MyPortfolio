@@ -184,47 +184,60 @@
                 <img src="imgs/portfolio/maze-bank/maze-bank-02.png" alt="Maze-Bank clone">
                 <h3>Maze-Bank clone</h3>
                 <span>Clone do site Maze-Bank do jogo GTA V</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('maze-bank')">Sobre</button>
             </div>
             <div class="card">
                 <img src="imgs/portfolio/lista-interativa/lista-interativa.png" alt="Lista interativa">
                 <h3>Lista interativa</h3>
                 <span>Mini projeto CSS</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('lista-interativa')">Sobre</button>
             </div>
             <div class="card">
                 <img src="imgs/portfolio/choose-your-game/choose_your_game_02.PNG" alt="Choose Your Game">
                 <h3>Choose Your Game</h3>
                 <span>Uma rede social para gamers</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('choose-your-game')">Sobre</button>
             </div>
             <div class="card">
                 <img src="imgs/portfolio/3jobs/3jobs-01.png" alt="Java 2D Engine">
                 <h3>Java 2D Engine</h3>
                 <span>Estudo sobre desenvolvimento de jogos</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('java-engine')">Sobre</button>
             </div>
             <div class="card">
                 <img src="imgs/portfolio/blood-clicker/blood-clicker.png" alt="Blood-clicker">
                 <h3>Blood-clicker</h3>
                 <span>Jogo educativo sobre doação de sangue</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('blood-clicker')">Sobre</button>
             </div>
             <div class="card">
                 <img src="imgs/portfolio/3jobs/3jobs-01.png" alt="3Jobs">
                 <h3>3Jobs</h3>
                 <span>Trabalho de conclusão de curso</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('3jobs')">Sobre</button>
             </div>
             <div class="card">
                 <img src="imgs/portfolio/3jobs/3jobs-01.png" alt="Prop Hunt 2D">
                 <h3>Prop Hunt 2D</h3>
                 <span>Jogo multiplayer</span>
-                <button>Sobre</button>
+                <button onclick="open_modal('prop-hunt')">Sobre</button>
             </div>
         </div>
     </section>
-    <script src="scripts/page-info.js"></script>
+
+    <!-- Modal -->
+    <div class="modal hidden" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>title</h2>
+                <span class="close" onclick="close_modal()">&times;</span>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer hidden">
+            </div>
+        </div>
+    </div>
     <script src="scripts/page-effects.js"></script>
 </body>
 

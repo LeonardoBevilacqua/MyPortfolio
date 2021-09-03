@@ -1,0 +1,108 @@
+@use '../../global';
+
+body {
+	&.modal-opened {
+		overflow: hidden;
+	}
+
+	.modal {
+		&.hidden {
+			display: none;
+		}
+		position: fixed;
+		z-index: 2;
+		padding: 100px 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: auto;
+		background-color: global.$primary-5;
+		background-color: transparentize(global.$primary-5, .4);
+	
+		.modal-content {
+			$modal-padding: 2px 16px;
+	
+			position: relative;
+			background-color: #efefef;
+			margin: auto;
+			border: 1px solid global.$tertiary-4;
+			width: 80%;
+			box-shadow: 2px 3px 4px rgba(38, 3, 57, 0.25);
+			-webkit-animation-name: animatetop;
+			-webkit-animation-duration: 0.4s;
+			animation-name: animatetop;
+			animation-duration: 0.4s;
+			color: global.$tertiary-1;
+	
+			.modal-header {
+				padding: $modal-padding;
+				background-color: global.$primary-1;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+	
+				.close {
+					font-size: 3em;
+					font-weight: bold;
+				}
+	
+				.close:hover,
+				.close:focus {
+					color: global.$tertiary-3;
+					text-decoration: none;
+					cursor: pointer;
+				}
+			}
+	
+			.modal-body {
+				padding: $modal-padding;
+				color: #000;
+	
+				.image-container {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-top: 10px;
+					img {
+						width: 90%;
+					}
+					i {
+						margin-top: 5px;
+					}
+				}
+			}
+	
+			.modal-footer {
+				padding: $modal-padding;
+				background-color: global.$primary-1;
+	
+				&.hidden {
+					display: none;
+				}
+			}
+		}
+	
+		/* Add Animation */
+		@-webkit-keyframes animatetop {
+			from {
+				top: -300px;
+				opacity: 0;
+			}
+			to {
+				top: 0;
+				opacity: 1;
+			}
+		}
+	
+		@keyframes animatetop {
+			from {
+				top: -300px;
+				opacity: 0;
+			}
+			to {
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+}

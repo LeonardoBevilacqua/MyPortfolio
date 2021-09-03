@@ -3,6 +3,7 @@
 @use 'components/skills-section';
 @use 'components/experience-section';
 @use 'components/portfolio-section';
+@use 'components/modal';
 
 body {
     background-color: #efefef;
@@ -30,7 +31,7 @@ section {
     }
 
     .skills, .experiences, .portfolio-cards {
-        max-height: 1000px;
+        max-height: 5000px;
         transition: max-height 0.7s ease-in-out;
         overflow: hidden;
         &.hidden {

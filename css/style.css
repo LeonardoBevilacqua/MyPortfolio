@@ -51,7 +51,7 @@ h1 {
 }
 .profile-panel .profile-infos {
   padding: 15px 10px;
-  max-height: 1000px;
+  max-height: 5000px;
   transition: max-height 0.7s ease-in-out;
   overflow: hidden;
 }
@@ -250,6 +250,7 @@ h1 {
   background: #3d1255;
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  cursor: pointer;
 }
 .portfolio-cards .card h3,
 .portfolio-cards .card span {
@@ -265,6 +266,98 @@ h1 {
 .portfolio-cards .card span {
   color: #fff0aa;
   margin-bottom: 40px;
+}
+
+body.modal-opened {
+  overflow: hidden;
+}
+body .modal {
+  position: fixed;
+  z-index: 2;
+  padding: 100px 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: #260339;
+  background-color: rgba(38, 3, 57, 0.6);
+  /* Add Animation */
+}
+body .modal.hidden {
+  display: none;
+}
+body .modal .modal-content {
+  position: relative;
+  background-color: #efefef;
+  margin: auto;
+  border: 1px solid #806d15;
+  width: 80%;
+  box-shadow: 2px 3px 4px rgba(38, 3, 57, 0.25);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: #fff0aa;
+}
+body .modal .modal-content .modal-header {
+  padding: 2px 16px;
+  background-color: #9775aa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .modal .modal-content .modal-header .close {
+  font-size: 3em;
+  font-weight: bold;
+}
+body .modal .modal-content .modal-header .close:hover,
+body .modal .modal-content .modal-header .close:focus {
+  color: #aa9739;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .modal .modal-content .modal-body {
+  padding: 2px 16px;
+  color: #000;
+}
+body .modal .modal-content .modal-body .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+body .modal .modal-content .modal-body .image-container img {
+  width: 90%;
+}
+body .modal .modal-content .modal-body .image-container i {
+  margin-top: 5px;
+}
+body .modal .modal-content .modal-footer {
+  padding: 2px 16px;
+  background-color: #9775aa;
+}
+body .modal .modal-content .modal-footer.hidden {
+  display: none;
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 body {
@@ -291,7 +384,7 @@ section h2 .collapse-button {
   align-self: center;
 }
 section .skills, section .experiences, section .portfolio-cards {
-  max-height: 1000px;
+  max-height: 5000px;
   transition: max-height 0.7s ease-in-out;
   overflow: hidden;
 }
@@ -311,7 +404,7 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     height: 415px;
   }
   .profile-panel .profile-infos.hidden {
-    max-height: 1000px;
+    max-height: 5000px;
   }
   .profile-panel button {
     display: none;
