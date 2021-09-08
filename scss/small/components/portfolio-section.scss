@@ -1,0 +1,61 @@
+@use '../../global';
+
+.portfolio-cards {
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: global.$primary-3;
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        margin: 10px 0;
+        padding-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        img {
+            border-radius: 10px 10px 0 0;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h3 {
+            font-size: 1.625em;
+            line-height: 39px;
+            color: global.$tertiary-2;
+        }
+
+        button {
+            margin: auto auto 0 auto;
+            width: 140px;
+            font-weight: 600;
+            font-size: 22px;
+            letter-spacing: 0.05em;
+            color: global.$secondary-1;
+            background: global.$primary-4;
+            box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        h3,
+        span {
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin: 0 10px;
+        }
+
+        span,
+        button {
+            font-size: 1.375em;
+            line-height: 33px;
+        }
+
+        span {
+            color: global.$tertiary-1;
+            margin-bottom: 40px;
+        }
+    }
+}

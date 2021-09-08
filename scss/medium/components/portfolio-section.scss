@@ -1,0 +1,20 @@
+@use '../../global';
+
+@media only screen and (min-width: 768px) {
+    .portfolio-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .card {
+            min-width: 300px;
+            width: 350px;
+            margin: 10px;
+
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

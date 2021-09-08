@@ -1,0 +1,41 @@
+@use '../global';
+@use 'components/profile-panel';
+@use 'components/skills-section';
+@use 'components/experience-section';
+@use 'components/portfolio-section';
+@use 'components/modal';
+
+body {
+    background-color: #efefef;
+}
+
+section {
+    padding: 10px;
+
+    h2 {
+        font-weight: 600;
+        font-size: 1.625em;
+        line-height: 39px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: global.$primary-2;
+        border-bottom: solid #333;
+        display: inline-flex;
+        width: 100%;
+        cursor: pointer;
+
+        .collapse-button {
+            margin-left: auto;
+            align-self: center;
+        }
+    }
+
+    .skills, .experiences, .portfolio-cards {
+        max-height: 5000px;
+        transition: max-height 0.7s ease-in-out;
+        overflow: hidden;
+        &.hidden {
+            max-height: 0;
+        }
+    }
+}
