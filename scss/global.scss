@@ -1,6 +1,8 @@
-/* --- Imports --- */
-@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* --- Font --- */
+@font-face {
+	font-family: 'Oswald';
+	src: url('../css/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
 /* --- Set variables --- */
 $primary-1: #9775aa;
 $primary-2: #764b8e;
