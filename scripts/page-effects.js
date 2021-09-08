@@ -104,7 +104,7 @@ const open_modal = async (data_id) => {
     }
 
     modal.classList.remove('hidden')
-    //page_body.classList.add('modal-opened')
+    page_body.classList.add('modal-opened')
     
 }
 
@@ -117,6 +117,12 @@ const close_modal = () => {
     const body = modal.getElementsByClassName('modal-body')[0]
     body.innerHTML = ''
 }
+
+window.onclick = (event) => {
+    if (event.target == modal) {
+        close_modal()
+    }
+  }
 
 /* Age calculation */
 const calculate_age = () => {

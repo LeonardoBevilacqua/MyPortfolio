@@ -271,25 +271,25 @@ h1 {
 body.modal-opened {
   overflow: hidden;
 }
-body .modal {
+body > .modal {
   position: fixed;
   z-index: 2;
-  padding: 100px 0;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   overflow: auto;
   background-color: #260339;
   background-color: rgba(38, 3, 57, 0.6);
   /* Add Animation */
 }
-body .modal.hidden {
+body > .modal.hidden {
   display: none;
 }
-body .modal .modal-content {
+body > .modal > .modal-content {
   position: relative;
   background-color: #efefef;
-  margin: auto;
+  margin: 100px auto;
   border: 1px solid #806d15;
   width: 80%;
   box-shadow: 2px 3px 4px rgba(38, 3, 57, 0.25);
@@ -299,44 +299,52 @@ body .modal .modal-content {
   animation-duration: 0.4s;
   color: #fff0aa;
 }
-body .modal .modal-content .modal-header {
+body > .modal > .modal-content > .modal-header {
   padding: 2px 16px;
   background-color: #9775aa;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body .modal .modal-content .modal-header .close {
+body > .modal > .modal-content > .modal-header > .close {
   font-size: 3em;
   font-weight: bold;
 }
-body .modal .modal-content .modal-header .close:hover,
-body .modal .modal-content .modal-header .close:focus {
+body > .modal > .modal-content > .modal-header > .close:hover, body > .modal > .modal-content > .modal-header > .close:focus {
   color: #aa9739;
   text-decoration: none;
   cursor: pointer;
 }
-body .modal .modal-content .modal-body {
-  padding: 2px 16px;
+body > .modal > .modal-content > .modal-body {
+  padding: 25px 16px;
   color: #000;
+  font-size: 1.2em;
 }
-body .modal .modal-content .modal-body .image-container {
+body > .modal > .modal-content > .modal-body i, body > .modal > .modal-content > .modal-body a {
+  color: #806d15;
+}
+body > .modal > .modal-content > .modal-body > .image-container > iframe {
+  height: 150px;
+}
+body > .modal > .modal-content > .modal-body > .video-container, body > .modal > .modal-content > .modal-body > .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
 }
-body .modal .modal-content .modal-body .image-container img {
+body > .modal > .modal-content > .modal-body > .video-container img,
+body > .modal > .modal-content > .modal-body > .video-container iframe, body > .modal > .modal-content > .modal-body > .image-container img,
+body > .modal > .modal-content > .modal-body > .image-container iframe {
   width: 90%;
 }
-body .modal .modal-content .modal-body .image-container i {
+body > .modal > .modal-content > .modal-body > .video-container i, body > .modal > .modal-content > .modal-body > .image-container i {
   margin-top: 5px;
 }
-body .modal .modal-content .modal-footer {
+body > .modal > .modal-content > .modal-footer {
   padding: 2px 16px;
   background-color: #9775aa;
 }
-body .modal .modal-content .modal-footer.hidden {
+body > .modal > .modal-content > .modal-footer.hidden {
   display: none;
 }
 @-webkit-keyframes animatetop {
@@ -426,6 +434,11 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
     margin-bottom: 10px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .modal > .modal-content > .modal-body > .video-container > iframe {
+    height: 300px;
+  }
+}
 @media only screen and (min-width: 1082px) {
   .profile-panel {
     flex-direction: column;
@@ -440,6 +453,11 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
   .experiences, .experiences.hidden {
     padding-top: 20px;
     padding-left: 50px;
+  }
+}
+@media only screen and (min-width: 1082px) {
+  .modal > .modal-content > .modal-body > .video-container > iframe {
+    height: 450px;
   }
 }
 @media only screen and (min-width: 1082px) {
@@ -502,6 +520,11 @@ section .skills.hidden, section .experiences.hidden, section .portfolio-cards.hi
   .experiences .experience.right::before, .experiences.hidden .experience.right::before {
     left: auto;
     right: -50px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal > .modal-content > .modal-body > .video-container > iframe {
+    height: 600px;
   }
 }
 /* --- Importing styles --- */

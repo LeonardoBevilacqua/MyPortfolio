@@ -5,26 +5,27 @@ body {
 		overflow: hidden;
 	}
 
-	.modal {
+	& > .modal {
 		&.hidden {
 			display: none;
 		}
 		position: fixed;
 		z-index: 2;
-		padding: 100px 0;
 		top: 0;
 		left: 0;
 		width: 100%;
+		height: 100%;
 		overflow: auto;
 		background-color: global.$primary-5;
 		background-color: transparentize(global.$primary-5, .4);
-	
-		.modal-content {
-			$modal-padding: 2px 16px;
-	
+
+		& > .modal-content {
+			$modal-padding-y: 2px;
+			$modal-padding-x: 16px;
+
 			position: relative;
 			background-color: #efefef;
-			margin: auto;
+			margin: 100px auto;
 			border: 1px solid global.$tertiary-4;
 			width: 80%;
 			box-shadow: 2px 3px 4px rgba(38, 3, 57, 0.25);
@@ -33,55 +34,68 @@ body {
 			animation-name: animatetop;
 			animation-duration: 0.4s;
 			color: global.$tertiary-1;
-	
-			.modal-header {
-				padding: $modal-padding;
+
+			& > .modal-header {
+				padding: $modal-padding-y $modal-padding-x;
 				background-color: global.$primary-1;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-	
-				.close {
+
+				& > .close {
 					font-size: 3em;
 					font-weight: bold;
-				}
-	
-				.close:hover,
-				.close:focus {
-					color: global.$tertiary-3;
-					text-decoration: none;
-					cursor: pointer;
+
+					&:hover,
+					&:focus {
+						color: global.$tertiary-3;
+						text-decoration: none;
+						cursor: pointer;
+					}
 				}
 			}
-	
-			.modal-body {
-				padding: $modal-padding;
+
+			& > .modal-body {
+				padding: 25px $modal-padding-x;
 				color: #000;
-	
-				.image-container {
+				font-size: 1.2em;
+
+				i, a {
+					color: global.$tertiary-4
+				}
+
+				& > .image-container > iframe {
+					height: 150px;
+				}
+
+				& > .video-container,
+				& > .image-container {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
 					margin-top: 10px;
-					img {
+
+					img,
+					iframe {
 						width: 90%;
 					}
+
 					i {
 						margin-top: 5px;
 					}
 				}
 			}
-	
-			.modal-footer {
-				padding: $modal-padding;
+
+			& > .modal-footer {
+				padding: $modal-padding-y $modal-padding-x;
 				background-color: global.$primary-1;
-	
+
 				&.hidden {
 					display: none;
 				}
 			}
 		}
-	
+
 		/* Add Animation */
 		@-webkit-keyframes animatetop {
 			from {
@@ -93,7 +107,7 @@ body {
 				opacity: 1;
 			}
 		}
-	
+
 		@keyframes animatetop {
 			from {
 				top: -300px;

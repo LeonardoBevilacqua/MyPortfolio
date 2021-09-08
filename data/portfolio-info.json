@@ -30,6 +30,7 @@
         "name": "Java 2D Engine | Game development",
         "content": [
             { "text": "Projeto criado para entender o funcionamento básico de uma engine, renderizando em 2D com suporte a multi jogador. A engine possui elementos baseados nas playlists do youtube de <a href=\"https://www.youtube.com/playlist?list=PL8CAB66181A502179\"><i>Ryan van Zeben</i></a>, e <a href=\"https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ\"><i>CodeNMore</i></a>." },
+            { "text": "Uma <a href=\"https://youtube.com/playlist?list=PL-OBuwg5uiFJSVfHHk-YSgj0VZdtk95FK\">playlist</a> foi criada criada para demonstrar o progresso do desenvolvimento." },
             { "video": "https://www.youtube.com/embed/rSEbEGXkw3E", "description": "Teste com multi jogador" },
             { "video": "https://www.youtube.com/embed/rDvPbmYpiJ4", "description": "Teste com interação com cenário" },
             { "video": "https://www.youtube.com/embed/0USSEYA7gwI", "description": "Alteração da arte" }
