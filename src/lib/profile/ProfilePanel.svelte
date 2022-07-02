@@ -12,14 +12,14 @@
 	};
 </script>
 
-<div class="bg-purple-800 text-white">
+<div class="bg-purple-800 text-white sm:flex sm:flex-row lg:block">
 	<img
-		class="h-2/5 w-full object-cover object-top"
+		class="h-2/5 w-full sm:h-auto sm:w-1/3 md:w-full object-cover object-top"
 		src="imgs/profile-picture.jpeg"
 		alt="Leonardo Almeida Bevilacqua profile face"
 	/>
 
-	<div class="p-3 flex flex-col gap-5">
+	<div class="p-3 flex flex-col gap-5 sm:m-auto md:my-auto md:mx-0 md:w-full">
 		<div class="text-center text-yellow-100">
 			<h1 class="uppercase text-2xl font-semibold">Leonardo Almeida Bevilacqua</h1>
 			<h2 class="text-xl font-semibold">Análista de Software</h2>
