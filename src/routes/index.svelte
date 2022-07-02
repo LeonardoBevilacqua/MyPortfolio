@@ -1,2 +1,15 @@
-<h1 class="text-3xl font-bold underline">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import PortfolioSection from '$lib/PortfolioSection.svelte';
+	import ProfilePanel from '$lib/profile/ProfilePanel.svelte';
+	import SkillSection from '$lib/SkillSection.svelte';
+	import ExperienceSection from '$lib/ExperienceSection.svelte';
+</script>
+
+<main class="grid grid-cols-1 md:grid-cols-3 h-screen font-Oswald">
+	<ProfilePanel />
+	<div class="grid grid-rows-3 col-span-2 bg-gray-200 dark:bg-gray-500">
+		<SkillSection />
+		<ExperienceSection />
+		<PortfolioSection />
+	</div>
+</main>
