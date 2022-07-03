@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Section from '$lib/global/Section.svelte';
 </script>
 
-<section class="">experience section</section>
+<Section title="experiências" />
