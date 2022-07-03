@@ -51,7 +51,7 @@
 </script>
 
 <Section title="experiências">
-	<div class="py-3">
+	<div class="pt-3">
 		{#each experiences as experience, index (index)}
 			<div class="grid grid-cols-3">
 				<div class="{isOdd(index + 1) ? 'order-1' : 'order-3'}"><ExperienceCard {experience} /></div>
