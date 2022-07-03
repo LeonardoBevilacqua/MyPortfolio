@@ -12,7 +12,7 @@
 	};
 </script>
 
-<div class="bg-slate-300 dark:bg-slate-900 text-black dark:text-white sm:flex sm:flex-row lg:block">
+<div class="bg-light-30 dark:bg-dark-30 text-light-default dark:text-dark-default sm:flex sm:flex-row lg:block">
 	<img
 		class="h-2/5 w-full sm:h-auto sm:w-1/3 md:w-full object-cover object-top"
 		src="imgs/profile-picture.jpeg"
@@ -20,7 +20,7 @@
 	/>
 
 	<div class="p-3 flex flex-col gap-5 sm:m-auto md:my-auto md:mx-0 md:w-full">
-		<div class="text-center text-black dark:text-white">
+		<div class="text-center text-light-10 dark:text-dark-10">
 			<h1 class="uppercase text-2xl font-semibold">Leonardo Almeida Bevilacqua</h1>
 			<h2 class="text-xl font-semibold">Análista de Software</h2>
 		</div>
@@ -42,14 +42,14 @@
 			<!-- GitHub -->
 			<InfoLabel label="GitHub">
 				<a target="_blank" rel="noreferrer" href="https://github.com/LeonardoBevilacqua">
-					<Fa class="inline-block text-black dark:text-white" icon={faGithubSquare} />
+					<Fa class="inline-block text-light-10 dark:text-dark-10" icon={faGithubSquare} />
 					<span>LeonardoBevilacqua</span>
 				</a>
 			</InfoLabel>
 			<!-- LinkedIn -->
 			<InfoLabel label="LinkedIn">
 				<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/leonardoabevilacqua/">
-					<Fa class="inline-block text-black dark:text-white" icon={faLinkedin} />
+					<Fa class="inline-block text-light-10 dark:text-dark-10" icon={faLinkedin} />
 					<span>leonardoABevilacqua</span>
 				</a>
 			</InfoLabel>

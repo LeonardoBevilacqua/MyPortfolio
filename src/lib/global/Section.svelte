@@ -4,7 +4,7 @@
 
 <section class="flex flex-col">
 	<h2
-		class="text-black dark:text-white uppercase font-semibold text-2xl tracking-wide border-b-2 border-black dark:border-white"
+		class="text-light-10 dark:text-dark-10 uppercase font-semibold text-2xl tracking-wide border-b-2 border-light-10 dark:border-dark-10"
 	>
 		{title}
 	</h2>

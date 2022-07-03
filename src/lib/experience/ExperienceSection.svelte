@@ -64,7 +64,7 @@
 						? 'after:h-1/2'
 						: 'after:h-full'}"
 				>
-					<div class="bg-slate-300 dark:bg-slate-900 h-12 w-12 rounded-full m-auto z-10 shadow-md" />
+					<div class="bg-light-30 dark:bg-dark-30 h-12 w-12 rounded-full m-auto z-10 shadow-md" />
 				</div>
 			</div>
 		{/each}
@@ -74,16 +74,16 @@
 <style>
 	.lines {
 		@apply before:absolute
-		before:bg-slate-300
-		before:dark:bg-slate-900
+		before:bg-light-30
+		before:dark:bg-dark-30
 		before:h-1
 		before:w-1/2
 		before:top-1/2
 		before:right-0
 		before:-translate-y-0.5
 		after:absolute
-		after:bg-slate-300
-		after:dark:bg-slate-900
+		after:bg-light-30
+		after:dark:bg-dark-30
 		after:w-1
 		after:left-1/2
 		after:-translate-x-0.5;
