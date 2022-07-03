@@ -14,7 +14,7 @@
 
 <div class="bg-purple-800 text-white sm:flex sm:flex-row lg:block">
 	<img
-		class="h-2/5 w-full sm:h-auto sm:w-1/3 md:w-full object-cover object-top"
+		class="h-2/5 w-full sm:h-auto sm:w-1/3 md:w-full lg:h-2/6 object-cover object-top"
 		src="imgs/profile-picture.jpeg"
 		alt="Leonardo Almeida Bevilacqua profile face"
 	/>
