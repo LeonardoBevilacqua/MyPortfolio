@@ -51,12 +51,12 @@
 </script>
 
 <Section title="experiências">
-	<div class="pt-3">
+	<div class="pt-3 grid xl:block gap-3">
 		{#each experiences as experience, index (index)}
-			<div class="grid grid-cols-3">
+			<div class="grid grid-cols-1 xl:grid-cols-3">
 				<div class="{isOdd(index + 1) ? 'order-1' : 'order-3'}"><ExperienceCard {experience} /></div>
 				<div
-					class="order-2 flex relative lines {isOdd(index + 1)
+					class="hidden xl:flex order-2 relative lines {isOdd(index + 1)
 						? 'before:left-0'
 						: 'col-end-3'} {index === 0
 						? 'after:h-1/2 after:top-1/2'
