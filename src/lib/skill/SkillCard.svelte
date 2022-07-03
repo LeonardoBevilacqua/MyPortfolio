@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="bg-purple-800 dark:bg-yellow-100 rounded-3xl text-center shadow-lg text-white dark:text-black p-3 grid grid-rows-1"
+	class="bg-slate-300 dark:bg-slate-900 rounded-3xl text-center shadow-lg text-black dark:text-white p-3 grid grid-rows-1"
 >
 	<img
 		class="h-36 w-3/4 m-auto object-contain"
