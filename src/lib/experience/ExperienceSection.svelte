@@ -13,7 +13,6 @@
 				'Recebi a premiação de aluno ouro no 2.º semestre. Premiação que ocorre a cada semestre para parabenizar o aluno que se destacou durante o semestre. Recebi a premiação de aluno destaque ao fim do curso. Premiação dada para que se mantém com notas altas e se dedicam ao máximo.'
 			]
 		},
-
 		{
 			title: 'Centro Universitário UniMetrocamp Wyden',
 			subtitle: 'Graduação',
@@ -23,7 +22,6 @@
 				'Formação em ciências da computação, aprendizado sobre programação avançada, conhecimento aprofundado em sistemas operacionais e arquitetura de software.'
 			]
 		},
-
 		{
 			title: 'Visio Tecnologia',
 			subtitle: 'Estágio e efetivação',
@@ -34,7 +32,6 @@
 				'Comecei como estagiário até maio de 2018, sendo efetivado após esse período.'
 			]
 		},
-
 		{
 			title: 'Instituto de Pesquisas Eldorado',
 			subtitle: 'Estágio e efetivação',
@@ -44,7 +41,16 @@
 				'Trabalhando com tecnologias atuais no mercado, como angular, spring boot e postgresql, focando em devops.',
 				'Comecei como estagiário em abril de 2019, sendo efetivado como analista de software júnior em janeiro de 2020.'
 			]
-		}
+		},
+        {
+			title: 'Centro Universitário UniMetrocamp Wyden',
+			subtitle: 'Pós-graduação',
+			start: 2021,
+			end: null,
+			descriptions: [
+				'Formação em engenharia de software, aprendizado sobre práticas seguras, arquitetura de projetos e plataformas em nuvem.'
+			]
+		},
 	];
 
 	const isOdd = (value: number) => !!(value % 2);
@@ -54,7 +60,7 @@
 	<div class="pt-3 grid xl:block gap-3">
 		{#each experiences as experience, index (index)}
 			<div class="grid grid-cols-1 xl:grid-cols-3">
-				<div class="{isOdd(index + 1) ? 'order-1' : 'order-3'}"><ExperienceCard {experience} /></div>
+				<div class={isOdd(index + 1) ? 'order-1' : 'order-3'}><ExperienceCard {experience} /></div>
 				<div
 					class="hidden xl:flex order-2 relative lines {isOdd(index + 1)
 						? 'before:left-0'
