@@ -56,7 +56,7 @@
 	const isOdd = (value: number) => !!(value % 2);
 </script>
 
-<Section title="experiências">
+<Section title="experiências" id="experience">
 	<div class="pt-3 grid xl:block gap-3">
 		{#each experiences as experience, index (index)}
 			<div class="grid grid-cols-1 xl:grid-cols-3">

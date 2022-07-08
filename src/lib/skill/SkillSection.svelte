@@ -10,7 +10,7 @@ import SkillCard from './SkillCard.svelte';
 	];
 </script>
 
-<Section title="Competências">
+<Section title="Competências" id="skill">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 m-auto mt-3 w-full">
         {#each skills as skill, index (index)}
             <SkillCard {skill} />

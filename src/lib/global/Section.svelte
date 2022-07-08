@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let title: string;
+    export let id: string;
 </script>
 
-<section class="flex flex-col">
+<section class="flex flex-col" {id}>
 	<h2
 		class="text-light-10 dark:text-dark-10 uppercase font-semibold text-2xl tracking-wide border-b-2 border-light-10 dark:border-dark-10"
 	>
