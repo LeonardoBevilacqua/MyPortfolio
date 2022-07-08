@@ -1,14 +1,13 @@
 <script lang="ts">
-	import ProjectCard from './ProjectCard.svelte';
-
 	import Section from '$lib/global/Section.svelte';
+	import ProjectCard from './ProjectCard.svelte';
 
 	const projects = [
 		{
 			id: 'maze-bank',
 			cardTitle: 'Maze-Bank clone',
 			cardDescription: 'Clone do site Maze-Bank do jogo GTA V',
-            cardSrc:"imgs/portfolio/maze-bank/maze-bank-02.png",
+			cardSrc: 'imgs/portfolio/maze-bank/maze-bank-02.png',
 			name: 'Replica do site Maze-Bank | GTA V',
 			content: [
 				{
@@ -28,7 +27,7 @@
 			id: 'lista-interativa',
 			cardTitle: 'Lista interativa',
 			cardDescription: 'Mini projeto CSS',
-            cardSrc:"imgs/portfolio/lista-interativa/lista-interativa.png",
+			cardSrc: 'imgs/portfolio/lista-interativa/lista-interativa.png',
 			name: 'Lista interativa | Mini projeto CSS',
 			content: [
 				{
@@ -44,7 +43,7 @@
 			id: 'choose-your-game',
 			cardTitle: 'Choose Your Game',
 			cardDescription: 'Uma rede social para gamers',
-            cardSrc:"imgs/portfolio/choose-your-game/choose_your_game_02.PNG",
+			cardSrc: 'imgs/portfolio/choose-your-game/choose_your_game_02.PNG',
 			name: 'Choose Your Game | Uma rede social para gamers',
 			content: [
 				{ text: 'Projeto do 5º semestre de CCO, com foco de criar uma aplicação web.' },
@@ -65,7 +64,7 @@
 			id: 'java-engine',
 			cardTitle: 'Java 2D Engine',
 			cardDescription: 'Estudo sobre desenvolvimento de jogos',
-            cardSrc:"imgs/portfolio/java-engine/java-engine.png",
+			cardSrc: 'imgs/portfolio/java-engine/java-engine.png',
 			name: 'Java 2D Engine | Game development',
 			content: [
 				{
@@ -89,7 +88,7 @@
 			id: 'blood-clicker',
 			cardTitle: 'Blood-clicker',
 			cardDescription: 'Jogo educativo sobre doação de sangue',
-            cardSrc:"imgs/portfolio/blood-clicker/blood-clicker.png",
+			cardSrc: 'imgs/portfolio/blood-clicker/blood-clicker.png',
 			name: 'Blood-clicker | Jogo educativo',
 			content: [
 				{
@@ -105,7 +104,7 @@
 			id: '3jobs',
 			cardTitle: '3Jobs',
 			cardDescription: 'Trabalho de conclusão de curso',
-            cardSrc:"imgs/portfolio/3jobs/3jobs-01.png",
+			cardSrc: 'imgs/portfolio/3jobs/3jobs-01.png',
 			name: '3Jobs | Trabalho de conclusão de curso',
 			content: [
 				{
@@ -126,7 +125,7 @@
 			id: 'prop-hunt',
 			cardTitle: 'Prop Hunt 2D',
 			cardDescription: 'Jogo multiplayer',
-            cardSrc:"imgs/portfolio/prop-hunt/prop-hunt.png",
+			cardSrc: 'imgs/portfolio/prop-hunt/prop-hunt.png',
 			name: 'Prop Hunt 2D | Jogo multiplayer',
 			content: [
 				{
