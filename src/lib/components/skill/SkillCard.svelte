@@ -7,7 +7,7 @@
 >
 	<img
 		class="h-36 xl:h-64 w-3/4 m-auto object-contain"
-		src={skill.src}
+		src={"http://localhost:3000/" + skill.src}
 		alt={skill.title}
 		title={skill.title}
 	/>
