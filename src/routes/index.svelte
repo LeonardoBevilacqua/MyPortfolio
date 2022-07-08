@@ -1,8 +1,8 @@
 <script lang="ts">
-	import PortfolioSection from '$lib/portfolio/PortfolioSection.svelte';
-	import ProfilePanel from '$lib/profile/ProfilePanel.svelte';
-	import SkillSection from '$lib/skill/SkillSection.svelte';
-	import ExperienceSection from '$lib/experience/ExperienceSection.svelte';
+	import PortfolioSection from '$lib/components/portfolio/PortfolioSection.svelte';
+	import ProfilePanel from '$lib/components/profile/ProfilePanel.svelte';
+	import SkillSection from '$lib/components/skill/SkillSection.svelte';
+	import ExperienceSection from '$lib/components/experience/ExperienceSection.svelte';
 </script>
 
 <main class="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-6 h-screen font-Oswald">

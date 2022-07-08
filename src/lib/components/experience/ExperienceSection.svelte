@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Section from '$lib/global/Section.svelte';
+	import Section from '$lib/components/global/Section.svelte';
 	import ExperienceCard from './ExperienceCard.svelte';
 
 	const experiences = [
