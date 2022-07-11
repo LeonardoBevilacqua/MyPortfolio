@@ -6,7 +6,6 @@
 	const id = $page.params.id;
 
 	let project = $ProjectStore.find((project) => project.id === id);
-	console.log(project, id);
 </script>
 
 <div
@@ -15,15 +14,27 @@
 >
 	{#if project}
 		<!-- header -->
-		<h3>{project.name}</h3>
-        <a href="/#portfolio">Return</a>
+		<h2>{project.name}</h2>
+		<a href="/#portfolio">Return</a>
 		<!-- body -->
 		{#each project.content as content, index (index)}
 			{#if content.text}
 				<p>{@html content.text}</p>
 			{:else if content.image}
-            <img src={"http://localhost:3000/" + content.image} alt={content.description}>
-            {/if}
+				<img src={'http://localhost:3000/' + content.image} alt={content.description} />
+			{:else if content.video}
+				<iframe
+					src={content.video}
+					alt={content.description}
+					title={content.description}
+					frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				/>
+			{/if}
+			{#if content.description}
+				<i>{content.description}</i>
+			{/if}
 		{/each}
 	{/if}
 </div>
