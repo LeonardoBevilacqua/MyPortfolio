@@ -15,6 +15,6 @@
 	<div class="m-3">
 		<h3 class="font-bold text-lg text-light-10 dark:text-dark-10">{project.cardTitle}</h3>
 		<h4>{project.cardDescription}</h4>
-		<a href="project/{project.id}">Test</a>
+		<a class="bg-light-60 dark:bg-dark-60" href="project/{project.id}">Ver mais sobre</a>
 	</div>
 </div>
