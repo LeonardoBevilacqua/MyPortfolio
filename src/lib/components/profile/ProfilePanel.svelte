@@ -12,9 +12,9 @@
 	};
 </script>
 
-<div class="bg-light-30 dark:bg-dark-30 text-light-default dark:text-dark-default sm:h-screen lg:h-auto sm:flex sm:flex-row lg:block">
+<div class="bg-light-30 dark:bg-dark-30 text-light-default dark:text-dark-default lg:h-auto flex flex-col sm:flex-row lg:block">
 	<img
-		class="h-2/5 w-full sm:h-auto sm:w-1/3 md:w-full object-cover object-top"
+		class="hidden w-full sm:block sm:h-auto sm:w-1/3 md:w-full object-cover object-top"
 		src="http://localhost:3000/imgs/profile-picture.jpeg"
 		alt="Leonardo Almeida Bevilacqua profile face"
 	/>
