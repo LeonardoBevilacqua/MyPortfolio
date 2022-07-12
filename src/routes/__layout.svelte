@@ -1,4 +1,6 @@
 <script>
+	import Nav from '$lib/components/global/Nav.svelte';
+
 	import ProfilePanel from '$lib/components/profile/ProfilePanel.svelte';
 	import '../app.css';
 </script>
@@ -8,6 +10,7 @@
 >
 	<ProfilePanel />
 	<div class="col-span-2 2xl:col-span-5 p-3" id="main">
+		<Nav />
 		<slot />
 	</div>
 </main>

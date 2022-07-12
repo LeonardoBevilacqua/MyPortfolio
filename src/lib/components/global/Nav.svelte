@@ -1,9 +1,19 @@
 <script>
+	import { page } from '$app/stores';
 </script>
 
-<nav class="col-span-2 2xl:col-span-5 p-3">
-		<a sveltekit:noscroll href="/#main">Competências</a>
-		<a sveltekit:noscroll href="/experience#main">Experiências</a>
-		<a sveltekit:noscroll href="/portfolio#main">Portfólio</a>
+<div class="flex">
+	<nav
+		class="mb-3 md:mb-0 p-5 bg-light-30 dark:bg-dark-30 inline-flex gap-5 m-auto justify-center rounded-3xl text-2xl"
+	>
+		<a sveltekit:noscroll class:hidden={$page.url.pathname === '/'} href="/#main">Competências</a>
+		<a
+			sveltekit:noscroll
+			class:hidden={$page.url.pathname === '/experience'}
+			href="/experience#main">Experiências</a
+		>
+		<a sveltekit:noscroll class:hidden={$page.url.pathname === '/portfolio'} href="/portfolio#main"
+			>Portfólio</a
+		>
 	</nav>
-
+</div>

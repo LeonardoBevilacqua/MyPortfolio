@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Nav from '$lib/components/global/Nav.svelte';
 	import { fade, fly } from 'svelte/transition';
 
 	export let title: string;
 </script>
 
 <section>
-	<Nav />
 	<h2
 		in:fly={{ delay: 150 }}
 		out:fade={{ duration: 150 }}
