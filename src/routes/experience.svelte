@@ -1,6 +1,6 @@
 <script lang="ts">
+	import ExperienceCard from '$lib/components/experience/ExperienceCard.svelte';
 	import Section from '$lib/components/global/Section.svelte';
-	import ExperienceCard from './ExperienceCard.svelte';
 
 	const experiences = [
 		{
@@ -42,7 +42,7 @@
 				'Comecei como estagiário em abril de 2019, sendo efetivado como analista de software júnior em janeiro de 2020.'
 			]
 		},
-        {
+		{
 			title: 'Centro Universitário UniMetrocamp Wyden',
 			subtitle: 'Pós-graduação',
 			start: 2021,
@@ -50,13 +50,13 @@
 			descriptions: [
 				'Formação em engenharia de software, aprendizado sobre práticas seguras, arquitetura de projetos e plataformas em nuvem.'
 			]
-		},
+		}
 	];
 
 	const isOdd = (value: number) => !!(value % 2);
 </script>
 
-<Section title="experiências" id="experience">
+<Section title="experiências">
 	<div class="pt-3 grid xl:block gap-3">
 		{#each experiences as experience, index (index)}
 			<div class="grid grid-cols-1 xl:grid-cols-3">

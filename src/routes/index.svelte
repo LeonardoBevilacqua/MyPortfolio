@@ -1,15 +1,19 @@
 <script lang="ts">
-	import ExperienceSection from '$lib/components/experience/ExperienceSection.svelte';
-	import PortfolioSection from '$lib/components/portfolio/PortfolioSection.svelte';
-	import SkillSection from '$lib/components/skill/SkillSection.svelte';
-	import { fly } from 'svelte/transition';
+	import Section from '$lib/components/global/Section.svelte';
+	import SkillCard from '$lib/components/skill/SkillCard.svelte';
+
+	const skills = [
+		{ title: 'Spring Framework', src: 'imgs/skills/spring-framework.png' },
+		{ title: 'Angular', src: 'imgs/skills/angular.png' },
+		{ title: 'PostgreSql', src: 'imgs/skills/postgresql.png' },
+		{ title: 'Amazon Web Services', src: 'imgs/skills/aws.png' }
+	];
 </script>
 
-<div
-	transition:fly={{ x: 200 }}
-	class="flex flex-col gap-3 col-span-2 2xl:col-span-5 bg-light-60 dark:bg-dark-60 p-3"
->
-	<SkillSection />
-	<ExperienceSection />
-	<PortfolioSection />
-</div>
+<Section title="Competências">
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-3 m-auto mt-3 w-full">
+		{#each skills as skill, index (index)}
+			<SkillCard {skill} />
+		{/each}
+	</div>
+</Section>

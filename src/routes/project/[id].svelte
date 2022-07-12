@@ -1,20 +1,16 @@
 <script lang="ts">
-	import { ProjectStore } from '$lib/store/Project.store';
-	import { fly } from 'svelte/transition';
 	import { page } from '$app/stores';
+	import Section from '$lib/components/global/Section.svelte';
+	import { ProjectStore } from '$lib/store/Project.store';
 
 	const id = $page.params.id;
 
 	let project = $ProjectStore.find((project) => project.id === id);
 </script>
 
-<div
-	transition:fly={{ x: 200 }}
-	class="col-span-2 2xl:col-span-5 bg-light-60 dark:bg-dark-60 text-dark-60 dark:text-light-60 p-3"
->
-	{#if project}
+{#if project}
+	<Section title={project.name}>
 		<!-- header -->
-		<h2>{project.name}</h2>
 		<a href="/#portfolio">Return</a>
 		<!-- body -->
 		{#each project.content as content, index (index)}
@@ -36,5 +32,5 @@
 				<i>{content.description}</i>
 			{/if}
 		{/each}
-	{/if}
-</div>
+	</Section>
+{/if}
