@@ -10,27 +10,43 @@
 
 {#if project}
 	<Section title={project.name}>
-		<!-- header -->
-		<a href="/#portfolio">Return</a>
-		<!-- body -->
-		{#each project.content as content, index (index)}
-			{#if content.text}
-				<p>{@html content.text}</p>
-			{:else if content.image}
-				<img src={'http://localhost:3000/' + content.image} alt={content.description} />
-			{:else if content.video}
-				<iframe
-					src={content.video}
-					alt={content.description}
-					title={content.description}
-					frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-			{/if}
-			{#if content.description}
-				<i>{content.description}</i>
-			{/if}
-		{/each}
+		<div class="pt-3 project">
+			{#each project.content as content, index (index)}
+				{#if content.text}
+					<p class="text-lg leading-7 mb-3">{@html content.text}</p>
+				{:else if content.image}
+					<img
+						class="mb-3 rounded-md"
+						src={'http://localhost:3000/' + content.image}
+						alt={content.description}
+					/>
+				{:else if content.video}
+					<iframe
+						class="mb-3 w-full h-96 rounded-md"
+						src={content.video}
+						alt={content.description}
+						title={content.description}
+						frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				{/if}
+				{#if content.description}
+					<i class="mb-3 text-center block">{content.description}</i>
+				{/if}
+			{/each}
+		</div>
 	</Section>
 {/if}
+
+<style global>
+	.project > p > i,
+    .project > p > a,
+    .project > p > b {
+		@apply text-light-10 dark:text-dark-10
+	}
+
+    .project > p > b {
+        @apply font-bold
+    }
+</style>
