@@ -12,12 +12,8 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
-			fallback: null
-		}),
+		prerender: { default: true },
+		adapter: adapter(),
 		vite: {
 			ssr: {
 				noExternal: ['@fortawesome/free-brands-svg-icons']

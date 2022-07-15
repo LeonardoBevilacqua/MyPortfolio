@@ -1,6 +1,6 @@
 - [x] Rever importação de icones
-- [ ] Rever css nao sendo carregado rapidamente
-- [ ] Rever imagem nao carregada a tempo (loading ?)
+- [x] Rever css nao sendo carregado rapidamente
+- [x] Rever imagem nao carregada a tempo (loading ?)
 - [x] Rever fonte não sendo importada (referenciar url pai)
 - [x] Rever importação de itens da pasta `static`
 - [ ] Botão para alterar light/dark mode

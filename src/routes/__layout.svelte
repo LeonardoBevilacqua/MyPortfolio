@@ -1,10 +1,18 @@
 <script>
+	import LoadingPanel from '$lib/components/global/LoadingPanel.svelte';
 	import Nav from '$lib/components/global/Nav.svelte';
-
 	import ProfilePanel from '$lib/components/profile/ProfilePanel.svelte';
+	import { onMount } from 'svelte';
 	import '../app.css';
+
+	let loading = true;
+
+	onMount(() => (loading = false));
 </script>
 
+{#if loading}
+	<LoadingPanel />
+{/if}
 <main
 	class="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-6 min-h-screen font-Oswald bg-light-60 dark:bg-dark-60 text-dark-60 dark:text-light-60"
 >
