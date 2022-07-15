@@ -1,7 +1,7 @@
-- [ ] Rever importação de icones
+- [x] Rever importação de icones
 - [ ] Rever css nao sendo carregado rapidamente
 - [ ] Rever imagem nao carregada a tempo (loading ?)
-- [ ] Rever fonte não sendo importada (referenciar url pai)
-- [ ] Rever importação de itens da pasta `static`
+- [x] Rever fonte não sendo importada (referenciar url pai)
+- [x] Rever importação de itens da pasta `static`
 - [ ] Botão para alterar light/dark mode
 - [ ] Botão download de curriculo

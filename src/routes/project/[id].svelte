@@ -17,7 +17,7 @@
 				{:else if content.image}
 					<img
 						class="mb-3 rounded-md"
-						src={'http://localhost:3000/' + content.image}
+						src={content.image}
 						alt={content.description}
 					/>
 				{:else if content.video}

@@ -3,10 +3,10 @@
 	import SkillCard from '$lib/components/skill/SkillCard.svelte';
 
 	const skills = [
-		{ title: 'Spring Framework', src: 'imgs/skills/spring-framework.png' },
-		{ title: 'Angular', src: 'imgs/skills/angular.png' },
-		{ title: 'PostgreSql', src: 'imgs/skills/postgresql.png' },
-		{ title: 'Amazon Web Services', src: 'imgs/skills/aws.png' }
+		{ title: 'Spring Framework', src: '/imgs/skills/spring-framework.png' },
+		{ title: 'Angular', src: '/imgs/skills/angular.png' },
+		{ title: 'PostgreSql', src: '/imgs/skills/postgresql.png' },
+		{ title: 'Amazon Web Services', src: '/imgs/skills/aws.png' }
 	];
 </script>
 

@@ -17,7 +17,12 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null
-		})
+		}),
+		vite: {
+			ssr: {
+				noExternal: ['@fortawesome/free-brands-svg-icons']
+			}
+		}
 	}
 };
 

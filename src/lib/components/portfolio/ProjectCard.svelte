@@ -9,7 +9,7 @@
 >
 	<img
 		class="h-52 w-full object-cover rounded-t-3xl"
-		src={'http://localhost:3000/' + project.cardSrc}
+		src={project.cardSrc}
 		alt={project.cardTitle}
 	/>
 	<div class="m-3">
