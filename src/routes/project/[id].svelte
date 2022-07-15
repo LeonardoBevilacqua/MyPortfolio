@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+    import { base } from '$app/paths';
 	import Section from '$lib/components/global/Section.svelte';
 	import { ProjectStore } from '$lib/store/Project.store';
 
@@ -17,7 +18,7 @@
 				{:else if content.image}
 					<img
 						class="mb-3 rounded-md"
-						src={content.image}
+						src={base + content.image}
 						alt={content.description}
 					/>
 				{:else if content.video}

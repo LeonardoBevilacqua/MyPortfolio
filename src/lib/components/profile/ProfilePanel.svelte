@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
 	import InfoLabel from './InfoLabel.svelte';
 	import Fa from 'svelte-fa';
 	import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +16,7 @@
 <div class="bg-light-30 dark:bg-dark-30 text-light-default dark:text-dark-default lg:h-auto flex flex-col sm:flex-row lg:block">
 	<img
 		class="hidden w-full sm:block sm:h-auto sm:w-1/3 md:w-full object-cover object-top"
-		src="/imgs/profile-picture.jpeg"
+		src="{base}/imgs/profile-picture.jpeg"
 		alt="Leonardo Almeida Bevilacqua profile face"
 	/>
 

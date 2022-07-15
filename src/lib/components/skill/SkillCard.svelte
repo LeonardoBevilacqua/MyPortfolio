@@ -1,4 +1,5 @@
 <script type="ts">
+    import { base } from '$app/paths';
 	import type { SkillType } from '$lib/store/Skill.store';
 
 	export let skill: SkillType;
@@ -9,7 +10,7 @@
 >
 	<img
 		class="h-36 xl:h-64 w-3/4 m-auto object-contain"
-		src={skill.src}
+		src={base + skill.src}
 		alt={skill.title}
 		title={skill.title}
 	/>
