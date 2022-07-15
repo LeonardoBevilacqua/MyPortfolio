@@ -21,8 +21,8 @@
 
 	<div class="p-3 flex flex-col gap-5 sm:m-auto md:my-auto md:mx-0 md:w-full">
 		<div class="text-center text-light-10 dark:text-dark-10">
-			<h1 class="uppercase text-2xl font-semibold">Leonardo Almeida Bevilacqua</h1>
-			<h2 class="text-xl font-semibold">Análista de Software</h2>
+			<h1 class="uppercase text-2xl md:text-3xl font-semibold">Leonardo Almeida Bevilacqua</h1>
+			<h2 class="text-xl md:text-2xl font-semibold">Análista de Software</h2>
 		</div>
 
 		<!-- personal info -->
