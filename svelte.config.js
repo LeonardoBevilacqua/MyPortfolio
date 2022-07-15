@@ -24,7 +24,6 @@ const config = {
         paths: {
             base: dev ? '' : '/MyPortfolio'
         },
-        appDir: 'internal'
 	}
 };
 
