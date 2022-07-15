@@ -13,16 +13,16 @@
 		<div class="pt-3 project">
 			{#each project.content as content, index (index)}
 				{#if content.text}
-					<p class="text-lg leading-7 mb-3">{@html content.text}</p>
+					<p class="text-lg leading-7 mb-3 mx-auto">{@html content.text}</p>
 				{:else if content.image}
 					<img
-						class="mb-3 rounded-md"
+						class="mb-3 rounded-md mx-auto"
 						src={content.image}
 						alt={content.description}
 					/>
 				{:else if content.video}
 					<iframe
-						class="mb-3 w-full h-96 rounded-md"
+						class="mb-3 w-full lg:w-9/12 h-96 rounded-md mx-auto"
 						src={content.video}
 						alt={content.description}
 						title={content.description}
@@ -32,7 +32,7 @@
 					/>
 				{/if}
 				{#if content.description}
-					<i class="mb-3 text-center block">{content.description}</i>
+					<i class="mb-3 text-center block mx-auto">{content.description}</i>
 				{/if}
 			{/each}
 		</div>
