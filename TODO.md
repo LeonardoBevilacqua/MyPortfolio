@@ -5,4 +5,5 @@
 - [x] Rever importação de itens da pasta `static`
 - [ ] Botão para alterar light/dark mode
 - [ ] Botão download de curriculo
+- [x] Competências faltando
 - [x] Transferir dados para stores
