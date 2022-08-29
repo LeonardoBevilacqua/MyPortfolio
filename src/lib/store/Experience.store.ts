@@ -52,7 +52,7 @@ export const ExperienceStore = writable<ExperienceType[]>([
         title: 'Centro Universitário UniMetrocamp Wyden',
         subtitle: 'Pós-graduação',
         start: 2021,
-        end: null,
+        end: 2022,
         descriptions: [
             'Formação em engenharia de software, aprendizado sobre práticas seguras, arquitetura de projetos e plataformas em nuvem.'
         ]
