@@ -1,2 +1,0 @@
-- [ ] Botão download de curriculo
-- [ ] Criar footer
