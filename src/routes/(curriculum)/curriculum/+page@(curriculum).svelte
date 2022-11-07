@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Heading from '$lib/components/global/Heading.svelte';
+	import { test } from '$lib/pdfmake';
 	import { ExperienceStore } from '$lib/store/Experience.store';
 	import { SkillStore } from '$lib/store/Skill.store';
+	import { onMount } from 'svelte';
+
+    onMount(() => test())
 </script>
 
 <div class="col-span-2 p-5 flex flex-col gap-5 text-lg">
