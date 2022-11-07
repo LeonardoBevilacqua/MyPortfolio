@@ -4,7 +4,7 @@
 	import { SkillStore } from '$lib/store/Skill.store';
 </script>
 
-<div class="col-span-2 p-3 grid gap-3">
+<div class="col-span-2 p-5 flex flex-col gap-5 text-lg">
 	<section>
 		<Heading>Leonardo Almeida Bevilacqua</Heading>
 		<Heading h2>Analista de Software Pleno na Instituto de Pesquisas Eldorado</Heading>
@@ -51,7 +51,7 @@
 	</section>
 </div>
 
-<div class="order-first bg-sky-900 text-white p-3">
+<div class="order-first bg-sky-900 text-white p-5 flex flex-col gap-5 text-lg">
 	<section>
 		<Heading h3>Contato</Heading>
 		<ul>
@@ -74,8 +74,8 @@
 	<section>
 		<Heading h3>Languages</Heading>
 		<ul>
-			<li>Português (Native or Bilingual)</li>
-			<li>Inglês (Full Professional)</li>
+			<li>Português (Nativo)</li>
+			<li>Inglês (Professional)</li>
 		</ul>
 	</section>
 </div>

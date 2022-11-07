@@ -1,7 +1,7 @@
 <script>
 	import LoadingPanel from '$lib/components/global/LoadingPanel.svelte';
 	import { onMount } from 'svelte';
-	import '../app.css';
+	import '../../app.css';
 
 	let loading = true;
 
