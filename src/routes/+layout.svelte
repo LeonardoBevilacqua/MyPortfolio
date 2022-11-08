@@ -4,7 +4,7 @@
 	import Nav from '$lib/components/global/Nav.svelte';
 	import ProfilePanel from '$lib/components/profile/ProfilePanel.svelte';
 	import { onMount } from 'svelte';
-	import '../../app.css';
+	import '../app.css';
 
 	let loading = true;
 
