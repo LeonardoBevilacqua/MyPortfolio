@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+    import { generateCurriculum } from "$lib/curriculum";
 </script>
 
 <div class="flex">
@@ -15,5 +16,6 @@
 		<a sveltekit:noscroll sveltekit:prefetch class:hidden={$page.url.pathname === '/portfolio'} href="/portfolio#main"
 			>Portfólio</a
 		>
+        <button on:click={generateCurriculum}>Currículo</button>
 	</nav>
 </div>

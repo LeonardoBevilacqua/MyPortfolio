@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-
+// TODO add type {job, academic}
 export type ExperienceType = {
 	title: string;
 	subtitle: string;
@@ -43,7 +43,7 @@ export const ExperienceStore = writable<ExperienceType[]>([
         subtitle: 'Estágio e efetivação',
         start: 2019,
         end: null,
-        descriptions: [
+        descriptions: [ // TODO update
             'Trabalhando com tecnologias atuais no mercado, como angular, spring boot e postgresql, focando em devops.',
             'Comecei como estagiário em abril de 2019, sendo efetivado como analista de software júnior em janeiro de 2020.'
         ]
