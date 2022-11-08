@@ -1,11 +1,12 @@
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import type { TDocumentDefinitions } from 'pdfmake/interfaces';
 import { ExperienceStore } from '$lib/store/Experience.store';
 import { SkillStore } from '$lib/store/Skill.store';
 
 export const generateCurriculum = () => {
-	pdfMake.vfs = pdfFonts.pdfMake.vfs;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
 	let experiences: { text: string }[] = [];
 	ExperienceStore.subscribe((value) => {
