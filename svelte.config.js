@@ -10,15 +10,8 @@ const config = {
 			postcss: true
 		})
 	],
-
 	kit: {
-		prerender: { default: true },
 		adapter: adapter(),
-		vite: {
-			ssr: {
-				noExternal: ['@fortawesome/free-brands-svg-icons']
-			}
-		}
 	}
 };
 
