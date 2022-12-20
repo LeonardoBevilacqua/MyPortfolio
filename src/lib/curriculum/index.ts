@@ -8,11 +8,41 @@ export const generateCurriculum = () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
-	let experiences: { text: string }[] = [];
+	type experienceType = { text: { text: string; bold?: boolean; fontSize?: number }[] }[];
+
+	let experiences: experienceType = [];
 	ExperienceStore.subscribe((value) => {
-		experiences = value.map((experience) => {
-			return { text: `${experience.title}\n` };
-		});
+		experiences = value
+			.filter((experience) => experience.type === 'professional')
+			.map((experience) => {
+				return {
+					text: [
+						{ text: experience.subtitle, bold: true },
+						{ text: ` - ${experience.title}` },
+						{
+							text: ` (${experience.start} - ${experience.end ? experience.end : 'atualmente'})\n`,
+							fontSize: 10
+						}
+					]
+				};
+			});
+	});
+	let academicExperiences: experienceType = [];
+	ExperienceStore.subscribe((value) => {
+		academicExperiences = value
+			.filter((experience) => experience.type === 'academic')
+			.map((experience) => {
+				return {
+					text: [
+						{ text: experience.subtitle, bold: true },
+						{ text: ` - ${experience.title}` },
+						{
+							text: ` (${experience.start} - ${experience.end ? experience.end : 'atualmente'})\n`,
+							fontSize: 10
+						}
+					]
+				};
+			});
 	});
 
 	let skills: { text: string }[] = [];
@@ -33,7 +63,7 @@ export const generateCurriculum = () => {
 							{ text: '(19)99582-8664 (Mobile)\n' },
 							{ text: 'leonardo_bevilacqua@hotmail.com\n' },
 							{ text: '\nwww.linkedin.com/in/leonardoabevilacqua (LinkedIn)\n' },
-							{ text: 'leonardobevilacqua.com.br (Portfolio)\n' },
+							{ text: '\nleonardobevilacqua.com.br (Portfolio)\n' },
 							{ text: '\nPrincipais competências\n', style: 'sectionTitle' },
 							...skills,
 							{ text: '\nIdiomas\n', style: 'sectionTitle' },
@@ -55,16 +85,16 @@ export const generateCurriculum = () => {
 								text: 'Formado em técnico em informática, na Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini e Ciências da computação, na faculdade DeVry Metrocamp.\n'
 							},
 							{
-								text: 'Trabalhei como estagiário e funcionário na Empresa VISIO TECNOLOGIA, trabalhando com a linguagem de programação 4GL e os bancos de dados Oracle, Informix e SQLServer.\n'
+								text: '\nTrabalhei como estagiário e funcionário na Empresa VISIO TECNOLOGIA, trabalhando com a linguagem de programação 4GL e os bancos de dados Oracle, Informix e SQLServer.\n'
 							},
 							{
-								text: 'Atuei como estagiário, no Instituto Eldorado Campinas, e atualmente como analista de software.\n'
+								text: '\nAtuei como estagiário, no Instituto Eldorado Campinas, e atualmente como analista de software.\n'
 							},
-							{ text: 'Pós graduado em engenharia de software.\n' },
+							{ text: '\nPós graduado em engenharia de software.\n' },
 							{ text: '\nExperiência\n', style: 'sectionTitle' },
 							...experiences,
 							{ text: '\nFormação acadêmica\n', style: 'sectionTitle' },
-							...experiences
+							...academicExperiences
 						]
 					}
 				]
@@ -72,21 +102,20 @@ export const generateCurriculum = () => {
 		],
 		styles: {
 			header: {
-				fontSize: 18,
+				fontSize: 20,
 				bold: true
 			},
 			subheader: {
-				fontSize: 15,
-				bold: true
+				fontSize: 16,
 			},
-            sectionTitle: {
-                fontSize: 14,
-                bold: true
-            }
+			sectionTitle: {
+				fontSize: 14,
+				bold: true
+			}
 		},
 		defaultStyle: {
 			columnGap: 10,
-            lineHeight: 1.2
+			lineHeight: 1.3
 		}
 	};
 
