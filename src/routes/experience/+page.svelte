@@ -1,8 +1,7 @@
 <script lang="ts">
 	import ExperienceCard from '$lib/components/experience/ExperienceCard.svelte';
 	import Section from '$lib/components/global/Section.svelte';
-	// import { ExperienceStore } from '$lib/store/Experience.store';
-	import Experiences from '$lib/data/Experiences.json';
+	import Experiences from '$lib/data/pt/Experiences.json';
 
 	const isOdd = (value: number) => !!(value % 2);
 </script>

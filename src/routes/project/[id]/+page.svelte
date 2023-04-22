@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import Section from '$lib/components/global/Section.svelte';
 	import type { ProjectType } from '$lib/data/Project.type';
-	import Projects from '$lib/data/Projects.json';
+	import Projects from '$lib/data/pt/Projects.json';
 
 	const id = $page.params.id;
 

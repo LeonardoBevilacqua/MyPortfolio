@@ -4,5 +4,5 @@ export type ExperienceType = {
 	start: number;
 	end: number | null;
 	descriptions: string[];
-	type: 'academic' | 'professional';
+	type: string;
 };
