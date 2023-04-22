@@ -1,5 +1,5 @@
-<script type="ts">
-	import type { SkillType } from '$lib/store/Skill.store';
+<script lang="ts">
+	import type { SkillType } from "$lib/store/Skill.store";
 
 	export let skill: SkillType;
 </script>

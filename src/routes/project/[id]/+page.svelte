@@ -24,7 +24,6 @@
 					<iframe
 						class="mb-3 w-full lg:w-9/12 h-96 rounded-md mx-auto"
 						src={content.video}
-						alt={content.description}
 						title={content.description}
 						frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
