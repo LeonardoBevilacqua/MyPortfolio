@@ -1,14 +1,15 @@
 <script lang="ts">
 	import ExperienceCard from '$lib/components/experience/ExperienceCard.svelte';
 	import Section from '$lib/components/global/Section.svelte';
-    import { ExperienceStore } from '$lib/store/Experience.store';
+	// import { ExperienceStore } from '$lib/store/Experience.store';
+	import Experiences from '$lib/data/Experiences.json';
 
 	const isOdd = (value: number) => !!(value % 2);
 </script>
 
 <Section title="experiências">
 	<div class="pt-3 grid xl:block gap-3">
-		{#each $ExperienceStore as experience, index (index)}
+		{#each Experiences as experience, index (index)}
 			<div class="grid grid-cols-1 xl:grid-cols-3">
 				<div class={isOdd(index + 1) ? 'order-1' : 'order-3'}><ExperienceCard {experience} /></div>
 				<div
@@ -16,7 +17,7 @@
 						? 'before:left-0'
 						: 'col-end-3'} {index === 0
 						? 'after:h-1/2 after:top-1/2'
-						: index + 1 === $ExperienceStore.length
+						: index + 1 === Experiences.length
 						? 'after:h-1/2'
 						: 'after:h-full'}"
 				>

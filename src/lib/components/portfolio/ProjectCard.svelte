@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ProjectType } from '$lib/store/Project.store';
+	import type { ProjectType } from '$lib/data/Project.type';
 
 	export let project: ProjectType;
 </script>

@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Section from '$lib/components/global/Section.svelte';
-	import { ProjectStore } from '$lib/store/Project.store';
+	import type { ProjectType } from '$lib/data/Project.type';
+	import Projects from '$lib/data/Projects.json';
 
 	const id = $page.params.id;
 
-	let project = $ProjectStore.find((project) => project.id === id);
+	let project: ProjectType | undefined = Projects.find((project : ProjectType) => project.id === id);
 </script>
 
 {#if project}

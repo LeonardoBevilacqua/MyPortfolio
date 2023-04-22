@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ExperienceType } from '$lib/store/Experience.store';
+	import type { ExperienceType } from '$lib/data/Experience.type';
 
 	export let experience: ExperienceType;
 </script>

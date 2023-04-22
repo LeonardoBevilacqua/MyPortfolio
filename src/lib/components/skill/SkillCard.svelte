@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SkillType } from "$lib/store/Skill.store";
+	import type { SkillType } from '$lib/data/Skill.type';
 
 	export let skill: SkillType;
 </script>
