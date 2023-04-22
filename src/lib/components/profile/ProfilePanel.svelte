@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 	import InfoLabel from './InfoLabel.svelte';
 	import Fa from 'svelte-fa';
 	import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 	import InfoPanel from './InfoPanel.svelte';
+	import { t, locale } from '$lib/i18n/Translation';
 
 	const getCurrentAge = () => {
 		var diffMs = Date.now() - new Date('1997/10/01').getTime();
@@ -22,23 +23,28 @@
 	<div class="p-3 flex flex-col gap-5 sm:m-auto md:my-auto md:mx-0 md:w-full">
 		<div class="text-center text-light-10 dark:text-dark-10">
 			<h1 class="uppercase text-2xl md:text-3xl font-semibold">Leonardo Almeida Bevilacqua</h1>
-			<h2 class="text-xl md:text-2xl font-semibold">Análista de Software</h2>
+			<h2 class="text-xl md:text-2xl font-semibold">{$t('profile.jobRole')}</h2>
 		</div>
 
 		<!-- personal info -->
-		<InfoPanel title="Informações pessoais">
+		<InfoPanel title={$t('profile.personalInfo')}>
 			<!-- birth date -->
-			<InfoLabel label="Nascimento">01/10/1997 ({getCurrentAge()} anos)</InfoLabel>
+			<InfoLabel label={$t('profile.birth')}>01/10/1997 ({getCurrentAge()} {$t('profile.years')})</InfoLabel>
 			<!-- location -->
-			<InfoLabel label="Localidade">Campinas, SP</InfoLabel>
+			<InfoLabel label={$t('profile.location')}>Campinas, SP</InfoLabel>
 		</InfoPanel>
 
 		<!-- contact info -->
-		<InfoPanel title="Contato">
+		<InfoPanel title={$t('profile.contact')}>
 			<!-- Email -->
 			<InfoLabel label="E-mail">leonardo_bevilacqua@hotmail.com</InfoLabel>
 			<!-- Cellphone -->
-			<InfoLabel label="Celular">(19) 99582-8664</InfoLabel>
+			<InfoLabel label={$t('profile.cellphone')}>
+				{#if $locale === 'en'}
+				+55
+				{/if}
+				(19) 99582-8664
+			</InfoLabel>
 			<!-- GitHub -->
 			<InfoLabel label="GitHub">
 				<a target="_blank" rel="noreferrer" href="https://github.com/LeonardoBevilacqua">

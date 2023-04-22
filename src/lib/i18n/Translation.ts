@@ -22,6 +22,16 @@ const config: Config = {
 			locale: 'en',
 			key: 'experience',
 			loader: async () => (await import('$lib/data/en/Experiences.json')).default
+		},
+		{
+			locale: 'pt',
+			key: 'profile',
+			loader: async () => (await import('$lib/data/pt/Profile.json')).default
+		},
+		{
+			locale: 'en',
+			key: 'profile',
+			loader: async () => (await import('$lib/data/en/Profile.json')).default
 		}
 	]
 };
