@@ -5,9 +5,7 @@
 	import { t } from '$lib/i18n/Translation';
 </script>
 
-{$t('interface.test')}
-
-<Section title="Competências">
+<Section title={$t('interface.skillTitle')}>
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-3 m-auto mt-3 w-full">
 		{#each Skills as skill, index (index)}
 			<SkillCard {skill} />
