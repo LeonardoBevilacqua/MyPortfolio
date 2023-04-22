@@ -5,10 +5,18 @@
 	import ProfilePanel from '$lib/components/profile/ProfilePanel.svelte';
 	import { onMount } from 'svelte';
 	import '../app.css';
+	import { page } from '$app/stores';
+	import { loadTranslations, locale, defaultLocale } from '$lib/i18n/Translation';
 
+	const { pathname } = $page.url;
 	let loading = true;
 
-	onMount(() => (loading = false));
+	onMount(async () => {
+		let initLocale = locale.get() || defaultLocale;
+		await loadTranslations(initLocale, pathname);
+		document.documentElement.setAttribute("lang", initLocale);
+		loading = false;
+	});
 </script>
 
 {#if loading}
