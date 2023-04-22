@@ -1,8 +1,7 @@
 export type ExperienceType = {
-	title: string;
-	subtitle: string;
+	id: string;
 	start: number;
 	end: number | null;
-	descriptions: string[];
+	descriptionLength: number;
 	type: string;
 };

@@ -12,6 +12,16 @@ const config: Config = {
 			locale: 'en',
 			key: 'interface',
 			loader: async () => (await import('$lib/data/en/Interface.json')).default
+		},
+		{
+			locale: 'pt',
+			key: 'experience',
+			loader: async () => (await import('$lib/data/pt/Experiences.json')).default
+		},
+		{
+			locale: 'en',
+			key: 'experience',
+			loader: async () => (await import('$lib/data/en/Experiences.json')).default
 		}
 	]
 };

@@ -1,12 +1,13 @@
 <script lang="ts">
 	import ExperienceCard from '$lib/components/experience/ExperienceCard.svelte';
 	import Section from '$lib/components/global/Section.svelte';
-	import Experiences from '$lib/data/pt/Experiences.json';
+	import Experiences from '$lib/data/Experiences.json';
+	import { t } from '$lib/i18n/Translation';
 
 	const isOdd = (value: number) => !!(value % 2);
 </script>
 
-<Section title="experiências">
+<Section title={$t('interface.experience')}>
 	<div class="pt-3 grid xl:block gap-3">
 		{#each Experiences as experience, index (index)}
 			<div class="grid grid-cols-1 xl:grid-cols-3">

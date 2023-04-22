@@ -1,0 +1,37 @@
+[
+	{
+		"id": "senai",
+		"start": 2015,
+		"end": 2016,
+		"descriptionLength": 2,
+		"type": "academic"
+	},
+	{
+		"id": "unimetrocampGraduation",
+		"start": 2016,
+		"end": 2020,
+		"descriptionLength": 1,
+		"type": "academic"
+	},
+	{
+		"id": "visio",
+		"start": 2017,
+		"end": 2019,
+		"descriptionLength": 2,
+		"type": "professional"
+	},
+	{
+		"id": "eldorado",
+		"start": 2019,
+		"end": null,
+		"descriptionLength": 3,
+		"type": "professional"
+	},
+	{
+		"id": "unimetrocampPostGraduation",
+		"start": 2021,
+		"end": 2022,
+		"descriptionLength": 1,
+		"type": "academic"
+	}
+]
