@@ -16,5 +16,9 @@
 			>Portfólio</a
 		>
         <!-- <button on:click={generateCurriculum}>Currículo</button> -->
+		<select class="bg-transparent">
+			<option value="">Português (Brasil)</option>
+			<option value="">English</option>
+		</select>
 	</nav>
 </div>
