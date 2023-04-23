@@ -25,6 +25,16 @@ const config: Config = {
 		},
 		{
 			locale: 'pt',
+			key: 'project',
+			loader: async () => (await import('$lib/data/pt/Projects.json')).default
+		},
+		{
+			locale: 'en',
+			key: 'project',
+			loader: async () => (await import('$lib/data/en/Projects.json')).default
+		},
+		{
+			locale: 'pt',
 			key: 'profile',
 			loader: async () => (await import('$lib/data/pt/Profile.json')).default
 		},

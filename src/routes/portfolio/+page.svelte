@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Section from '$lib/components/global/Section.svelte';
 	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
-	import Projects from '$lib/data/pt/Projects.json';
+	import Projects from '$lib/data/Projects.json';
 </script>
 
 <Section title="Portfólio">
