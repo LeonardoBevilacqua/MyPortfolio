@@ -1,0 +1,1 @@
+const e="Competências",o="Experiências",t="Portfólio",r="Atualmente",s="Desenvolvido por",l="Ver mais sobre",n={skillTitle:e,experience:o,portfolio:t,currently:r,developedBy:s,seeMore:l};export{r as currently,n as default,s as developedBy,o as experience,t as portfolio,l as seeMore,e as skillTitle};

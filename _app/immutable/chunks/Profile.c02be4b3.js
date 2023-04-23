@@ -1,0 +1,1 @@
+const o="Software Analyst",n="Personal information",t="Birth",c="years old",e="Location",a="Contact",l="Cell phone",s={jobRole:o,personalInfo:n,birth:t,years:c,location:e,contact:a,cellphone:l};export{t as birth,l as cellphone,a as contact,s as default,o as jobRole,e as location,n as personalInfo,c as years};
