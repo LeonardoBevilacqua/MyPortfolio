@@ -18,5 +18,5 @@
 		<h4>{$t(`project.${project.id}.cardDescription`)}</h4>
 	</div>
     <a class="mb-3 p-3 mt-auto self-center rounded-lg shadow-lg bg-light-60 dark:bg-dark-60 hover:bg-light-10 hover:dark:bg-dark-10 text-black dark:text-white transition-colors duration-200" href="project/{project.id}"
-        >Ver mais sobre</a>
+        >{$t('interface.seeMore')}</a>
 </div>
