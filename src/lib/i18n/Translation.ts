@@ -1,7 +1,11 @@
 import type { Config } from 'sveltekit-i18n';
 import i18n from 'sveltekit-i18n';
 
+export const defaultLocale = 'pt';
+
 const config: Config = {
+	initLocale: defaultLocale,
+	fallbackLocale: defaultLocale,
 	loaders: [
 		{
 			locale: 'pt',
@@ -45,7 +49,5 @@ const config: Config = {
 		}
 	]
 };
-
-export const defaultLocale = 'pt';
 
 export const { t, locale, locales, loading, loadTranslations } = new i18n(config);
