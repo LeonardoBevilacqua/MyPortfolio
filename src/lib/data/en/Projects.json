@@ -1,0 +1,64 @@
+{
+    "maze-bank": {
+        "cardTitle": "Maze-Bank clone",
+        "cardDescription": "Clone of the Maze-Bank website from the game GTA V",
+        "name": "Maze-Bank website replica | GTA V",
+        "paragraph-0": "Project created to practice creating <i>web pages</i> using html and css pre-processor, using scss. The page is a replica of a website within the game <i>grand theft auto V</i>, being a bank page where the player has the possibility to check his balance, withdraw and deposit money within the game . The project is available for browsing at this link: <a href=\"https://leonardobevilacqua.github.io/Maze-Bank\">https: //leonardobevilacqua.github.io/Maze-Bank</a>.",
+        "paragraph-1": "Maze bank | main page",
+        "paragraph-2": "Maze bank | transaction history"
+    },
+    "lista-interativa": {
+        "cardTitle": "Interactive list",
+        "cardDescription": "Mini css project",
+        "name": "Interactive list | Mini css project",
+        "paragraph-0": "This small project is about a list of items, in which there is the possibility to edit and delete in an easy and minimalist way, using only icons, and to add items without refreshing the current page. The project is available for browsing at this link: <a href=\"https://leonardobevilacqua.github.io/Lista-interativa/index.html\">https://leonardobevilacqua.github.io/Lista-interativa/index.html</a>",
+        "paragraph-1": "Interactive list"
+    },
+    "choose-your-game": {
+        "cardTitle": "Choose Your Game",
+        "cardDescription": "A social network for gamers",
+        "name": "Choose Your Game | A social network for gamers",
+        "paragraph-0": "CCO's 5th semester project, focusing on creating a web application.",
+        "paragraph-1": "The project is a social network focused on games, aimed at discussing the subject, analyzes and others. All planning was carried out on how the site would work using the \"Trello\" tool, right after the entire front-end was created, available for viewing and interaction at the following link: <a href=\"https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages\">https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages</a>, being able to click on \"ENTER\" and browse the pages. Soon after, the development process was started, using <i>.net core</i>.",
+        "paragraph-2": "Choose your game | main page",
+        "paragraph-3": "Choose your game | profile page"
+    },
+    "java-engine": {
+        "cardTitle": "Java 2D Engine",
+        "cardDescription": "Game development study",
+        "name": "Java 2D Engine | Game development",
+        "paragraph-0": "Project created to understand the basic operation of an engine, rendering in 2D with multiplayer support. The engine has elements based on the youtube playlists of <a href=\"https://www.youtube.com/playlist?list=PL8CAB66181A502179\"><i>Ryan van Zeben</i></a>, and <a href=\"https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ\"><i>CodeNMore</i></a>.",
+        "paragraph-1": "A <a href=\"https://youtube.com/playlist?list=PL-OBuwg5uiFJSVfHHk-YSgj0VZdtk95FK\">playlist</a> has been created to demonstrate development progress.",
+        "paragraph-2": "test with multiplayer",
+        "paragraph-3": "Test with scenario interaction",
+        "paragraph-4": "Artwork alteration"
+    },
+    "blood-clicker": {
+        "cardTitle": "Blood-clicker",
+        "cardDescription": "Educational game about blood donation",
+        "name": "Blood-clicker | Educational game",
+        "paragraph-0": "In 2019, the <b>\"social responsibility show\"</b> took place at UniMetrocamp College, in which we were encouraged to create a game to raise awareness about blood donation. My game was inspired by the game <i>\"cookie clicker\"</i>, in which your goal is to collect points and buy upgrades. In the game, with each purchased improvement, a message is displayed giving information about blood donation. The game was created using the <i>Godot Engine</i> and is available at the link: <a href=\"https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html\">https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html</a>.",
+        "paragraph-1": "blood clicker game"
+    },
+    "3jobs": {
+        "cardTitle": "3Jobs",
+        "cardDescription": "Completion of course work",
+        "name": "3Jobs | Completion of course work",
+        "paragraph-0": "3Jobs is a project with the intention of being a facilitator for candidates and job openings. Allowing headhunters to easily find, evaluate and indicate, to the Human Resources (HR) Department, the candidates that best suit the given vacancy.",
+        "paragraph-1": "The project was organized using Kanban, in which I was responsible for managing the tasks of the other members of the group and also for creating the frontend of the system.",
+        "paragraph-2": "3Jobs | home page",
+        "paragraph-3": "3Jobs | main page after login",
+        "paragraph-4": "3Jobs | profile page"
+    },
+    "prop-hunt": {
+        "cardTitle": "Prop Hunt 2D",
+        "cardDescription": "Multiplayer game",
+        "name": "Prop Hunt 2D | Multiplayer game",
+        "paragraph-0": "In early 2020 I started a study and creation of a simple 2D game, using the <i>Godot engine</i>",
+        "paragraph-1": "The project was focused on allowing the learning of the <i>engine</i> and the understanding of the basic functioning of multiplayer games, with the recording of each evolution obtained during development. The project was completed at the end of 2020.",
+        "paragraph-2": "The game works in a simple way, two teams, where one must hide and the other must seek.",
+        "paragraph-3": "Start of the project",
+        "paragraph-4": "end of project",
+        "paragraph-5": "A <a href=\"https://youtube.com/playlist?list=PL-OBuwg5uiFIGYAxFF3GRB57KsoBDg6Hl\">playlist</a> was created with short videos of the project's evolution."
+    }
+}

@@ -1,3 +1,7 @@
+<script>
+	import { t } from '$lib/i18n/Translation';
+</script>
+
 <footer
 	class="bg-light-30 dark:bg-dark-30 text-light-default dark:text-dark-default rounded-3xl mt-auto body-font"
 >
@@ -11,7 +15,7 @@
 		<p
 			class="text-sm text-gray-300 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
 		>
-			© 2022 Desenvolvido por: Leonardo Bevilacqua —
+			© 2022 {$t('interface.developedBy')}: Leonardo Bevilacqua —
 			<a
 				href="https://kit.svelte.dev/"
 				class="text-gray-200 ml-1"
