@@ -13,8 +13,8 @@
 		"deploy": "node ./gh-pages.js"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^2.0.2",
-		"@sveltejs/kit": "^1.8.5",
+		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/kit": "^2.8.3",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
 		"autoprefixer": "^10.4.7",
