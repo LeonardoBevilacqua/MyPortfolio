@@ -1,4 +1,8 @@
-<div id="left-panel" class="panel">left panel</div>
+<script>
+    import LeftPanel from "./lib/templates/LeftPanel.svelte";
+</script>
+
+<LeftPanel />
 <nav id="right-panel-header" class="panel">right panel header</nav>
 <main id="right-panel-body" class="panel">
     <h1>right panel body</h1>
@@ -126,11 +130,6 @@
         grid-template-rows: auto 1fr auto;
         max-width: 1440px;
         margin: auto auto;
-    }
-
-    #left-panel {
-        grid-area: leftPanel;
-        background-color: green;
     }
 
     #right-panel-header {
