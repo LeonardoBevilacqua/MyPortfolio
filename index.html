@@ -5,11 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vite-project</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+    </style>
   </head>
-  <body class="bg-red-500 h-screen">
+  <body class="bg-light-body dark:bg-dark-body h-screen font-display">
     <div
       id="app"
-      class="bg-red-500 h-screen grid gap-2 max-w-[1440px] m-auto grid-cols-[1fr_2fr] grid-rows-[auto_1fr_auto] py-2 px-[clamp(5rem,8vw,10rem)]"
+      class="h-screen grid gap-2 max-w-[1440px] m-auto grid-cols-[5fr_7fr] grid-rows-[auto_1fr_auto] py-4 px-[clamp(5rem,8vw,10rem)]"
       style="
         grid-template-areas: &quot;leftPanel rightPanelHeader&quot; &quot;leftPanel rightPanelBody&quot; &quot;leftPanel rightPanelFooter&quot;;
       "
