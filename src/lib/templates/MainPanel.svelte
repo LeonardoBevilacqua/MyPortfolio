@@ -18,7 +18,7 @@
     </section>
 {/snippet}
 <main
-    id="right-panel-body"
+    style="grid-area: rightPanelBody;"
     class="rounded-lg p-2 bg-yellow-300 border-[0.5rem] border-solid border-yellow-300 overflow-auto"
 >
     <h1>right panel body</h1>
@@ -26,9 +26,3 @@
         {@render section()}
     {/each}
 </main>
-
-<style>
-    #right-panel-body {
-        grid-area: rightPanelBody;
-    }
-</style>
