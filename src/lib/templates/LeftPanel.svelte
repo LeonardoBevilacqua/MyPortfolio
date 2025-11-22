@@ -59,45 +59,51 @@
 
 <div
     style="grid-area: leftPanel;"
-    class="rounded-lg p-2 bg-light-30 border-[0.5rem] border-solid dark:bg-dark-30 dark:border-dark-30 flex flex-col gap-5 overflow-auto"
+    class="rounded-lg p-2 bg-light-30 border-[0.5rem] border-solid dark:bg-dark-30 dark:border-dark-30 flex gap-5 @desktop:overflow-auto @desktop:flex-col"
 >
     <img
         src="images/profile-picture.jpeg"
         alt="Leonardo Bevilacqua"
-        class="rounded-2xl"
+        class="rounded-2xl w-1/2 @desktop:w-full @max-[720px]:hidden"
     />
-    <header class="text-center">
-        <h1
-            class="text-3xl font-semibold text-light-10 dark:text-dark-10 uppercase"
-        >
-            Leonardo Almeida Bevilacqua
-        </h1>
-        <h2 class="text-2xl font-semibold text-light-10 dark:text-dark-10">
-            Análista de Software
-        </h2>
+    <header
+        class="flex flex-col gap-5 grow justify-evenly @desktop:justify-start"
+    >
+        <div class="text-center">
+            <h1
+                class="text-3xl font-semibold text-light-10 dark:text-dark-10 uppercase"
+            >
+                Leonardo Almeida Bevilacqua
+            </h1>
+            <h2 class="text-2xl font-semibold text-light-10 dark:text-dark-10">
+                Análista de Software
+            </h2>
+        </div>
+        <div>
+            {@render informationLabel("Informações pessoais")}
+            {@render informationValues("Nascimento", "01/10/1997 (28 anos)")}
+            {@render informationValues("Localidade", "Campinas, SP")}
+        </div>
+
+        <div>
+            {@render informationLabel("Contato")}
+            {@render informationValues(
+                "E-mail",
+                "leonardo_bevilacqua@hotmail.com",
+            )}
+            {@render informationValues("Celular", "(19) 99582-8664")}
+            {@render informationValues(
+                "Github",
+                "LeonardoBevilacqua",
+                "github",
+                "https://github.com/LeonardoBevilacqua",
+            )}
+            {@render informationValues(
+                "LinkedIn",
+                "LeonardoABevilacqua",
+                "linkedin",
+                "https://www.linkedin.com/in/leonardoabevilacqua/",
+            )}
+        </div>
     </header>
-
-    <div>
-        {@render informationLabel("Informações pessoais")}
-        {@render informationValues("Nascimento", "01/10/1997 (28 anos)")}
-        {@render informationValues("Localidade", "Campinas, SP")}
-    </div>
-
-    <div>
-        {@render informationLabel("Contato")}
-        {@render informationValues("E-mail", "leonardo_bevilacqua@hotmail.com")}
-        {@render informationValues("Celular", "(19) 99582-8664")}
-        {@render informationValues(
-            "Github",
-            "LeonardoBevilacqua",
-            "github",
-            "https://github.com/LeonardoBevilacqua",
-        )}
-        {@render informationValues(
-            "LinkedIn",
-            "LeonardoABevilacqua",
-            "linkedin",
-            "https://www.linkedin.com/in/leonardoabevilacqua/",
-        )}
-    </div>
 </div>
