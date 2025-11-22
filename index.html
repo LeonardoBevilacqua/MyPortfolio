@@ -25,14 +25,15 @@
           grid-template-columns: 5fr 7fr;
           grid-template-rows: auto 1fr auto;
           padding-inline: clamp(5rem, 8vw, 10rem);
+          height: 100vh;
         }
       }
     </style>
   </head>
   <body
-    class="bg-light-body dark:bg-dark-body h-screen font-display @container"
+    class="bg-light-body dark:bg-dark-body font-display @container desktop:h-screen"
   >
-    <div id="app" class="h-screen grid gap-2 max-w-[1440px] m-auto p-4"></div>
+    <div id="app" class="grid gap-2 max-w-[1440px] m-auto p-4"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
