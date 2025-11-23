@@ -5,11 +5,10 @@
 	import MainPanel from '$lib/templates/MainPanel.svelte';
 	import Navbar from '$lib/templates/Navbar.svelte';
 
-	// let { children } = $props();
+	let { children } = $props();
 </script>
 
 <LeftPanel />
 <Navbar />
-<MainPanel />
+<MainPanel {children} />
 <Footer />
-<!-- {@render children()} -->
