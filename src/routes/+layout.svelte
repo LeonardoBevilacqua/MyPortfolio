@@ -10,5 +10,7 @@
 
 <LeftPanel />
 <Navbar />
-<MainPanel {children} />
+<MainPanel>
+	{@render children()}
+</MainPanel>
 <Footer />
