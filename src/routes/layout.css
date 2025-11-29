@@ -14,4 +14,6 @@
 	--color-dark-default: white;
 	--breakpoint-desktop: 1216px;
 	--container-desktop: 1216px;
+	--breakpoint-tablet: 736px;
+	--container-tablet: 736px;
 }
