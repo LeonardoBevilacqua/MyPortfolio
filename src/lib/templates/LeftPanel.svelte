@@ -61,7 +61,7 @@
 	class="rounded-lg p-2 bg-light-30 border-[0.5rem] border-solid dark:bg-dark-30 dark:border-dark-30 flex gap-5 @desktop:overflow-auto @desktop:flex-col"
 >
 	<img
-		src="images/profile-picture.jpeg"
+		src="/images/profile-picture.jpeg"
 		alt="Leonardo Bevilacqua"
 		class="rounded-2xl w-1/2 @desktop:w-full @max-[720px]:hidden"
 	/>
