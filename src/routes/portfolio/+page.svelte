@@ -34,6 +34,7 @@
 	];
 </script>
 
+<!-- TODO: add direction -->
 {#snippet projectCard({ title, subtitle, descriptions, link, imgLink }: Project)}
 	<!-- TODO: use grid instead of flex to avoid duplication -->
 	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex @desktop:flex-col">
