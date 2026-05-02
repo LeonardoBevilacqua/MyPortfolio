@@ -34,29 +34,27 @@
 	];
 </script>
 
-{#snippet projectCard({ title, subtitle, descriptions, link }: Project)}
-	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex flex-col">
-		<h3 class="text-dark-10 text-lg font-bold">{title}</h3>
-		<h4 class="font-medium mb-2">{subtitle}</h4>
-		{#each descriptions as description, index (index)}
-			<p>{description}</p>
-		{/each}
-		<a href={resolve(link)} class="bg-dark-30 rounded-lg p-3 inline-block m-auto">Ver mais sobre</a>
-	</section>
-{/snippet}
-
-{#snippet projectCard2({ title, subtitle, descriptions, link, imgLink }: Project)}
-	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex">
-		<div class="max-w-1/2 content-center">
+{#snippet projectCard({ title, subtitle, descriptions, link, imgLink }: Project)}
+	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex @desktop:flex-col">
+		<div class="max-w-1/2 content-center @desktop:hidden @max-[720px]:hidden">
 			<img src={imgLink} class="max-w-full h-auto rounded-lg" alt={title} />
 		</div>
-		<div class="flex flex-col max-w-1/2">
+		<div class="flex flex-col @max-desktop:max-w-1/2 @max-[720px]:max-w-full">
 			<h3 class="text-dark-10 text-lg font-bold">{title}</h3>
 			<h4 class="font-medium mb-2">{subtitle}</h4>
+
+			<img
+				src={imgLink}
+				class="max-w-full h-auto rounded-lg @max-desktop:hidden mb-2"
+				alt={title}
+			/>
+
 			{#each descriptions as description, index (index)}
 				<p>{description}</p>
 			{/each}
-			<a href={resolve(link)} class="bg-dark-30 rounded-lg p-3 inline-block m-auto"
+			<a
+				href={resolve(link)}
+				class="bg-dark-30 hover:bg-dark-10 transition-colors duration-300 rounded-lg p-3 inline-block m-auto mt-2"
 				>Ver mais sobre</a
 			>
 		</div>
@@ -67,6 +65,5 @@
 <article class="flex flex-col gap-4">
 	{#each projects as project, index (index)}
 		{@render projectCard(project)}
-		{@render projectCard2(project)}
 	{/each}
 </article>
