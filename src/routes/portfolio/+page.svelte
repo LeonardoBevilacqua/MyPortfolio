@@ -35,24 +35,24 @@
 </script>
 
 {#snippet projectCard({ title, subtitle, descriptions, link, imgLink }: Project, right: boolean)}
-	<!-- TODO: use grid instead of flex to avoid duplication -->
-	<section
-		class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex @desktop:flex-col {right &&
-			'flex-row-reverse'}"
-	>
-		<div class="max-w-1/2 content-center @desktop:hidden @max-[720px]:hidden">
+	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 grid @min-[720px]:grid-cols-2">
+		<div
+			class="content-center @max-[720px]:hidden @desktop:col-span-3 @desktop:row-start-2 {right &&
+				'col-start-2'} row-span-3"
+		>
 			<img src={imgLink} class="max-w-full h-auto rounded-lg" alt={title} />
 		</div>
-		<div class="flex flex-col @max-desktop:max-w-1/2 @max-[720px]:max-w-full">
+
+		<div class="@max-desktop:max-w-1/2 @max-[720px]:col-span-3 @desktop:col-span-3">
 			<h3 class="text-dark-10 text-lg font-bold">{title}</h3>
 			<h4 class="font-medium mb-2">{subtitle}</h4>
+		</div>
 
-			<img
-				src={imgLink}
-				class="max-w-full h-auto rounded-lg @max-desktop:hidden mb-2"
-				alt={title}
-			/>
-
+		<div
+			class="{right
+				? '@min-[720px]:col-start-1'
+				: '@min-[720px]:col-start-2'} @desktop:col-span-3 flex flex-col"
+		>
 			{#each descriptions as description, index (index)}
 				<p>{description}</p>
 			{/each}
