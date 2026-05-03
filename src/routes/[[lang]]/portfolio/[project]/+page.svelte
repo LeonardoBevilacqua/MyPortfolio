@@ -13,24 +13,23 @@
 	const project: ProjectDetails = projectDetailsData[langKey][params.project];
 </script>
 
-<!-- TODO: validate if styling is correct -->
 {#snippet textContent({ text }: ProjectContent)}
 	{#if text}
 		<!-- eslint-disable svelte/no-at-html-tags - disbled because I control the data -->
-		<p class="text-content text-lg leading-7 mb-3 mx-auto">{@html text}</p>
+		<p class="text-content text-lg leading-7 mb-2 mx-auto">{@html text}</p>
 	{/if}
 {/snippet}
 
 {#snippet imageContent({ image, description }: ProjectContent)}
 	{#if image}
-		<img class="mb-3 rounded-md mx-auto" src={image} alt={description} />
+		<img class="mb-2 rounded-md mx-auto" src={image} alt={description} />
 	{/if}
 {/snippet}
 
 {#snippet videoContent({ video, description }: ProjectContent)}
 	{#if video}
 		<iframe
-			class="mb-3 w-full lg:w-9/12 h-96 rounded-md mx-auto"
+			class="mb-2 w-full lg:w-9/12 h-96 rounded-md mx-auto"
 			src={video}
 			title={description}
 			frameborder="0"
@@ -42,7 +41,7 @@
 
 {#snippet descriptionContent({ description }: ProjectContent)}
 	{#if description}
-		<i class="mb-3 text-center block mx-auto">{description}</i>
+		<i class="mb-2 text-center block mx-auto">{description}</i>
 	{/if}
 {/snippet}
 
@@ -57,6 +56,6 @@
 
 <SectionHeader class="mb-4">{project.title}</SectionHeader>
 
-<article class="text-white">
+<article class="bg-dark-60 text-white p-2 rounded-lg">
 	{@render contentBody(project.content)}
 </article>
