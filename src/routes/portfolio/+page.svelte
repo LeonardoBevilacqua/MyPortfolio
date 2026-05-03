@@ -34,10 +34,12 @@
 	];
 </script>
 
-<!-- TODO: add direction -->
-{#snippet projectCard({ title, subtitle, descriptions, link, imgLink }: Project)}
+{#snippet projectCard({ title, subtitle, descriptions, link, imgLink }: Project, right: boolean)}
 	<!-- TODO: use grid instead of flex to avoid duplication -->
-	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex @desktop:flex-col">
+	<section
+		class="bg-dark-60 text-white rounded-lg p-2 gap-2 flex @desktop:flex-col {right &&
+			'flex-row-reverse'}"
+	>
 		<div class="max-w-1/2 content-center @desktop:hidden @max-[720px]:hidden">
 			<img src={imgLink} class="max-w-full h-auto rounded-lg" alt={title} />
 		</div>
@@ -66,6 +68,7 @@
 <SectionHeader class="mb-4">Portfólio</SectionHeader>
 <article class="flex flex-col gap-4">
 	{#each projects as project, index (index)}
-		{@render projectCard(project)}
+		{@const right = !(index % 2)}
+		{@render projectCard(project, right)}
 	{/each}
 </article>
