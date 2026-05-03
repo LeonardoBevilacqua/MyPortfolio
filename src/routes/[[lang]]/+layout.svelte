@@ -4,12 +4,14 @@
 	import LeftPanel from '$lib/templates/LeftPanel.svelte';
 	import MainPanel from '$lib/templates/MainPanel.svelte';
 	import Navbar from '$lib/templates/Navbar.svelte';
+	import type { LayoutProps } from './$types';
 
-	let { children } = $props();
+	let props: LayoutProps = $props();
+	let { children } = props;
 </script>
 
 <LeftPanel />
-<Navbar />
+<Navbar {...props} />
 <MainPanel>
 	{@render children()}
 </MainPanel>

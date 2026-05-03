@@ -2,6 +2,8 @@
 	import { resolve } from '$app/paths';
 	import SectionHeader from '$lib/atoms/SectionHeader.svelte';
 	import type { ProjectSummary } from '$lib/data/Project.type';
+	import { getLangRoute } from '$lib/lang/lang.utils';
+	import type { PageProps } from '../$types';
 
 	const projects: ProjectSummary[] = [
 		{
@@ -26,6 +28,9 @@
 			imgLink: '/images/portfolio/choose-your-game/choose_your_game_02.PNG'
 		}
 	];
+
+	let { params }: PageProps = $props();
+	let langRoute = getLangRoute(params.lang);
 </script>
 
 {#snippet projectCard(
@@ -54,7 +59,7 @@
 				<p>{description}</p>
 			{/each}
 			<a
-				href={resolve(link)}
+				href={resolve(langRoute + link)}
 				class="bg-dark-30 hover:bg-dark-10 transition-colors duration-300 rounded-lg p-3 inline-block m-auto mt-2"
 				>Ver mais sobre</a
 			>

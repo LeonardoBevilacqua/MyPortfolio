@@ -1,11 +1,16 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
+	import { getLangRoute, type Lang } from '$lib/lang/lang.utils';
+	import type { LayoutProps } from '../../routes/$types';
 
-	type Routes = '/' | '/experiences' | '/portfolio';
+	type Routes = '/' | `/en` | '/experiences' | '/en/experiences' | '/portfolio' | '/en/portfolio';
+
+	let { params }: LayoutProps = $props();
+	let lang: Lang = $state(getLangRoute(params.lang));
 
 	function isActive(route: Routes): boolean {
-		if (route === '/') return page.url.pathname === route;
+		if (route === '/' || route === '/en') return page.url.pathname === route;
 		return page.url.pathname.replace('/', '').includes(route.replace('/', ''));
 	}
 </script>
@@ -24,9 +29,9 @@
 	id="right-panel-header"
 	class="rounded-lg p-5 bg-dark-30 text-white flex gap-3 justify-center items-center flex-wrap"
 >
-	{@render link('/', 'Competências')}
-	{@render link('/experiences', 'Experiências')}
-	{@render link('/portfolio', 'Portfólio')}
+	{@render link(lang !== '' ? lang : '/', 'Competências')}
+	{@render link(`${lang}/experiences`, 'Experiências')}
+	{@render link(`${lang}/portfolio`, 'Portfólio')}
 </nav>
 
 <style>
