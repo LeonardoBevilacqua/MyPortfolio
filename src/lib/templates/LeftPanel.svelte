@@ -1,5 +1,21 @@
 <script lang="ts">
+	import { getLangKey, type LangKey } from '$lib/lang/lang.utils';
+	import { profile } from '$lib/lang/profile-data';
+	import type { LayoutProps } from '../../routes/$types';
+
 	type Icon = 'github' | 'linkedin';
+
+	let { params }: LayoutProps = $props();
+	const langKey: LangKey = $state(getLangKey(params.lang));
+	const { jobRole, personalInfo, birth, birthdate, years, location, contact, cellphone } =
+		profile[langKey];
+
+	const getCurrentAge = () => {
+		var diffMs = Date.now() - new Date('1997/10/01').getTime();
+		var ageDt = new Date(diffMs);
+
+		return Math.abs(ageDt.getUTCFullYear() - 1970);
+	};
 </script>
 
 {#snippet informationLabel(label: string)}
@@ -58,7 +74,7 @@
 
 <div
 	style="grid-area: leftPanel;"
-	class="rounded-lg p-2 bg-light-30 border-[0.5rem] border-solid dark:bg-dark-30 dark:border-dark-30 flex gap-5 @desktop:overflow-auto @desktop:flex-col"
+	class="rounded-lg p-2 bg-light-30 border-8 border-solid dark:bg-dark-30 dark:border-dark-30 flex gap-5 @desktop:overflow-auto @desktop:flex-col"
 >
 	<img
 		src="/images/profile-picture.jpeg"
@@ -70,18 +86,18 @@
 			<h1 class="text-3xl font-semibold text-light-10 dark:text-dark-10 uppercase">
 				Leonardo Almeida Bevilacqua
 			</h1>
-			<h2 class="text-2xl font-semibold text-light-10 dark:text-dark-10">Análista de Software</h2>
+			<h2 class="text-2xl font-semibold text-light-10 dark:text-dark-10">{jobRole}</h2>
 		</div>
 		<div>
-			{@render informationLabel('Informações pessoais')}
-			{@render informationValues('Nascimento', '01/10/1997 (28 anos)')}
-			{@render informationValues('Localidade', 'Campinas, SP')}
+			{@render informationLabel(personalInfo)}
+			{@render informationValues(birth, `${birthdate} (${getCurrentAge()} ${years})`)}
+			{@render informationValues(location, 'Campinas, SP')}
 		</div>
 
 		<div>
-			{@render informationLabel('Contato')}
+			{@render informationLabel(contact)}
 			{@render informationValues('E-mail', 'leonardo_bevilacqua@hotmail.com')}
-			{@render informationValues('Celular', '(19) 99582-8664')}
+			{@render informationValues(cellphone, '(19) 99582-8664')}
 			{@render informationValues(
 				'Github',
 				'LeonardoBevilacqua',

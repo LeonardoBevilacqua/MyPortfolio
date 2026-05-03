@@ -7,7 +7,7 @@
 	type Routes = '/' | `/en` | '/experiences' | '/en/experiences' | '/portfolio' | '/en/portfolio';
 
 	let { params }: LayoutProps = $props();
-	let lang: Lang = $state(getLangRoute(params.lang));
+	const lang: Lang = $state(getLangRoute(params.lang));
 
 	function isActive(route: Routes): boolean {
 		if (route === '/' || route === '/en') return page.url.pathname === route;

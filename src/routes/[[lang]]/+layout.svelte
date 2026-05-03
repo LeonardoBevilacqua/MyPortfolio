@@ -10,7 +10,7 @@
 	let { children } = props;
 </script>
 
-<LeftPanel />
+<LeftPanel {...props} />
 <Navbar {...props} />
 <MainPanel>
 	{@render children()}
