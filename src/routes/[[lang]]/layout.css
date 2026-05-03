@@ -17,3 +17,13 @@
 	--breakpoint-tablet: 736px;
 	--container-tablet: 736px;
 }
+
+p.text-content > i,
+p.text-content > a,
+p.text-content > b {
+	color: var(--color-amber-600);
+}
+
+p.text-content > b {
+	font-weight: bold;
+}
