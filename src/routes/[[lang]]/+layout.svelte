@@ -15,4 +15,4 @@
 <MainPanel>
 	{@render children()}
 </MainPanel>
-<Footer />
+<Footer {...props} />

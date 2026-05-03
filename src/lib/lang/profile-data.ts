@@ -1,4 +1,4 @@
-export type ProfileInfo = {
+type ProfileInfo = {
 	jobRole: string;
 	personalInfo: string;
 	birth: string;
@@ -30,7 +30,4 @@ const en = {
 	cellphone: 'Cell phone'
 };
 
-export const profile = {
-	pt,
-	en
-};
+export const profile = { pt, en };

@@ -1,4 +1,11 @@
 <script lang="ts">
+	import { interfaceData } from '$lib/lang/interface-data';
+	import { type LangKey, getLangKey } from '$lib/lang/lang.utils';
+	import type { LayoutProps } from '../../routes/$types';
+
+	let { params }: LayoutProps = $props();
+	const langKey: LangKey = $state(getLangKey(params.lang));
+	const { developedWith } = interfaceData[langKey];
 </script>
 
 {#snippet verticalLine()}
@@ -38,5 +45,5 @@
 	<img src="/logo.svg" alt="Logo" class="max-h-12" />
 	{@render verticalLine()}
 	<h3 class="text-xl font-bold text-dark-10">Leonardo A. Bevilacqua</h3>
-	<span class="text-white">&copy; Desenvolvindo com: Sveltekit</span>
+	<span class="text-white">&copy; {developedWith}: Sveltekit</span>
 </footer>
