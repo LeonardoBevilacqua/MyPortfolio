@@ -1,15 +1,9 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import SectionHeader from '$lib/atoms/SectionHeader.svelte';
-	type Project = {
-		title: string;
-		subtitle: string;
-		descriptions: string[];
-		link: `/portfolio/${string}`;
-		imgLink: string;
-	};
+	import type { ProjectSummary } from '$lib/data/Project.type';
 
-	const projects: Project[] = [
+	const projects: ProjectSummary[] = [
 		{
 			title: 'Project Title',
 			subtitle: 'Project subtitle',
@@ -34,10 +28,13 @@
 	];
 </script>
 
-{#snippet projectCard({ title, subtitle, descriptions, link, imgLink }: Project, right: boolean)}
+{#snippet projectCard(
+	{ title, subtitle, descriptions, link, imgLink }: ProjectSummary,
+	reverse: boolean
+)}
 	<section class="bg-dark-60 text-white rounded-lg p-2 gap-2 grid @min-[720px]:grid-cols-2">
 		<div
-			class="content-center @max-[720px]:hidden @desktop:col-span-3 @desktop:row-start-2 {right &&
+			class="content-center @max-[720px]:hidden @desktop:col-span-3 @desktop:row-start-2 {reverse &&
 				'col-start-2'} row-span-3"
 		>
 			<img src={imgLink} class="max-w-full h-auto rounded-lg" alt={title} />
@@ -49,7 +46,7 @@
 		</div>
 
 		<div
-			class="{right
+			class="{reverse
 				? '@min-[720px]:col-start-1'
 				: '@min-[720px]:col-start-2'} @desktop:col-span-3 flex flex-col"
 		>
@@ -68,7 +65,7 @@
 <SectionHeader class="mb-4">Portfólio</SectionHeader>
 <article class="flex flex-col gap-4">
 	{#each projects as project, index (index)}
-		{@const right = !(index % 2)}
-		{@render projectCard(project, right)}
+		{@const reverse = !(index % 2)}
+		{@render projectCard(project, reverse)}
 	{/each}
 </article>

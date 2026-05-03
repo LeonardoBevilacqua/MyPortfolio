@@ -1,18 +1,9 @@
 <script lang="ts">
 	import SectionHeader from '$lib/atoms/SectionHeader.svelte';
+	import type { ProjectContent, ProjectDetails } from '$lib/data/Project.type';
 	import type { PageProps } from './$types';
 
-	type Content = { text?: string; image?: string; description?: string; video?: string };
-	// TODO move to own file and reuse it in ../+page.svelte
-	type Project = {
-		title: string;
-		subtitle: string;
-		descriptions: string[];
-		link: `/portfolio/${string}`;
-		imgLink: string;
-		content: Content[];
-	};
-	const project: Project = {
+	const project: ProjectDetails = {
 		title: 'Project Title',
 		subtitle: 'Project subtitle',
 		descriptions: [
@@ -40,28 +31,43 @@
 	console.log(`Path param ${params.project}`);
 </script>
 
-{#snippet contentBody(contentList: Content[])}
+{#snippet textContent({ text }: ProjectContent)}
+	{#if text}
+		<p class="text-lg leading-7 mb-3 mx-auto">{text}</p>
+	{/if}
+{/snippet}
+
+{#snippet imageContent({ image, description }: ProjectContent)}
+	{#if image}
+		<img class="mb-3 rounded-md mx-auto" src={image} alt={description} />
+	{/if}
+{/snippet}
+
+{#snippet videoContent({ video, description }: ProjectContent)}
+	{#if video}
+		<iframe
+			class="mb-3 w-full lg:w-9/12 h-96 rounded-md mx-auto"
+			src={video}
+			title={description}
+			frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		></iframe>
+	{/if}
+{/snippet}
+
+{#snippet descriptionContent({ description }: ProjectContent)}
+	{#if description}
+		<i class="mb-3 text-center block mx-auto">{description}</i>
+	{/if}
+{/snippet}
+
+{#snippet contentBody(contentList: ProjectContent[])}
 	{#each contentList as content, index (index)}
-		<!-- add in own snippets -->
-		{#if content.text}
-			<p class="text-lg leading-7 mb-3 mx-auto">
-				{content.text}
-			</p>
-		{:else if content.image}
-			<img class="mb-3 rounded-md mx-auto" src={content.image} alt={content.description} />
-		{:else if content.video}
-			<iframe
-				class="mb-3 w-full lg:w-9/12 h-96 rounded-md mx-auto"
-				src={content.video}
-				title={content.description}
-				frameborder="0"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			></iframe>
-		{/if}
-		{#if content.description}
-			<i class="mb-3 text-center block mx-auto">{content.description}</i>
-		{/if}
+		{@render textContent(content)}
+		{@render imageContent(content)}
+		{@render videoContent(content)}
+		{@render descriptionContent(content)}
 	{/each}
 {/snippet}
 
