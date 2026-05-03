@@ -1,49 +1,14 @@
 <script lang="ts">
 	import SectionHeader from '$lib/atoms/SectionHeader.svelte';
-	type Experience = { experience: string; period: string; descriptions: string[] };
+	import { experienceData, type Experience } from '$lib/lang/experience-data';
+	import { interfaceData } from '$lib/lang/interface-data';
+	import { type LangKey, getLangKey } from '$lib/lang/lang.utils';
+	import type { LayoutProps } from '../$types';
 
-	const experiences: Experience[] = [
-		{
-			experience: 'Escola SENAI Prof. Dr. Euryclides de Jesus Zerbini',
-			period: 'Curso técnico, 2015 - 2016',
-			descriptions: [
-				'Formação em técnico em informática, aprendendo sobre hardware e software, redes de computadores, programação básica em C, C++, C#, java e javacript e criação de web sites com html e css.',
-				'Recebi a premiação de aluno ouro no 2.º semestre. Premiação que ocorre a cada semestre para parabenizar o aluno que se destacou durante o semestre.',
-				'Recebi a premiação de aluno destaque ao fim do curso. Premiação dada para que se mantém com notas altas e se dedicam ao máximo.'
-			]
-		},
-		{
-			experience: 'Centro Universitário UniMetrocamp Wyden',
-			period: 'Graduação, 2016 - 2020',
-			descriptions: [
-				'Formação em ciências da computação, aprendizado sobre programação avançada, conhecimento aprofundado em sistemas operacionais e arquitetura de software.'
-			]
-		},
-		{
-			experience: 'Visio Tecnologia',
-			period: 'Estágio e efetivação, 2017 - 2019',
-			descriptions: [
-				'Trabalhei com diversos bancos de dados como oracle, sql server e informix e programação 4gl.',
-				'Comecei como estagiário até maio de 2018, sendo efetivado após esse período.'
-			]
-		},
-		{
-			experience: 'Instituto de Pesquisas Eldorado',
-			period: 'Estágio e efetivação, 2019 - Atualmente',
-			descriptions: [
-				'Trabalhando com tecnologias atuais no mercado, como angular, spring boot e postgresql, focando em devops.',
-				'Comecei como estagiário em abril de 2019, sendo efetivado como analista de software júnior em janeiro de 2020.',
-				'Em 2022 fui promovido para analista de software pleno.'
-			]
-		},
-		{
-			experience: 'Centro Universitário UniMetrocamp Wyden',
-			period: 'Pós-graduação, 2021 - 2022',
-			descriptions: [
-				'Formação em engenharia de software, aprendizado sobre práticas seguras, arquitetura de projetos e plataformas em nuvem.'
-			]
-		}
-	];
+	let { params }: LayoutProps = $props();
+	const langKey: LangKey = $state(getLangKey(params.lang));
+	const { experience } = interfaceData[langKey];
+	const experiences = experienceData[langKey];
 </script>
 
 {#snippet experienceCard({ experience, period, descriptions }: Experience, row: number)}
@@ -61,7 +26,7 @@
 	</section>
 {/snippet}
 
-<SectionHeader class="mb-4">Experiências</SectionHeader>
+<SectionHeader class="mb-4">{experience}</SectionHeader>
 <article class="@tablet:grid grid-cols-7">
 	{#each experiences as experience, index (index)}
 		{@const row = index + 1}
