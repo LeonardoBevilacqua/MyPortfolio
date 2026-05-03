@@ -1,18 +1,26 @@
 <script lang="ts">
 	import SectionHeader from '$lib/atoms/SectionHeader.svelte';
+	import { interfaceData } from '$lib/lang/interface-data';
+	import { type LangKey, getLangKey } from '$lib/lang/lang.utils';
+	import type { LayoutProps } from '../$types';
+
 	type Skill = { src: string; title: string };
 	type SkillType = { label: string; skills: Skill[] };
 
+	let { params }: LayoutProps = $props();
+	const langKey: LangKey = $state(getLangKey(params.lang));
+	const { skillTitle, backend, frontend, database, games, design } = interfaceData[langKey];
+
 	const skillTypes: SkillType[] = [
 		{
-			label: 'Desenvolvimento Backend',
+			label: backend,
 			skills: [
 				{ src: 'node-js', title: 'Node JS' },
 				{ src: 'spring-boot', title: 'Spring Framework' }
 			]
 		},
 		{
-			label: 'Desenvolvimento Frontend',
+			label: frontend,
 			skills: [
 				{ src: 'angular', title: 'Angular' },
 				{ src: 'svelte', title: 'Svelte' },
@@ -21,7 +29,7 @@
 			]
 		},
 		{
-			label: 'Banco de dados',
+			label: database,
 			skills: [
 				{ src: 'postgres', title: 'PostgreSQL' },
 				{ src: 'mongodb', title: 'MongoDB' }
@@ -35,11 +43,11 @@
 			]
 		},
 		{
-			label: 'Desenvolvimento de jogos',
+			label: games,
 			skills: [{ src: 'godot', title: 'Godot engine' }]
 		},
 		{
-			label: 'Design & Prototipagem',
+			label: design,
 			skills: [{ src: 'figma', title: 'Figma' }]
 		}
 	];
@@ -52,7 +60,7 @@
 	</div>
 {/snippet}
 
-<SectionHeader class="mb-4">Competências</SectionHeader>
+<SectionHeader class="mb-4">{skillTitle}</SectionHeader>
 {#each skillTypes as skill (skill.label)}
 	<SectionHeader header="h3" class="mb-4">{skill.label}</SectionHeader>
 	<div class="grid @tablet:grid-cols-2 gap-4 mb-4">
