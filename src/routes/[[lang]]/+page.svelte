@@ -2,6 +2,7 @@
 	import SectionHeader from '$lib/atoms/SectionHeader.svelte';
 	import { interfaceData } from '$lib/lang/interface-data';
 	import { type LangKey, getLangKey } from '$lib/lang/lang.utils';
+	import Animate from '$lib/templates/Animate.svelte';
 	import type { LayoutProps } from '../$types';
 
 	type Skill = { src: string; title: string };
@@ -60,12 +61,14 @@
 	</div>
 {/snippet}
 
-<SectionHeader class="mb-4">{skillTitle}</SectionHeader>
-{#each skillTypes as skill (skill.label)}
-	<SectionHeader header="h3" class="mb-4">{skill.label}</SectionHeader>
-	<div class="grid @tablet:grid-cols-2 gap-4 mb-4">
-		{#each skill.skills as skillInfo (skillInfo.src)}
-			{@render skillCard(skillInfo.src, skillInfo.title)}
-		{/each}
-	</div>
-{/each}
+<Animate>
+	<SectionHeader class="mb-4">{skillTitle}</SectionHeader>
+	{#each skillTypes as skill (skill.label)}
+		<SectionHeader header="h3" class="mb-4">{skill.label}</SectionHeader>
+		<div class="grid @tablet:grid-cols-2 gap-4 mb-4">
+			{#each skill.skills as skillInfo (skillInfo.src)}
+				{@render skillCard(skillInfo.src, skillInfo.title)}
+			{/each}
+		</div>
+	{/each}
+</Animate>

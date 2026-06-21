@@ -4,6 +4,7 @@
 	import { interfaceData } from '$lib/lang/interface-data';
 	import { getLangKey, getLangRoute, type LangKey } from '$lib/lang/lang.utils';
 	import { projectSummaryData, type ProjectSummary } from '$lib/lang/project-data';
+	import Animate from '$lib/templates/Animate.svelte';
 	import type { PageProps } from '../$types';
 
 	let { params }: PageProps = $props();
@@ -44,10 +45,12 @@
 	</section>
 {/snippet}
 
-<SectionHeader class="mb-4">{portfolio}</SectionHeader>
-<article class="flex flex-col gap-4">
-	{#each projects as project, index (index)}
-		{@const reverse = !(index % 2)}
-		{@render projectCard(project, reverse)}
-	{/each}
-</article>
+<Animate>
+	<SectionHeader class="mb-4">{portfolio}</SectionHeader>
+	<article class="flex flex-col gap-4">
+		{#each projects as project, index (index)}
+			{@const reverse = !(index % 2)}
+			{@render projectCard(project, reverse)}
+		{/each}
+	</article>
+</Animate>

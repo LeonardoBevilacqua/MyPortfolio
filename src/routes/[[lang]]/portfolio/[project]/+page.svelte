@@ -6,6 +6,7 @@
 		type ProjectContent,
 		type ProjectDetails
 	} from '$lib/lang/project-data';
+	import Animate from '$lib/templates/Animate.svelte';
 	import type { PageProps } from './$types';
 
 	let { params }: PageProps = $props();
@@ -54,8 +55,10 @@
 	{/each}
 {/snippet}
 
-<SectionHeader class="mb-4">{project.title}</SectionHeader>
+<Animate>
+	<SectionHeader class="mb-4">{project.title}</SectionHeader>
 
-<article class="bg-dark-60 text-white p-2 rounded-lg">
-	{@render contentBody(project.content)}
-</article>
+	<article class="bg-dark-60 text-white p-2 rounded-lg">
+		{@render contentBody(project.content)}
+	</article>
+</Animate>

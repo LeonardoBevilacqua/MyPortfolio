@@ -3,6 +3,7 @@
 	import { experienceData, type Experience } from '$lib/lang/experience-data';
 	import { interfaceData } from '$lib/lang/interface-data';
 	import { type LangKey, getLangKey } from '$lib/lang/lang.utils';
+	import Animate from '$lib/templates/Animate.svelte';
 	import type { LayoutProps } from '../$types';
 
 	let { params }: LayoutProps = $props();
@@ -26,24 +27,26 @@
 	</section>
 {/snippet}
 
-<SectionHeader class="mb-4">{experience}</SectionHeader>
-<article class="@tablet:grid grid-cols-7">
-	{#each experiences as experience, index (index)}
-		{@const row = index + 1}
-		{@const right = !(row % 2)}
-		{@const isFirst = index === 0}
-		{@const isLast = row === experiences.length}
-		{@render experienceCard(experience, row)}
-		<div class="relative content-center col-4">
-			<div
-				class="bg-dark-10 h-12 w-12 rounded-full mx-auto my-12 line lines lines-h {right &&
-					'lines-h-r'} lines-v after:top-0 after:h-full {isFirst &&
-					'tablet:after:top-1/2 tablet:after:h-1/2'} {isLast &&
-					'hidden tablet:block lines-v-t'} before:bg-dark-10 tablet:before:w-1/2 after:bg-dark-10"
-			></div>
-		</div>
-	{/each}
-</article>
+<Animate>
+	<SectionHeader class="mb-4">{experience}</SectionHeader>
+	<article class="@tablet:grid grid-cols-7">
+		{#each experiences as experience, index (index)}
+			{@const row = index + 1}
+			{@const right = !(row % 2)}
+			{@const isFirst = index === 0}
+			{@const isLast = row === experiences.length}
+			{@render experienceCard(experience, row)}
+			<div class="relative content-center col-4">
+				<div
+					class="bg-dark-10 h-12 w-12 rounded-full mx-auto my-12 line lines lines-h {right &&
+						'lines-h-r'} lines-v after:top-0 after:h-full {isFirst &&
+						'tablet:after:top-1/2 tablet:after:h-1/2'} {isLast &&
+						'hidden tablet:block lines-v-t'} before:bg-dark-10 tablet:before:w-1/2 after:bg-dark-10"
+				></div>
+			</div>
+		{/each}
+	</article>
+</Animate>
 
 <style>
 	.lines::before,
