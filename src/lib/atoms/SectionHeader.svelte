@@ -7,7 +7,8 @@
 		class?: string;
 	}
 	let { children, header = 'h2', class: className }: Props = $props();
-	const defaultClass = 'text-dark-10 uppercase border-b-2 border-solid border-b-dark-10';
+	const defaultClass =
+		'dark:text-dark-10 text-light-10 uppercase border-b-2 border-solid dark:border-b-dark-10 border-b-light-10';
 </script>
 
 {#if header === 'h2'}

@@ -55,7 +55,9 @@
 </script>
 
 {#snippet skillCard(src: string, title: string)}
-	<div class="bg-dark-60 inline-flex flex-col p-3 text-center rounded-3xl text-white grow">
+	<div
+		class="dark:bg-dark-60 bg-light-60 inline-flex flex-col p-3 text-center rounded-3xl dark:text-white text-white grow"
+	>
 		<img src={`logos/${src}.svg`} alt={`${title} logo`} class="m-auto" />
 		<span class="mt-1 inline-block text-lg">{title}</span>
 	</div>

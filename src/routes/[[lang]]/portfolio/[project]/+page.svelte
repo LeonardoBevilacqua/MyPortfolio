@@ -58,7 +58,7 @@
 <Animate>
 	<SectionHeader class="mb-4">{project.title}</SectionHeader>
 
-	<article class="bg-dark-60 text-white p-2 rounded-lg">
+	<article class="dark:bg-dark-60 dark:text-white bg-light-60 text-white p-2 rounded-lg">
 		{@render contentBody(project.content)}
 	</article>
 </Animate>

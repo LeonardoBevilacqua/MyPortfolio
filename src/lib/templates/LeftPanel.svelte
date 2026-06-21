@@ -44,7 +44,7 @@
 {/snippet}
 {#snippet informationValues(label: string, value: string, iconName?: Icon, href?: string)}
 	<div class="flex items-center justify-between">
-		<span class="font-semibold text-light-10 dark:text-red-10">
+		<span class="font-semibold text-light-10 dark:text-dark-10">
 			{label}:
 		</span>
 		{@render valueDisplay(value, iconName, href)}
@@ -74,7 +74,7 @@
 
 <div
 	style="grid-area: leftPanel;"
-	class="rounded-lg p-2 bg-light-30 border-8 border-solid dark:bg-dark-30 dark:border-dark-30 flex gap-5 @desktop:overflow-auto @desktop:flex-col"
+	class="rounded-lg p-2 border-8 border-solid dark:bg-dark-30 dark:border-dark-30 bg-light-30 border-light-30 flex gap-5 @desktop:overflow-auto @desktop:flex-col"
 >
 	<img
 		src="/images/profile-picture.jpeg"

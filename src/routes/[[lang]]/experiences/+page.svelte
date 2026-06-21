@@ -14,14 +14,16 @@
 
 {#snippet experienceCard({ experience, period, descriptions }: Experience, row: number)}
 	<section
-		class="bg-dark-60 rounded-3xl p-3 col-span-3 {row % 2 ? 'col-start-1' : 'col-start-5'}"
+		class="dark:bg-dark-60 bg-light-60 rounded-3xl p-3 col-span-3 {row % 2
+			? 'col-start-1'
+			: 'col-start-5'}"
 		style:grid-row={row}
 	>
-		<h3 class="text-dark-10 text-xl font-bold">{experience}</h3>
-		<h4 class="text-white text-lg font-bold border-b-2">{period}</h4>
+		<h3 class="dark:text-dark-10 text-light-10 text-xl font-bold">{experience}</h3>
+		<h4 class="dark:text-white text-white text-lg font-bold border-b-2">{period}</h4>
 		<div class="flex flex-col gap-3 mt-3">
 			{#each descriptions as description, index (index)}
-				<p class="text-white">{description}</p>
+				<p class="dark:text-white text-white">{description}</p>
 			{/each}
 		</div>
 	</section>
@@ -38,10 +40,10 @@
 			{@render experienceCard(experience, row)}
 			<div class="relative content-center col-4">
 				<div
-					class="bg-dark-10 h-12 w-12 rounded-full mx-auto my-12 line lines lines-h {right &&
+					class="dark:bg-dark-10 bg-light-10 h-12 w-12 rounded-full mx-auto my-12 line lines lines-h {right &&
 						'lines-h-r'} lines-v after:top-0 after:h-full {isFirst &&
 						'tablet:after:top-1/2 tablet:after:h-1/2'} {isLast &&
-						'hidden tablet:block lines-v-t'} before:bg-dark-10 tablet:before:w-1/2 after:bg-dark-10"
+						'hidden tablet:block lines-v-t'} dark:before:bg-dark-10 before:bg-dark-10 tablet:before:w-1/2 dark:after:bg-dark-10 after:bg-dark-10"
 				></div>
 			</div>
 		{/each}

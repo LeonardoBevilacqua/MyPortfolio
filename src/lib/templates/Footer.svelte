@@ -40,10 +40,10 @@
 
 <footer
 	style="rightPanelFooter"
-	class="rounded-lg p-5 bg-dark-30 flex gap-4 items-center justify-center"
+	class="rounded-lg p-5 dark:bg-dark-30 bg-light-30 flex gap-4 items-center justify-center"
 >
 	<img src="/logo.svg" alt="Logo" class="max-h-12" />
 	{@render verticalLine()}
-	<h3 class="text-xl font-bold text-dark-10">Leonardo A. Bevilacqua</h3>
+	<h3 class="text-xl font-bold dark:text-dark-10 text-light-10">Leonardo A. Bevilacqua</h3>
 	<span class="text-white">&copy; {developedWith}: Sveltekit</span>
 </footer>

@@ -2,10 +2,10 @@
 
 @theme {
 	--font-display: 'Oswald', sans-serif;
-	--color-light-60: var(--color-purple-100);
-	--color-light-30: rgb(18 0 37);
+	--color-light-60: var(--color-violet-900);
+	--color-light-30: var(--color-violet-950);
 	--color-light-10: var(--color-amber-600);
-	--color-light: var(--color-purple-50);
+	--color-light-body: var(--color-violet-200);
 	--color-light-default: white;
 	--color-dark-60: var(--color-slate-800);
 	--color-dark-30: var(--color-slate-900);

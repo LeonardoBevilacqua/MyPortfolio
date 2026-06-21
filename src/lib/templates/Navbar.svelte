@@ -22,15 +22,16 @@
 	<a
 		href={resolve(route)}
 		class={[
-			'text-2xl p-2 border border-solid border-transparent rounded-lg hover:text-dark-10 hover:border-dark-10',
-			isActive(route) && 'bg-dark-10 hover:text-white hover:border-white'
+			'text-2xl p-2 border border-solid border-transparent rounded-lg dark:hover:text-dark-10 dark:hover:border-dark-10 hover:text-light-10 hover:border-light-10',
+			isActive(route) &&
+				'dark:bg-dark-10 dark:hover:text-white dark:hover:border-white bg-light-10 hover:text-white hover:border-white'
 		]}>{label}</a
 	>
 {/snippet}
 
 <nav
 	id="right-panel-header"
-	class="rounded-lg p-5 bg-dark-30 text-white flex gap-3 justify-center items-center flex-wrap"
+	class="rounded-lg p-5 dark:bg-dark-30 bg-light-30 text-white flex gap-3 justify-center items-center flex-wrap"
 >
 	{@render link(lang !== '' ? lang : '/', skillTitle)}
 	{@render link(`${lang}/experiences`, experience)}

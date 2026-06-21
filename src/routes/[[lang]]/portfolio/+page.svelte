@@ -20,10 +20,10 @@
 )}
 	{@const { link, imgLink } = resource}
 	<section
-		class="bg-dark-60 text-white rounded-lg p-2 gap-2 grid @min-[720px]:grid-cols-2 @min-[720px]:grid-rows-[auto_1fr] @min-desktop:grid-cols-1 @min-desktop:grid-rows-[repeat(3,auto)]"
+		class="dark:bg-dark-60 bg-light-60 dark:text-white text-white rounded-lg p-2 gap-2 grid @min-[720px]:grid-cols-2 @min-[720px]:grid-rows-[auto_1fr] @min-desktop:grid-cols-1 @min-desktop:grid-rows-[repeat(3,auto)]"
 	>
 		<div class="row-auto {reverse && '@min-[720px]:col-start-2 @min-desktop:col-start-1'}">
-			<h3 class="text-dark-10 text-lg font-bold">{title}</h3>
+			<h3 class="dark:text-dark-10 text-light-10 text-lg font-bold">{title}</h3>
 			<h4 class="font-medium mb-2">{subtitle}</h4>
 		</div>
 		<div
@@ -38,7 +38,7 @@
 			{/each}
 			<a
 				href={resolve(langRoute + link)}
-				class="bg-dark-30 hover:bg-dark-10 transition-colors duration-300 rounded-lg p-3 inline-block m-auto @min-[720px]:mb-0 @min-desktop:mt-2 @max-[720px]:mt-2"
+				class="dark:bg-dark-30 dark:hover:bg-dark-10 bg-light-30 text-white hover:bg-light-10 transition-colors duration-300 rounded-lg p-3 inline-block m-auto @min-[720px]:mb-0 @min-desktop:mt-2 @max-[720px]:mt-2"
 				>{seeMore}</a
 			>
 		</div>
