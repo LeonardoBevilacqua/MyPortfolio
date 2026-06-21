@@ -1,7 +1,7 @@
 {
-	"name": "p",
+	"name": "myportfolio",
 	"private": true,
-	"version": "0.0.1",
+	"version": "5.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -11,7 +11,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "prettier --check . && eslint .",
+		"deploy": "node ./gh-pages.js"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.4.0",
@@ -24,6 +25,7 @@
 		"@types/node": "^20",
 		"eslint": "^9.39.1",
 		"eslint-plugin-svelte": "^3.13.0",
+		"gh-pages": "^6.3.0",
 		"globals": "^16.5.0",
 		"prettier": "^3.6.2",
 		"prettier-plugin-svelte": "^3.4.0",
