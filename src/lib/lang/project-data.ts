@@ -23,12 +23,73 @@ const mazeBank: ProjectResource = {
 	link: '/portfolio/maze-bank',
 	imgLink: '/images/portfolio/maze-bank/maze-bank-02.png'
 };
+const listaInterativa: ProjectResource = {
+	link: '/portfolio/lista-interativa',
+	imgLink: '/images/portfolio/lista-interativa/lista-interativa.png'
+};
+const chooseYourGame: ProjectResource = {
+	link: '/portfolio/choose-your-game',
+	imgLink: '/images/portfolio/choose-your-game/choose_your_game_02.PNG'
+};
+const javaEngine: ProjectResource = {
+	link: '/portfolio/java-engine',
+	imgLink: '/images/portfolio/java-engine/java-engine.png'
+};
+const bloodClicker: ProjectResource = {
+	link: '/portfolio/blood-clicker',
+	imgLink: '/images/portfolio/blood-clicker/blood-clicker.png'
+};
+const threeJobs: ProjectResource = {
+	link: '/portfolio/3jobs',
+	imgLink: '/images/portfolio/3jobs/3jobs-01.png'
+};
+const propHunt: ProjectResource = {
+	link: '/portfolio/prop-hunt',
+	imgLink: '/images/portfolio/prop-hunt/prop-hunt.png'
+};
+
 const ptSummary: ProjectSummary[] = [
 	{
 		title: 'Clone do Maze-Bank',
 		subtitle: '',
 		descriptions: ['Clone do site Maze-Bank do jogo GTA V'],
 		resource: mazeBank
+	},
+	{
+		title: 'Lista interativa',
+		subtitle: '',
+		descriptions: ['Mini projeto CSS'],
+		resource: listaInterativa
+	},
+	{
+		title: 'Choose Your Game',
+		subtitle: '',
+		descriptions: ['Uma rede social para gamers'],
+		resource: chooseYourGame
+	},
+	{
+		title: 'Java 2D Engine',
+		subtitle: '',
+		descriptions: ['Estudo sobre desenvolvimento de jogos'],
+		resource: javaEngine
+	},
+	{
+		title: 'Blood-clicker',
+		subtitle: '',
+		descriptions: ['Jogo educativo sobre doação de sangue'],
+		resource: bloodClicker
+	},
+	{
+		title: '3Jobs',
+		subtitle: '',
+		descriptions: ['Trabalho de conclusão de curso'],
+		resource: threeJobs
+	},
+	{
+		title: 'Prop Hunt 2D',
+		subtitle: '',
+		descriptions: ['Jogo multiplayer'],
+		resource: propHunt
 	}
 ];
 const enSummary: ProjectSummary[] = [
@@ -37,13 +98,48 @@ const enSummary: ProjectSummary[] = [
 		subtitle: '',
 		descriptions: ['Clone of the Maze-Bank website from the game GTA V'],
 		resource: mazeBank
+	},
+	{
+		title: 'Interactive list',
+		subtitle: '',
+		descriptions: ['Mini css project'],
+		resource: listaInterativa
+	},
+	{
+		title: 'Choose Your Game',
+		subtitle: '',
+		descriptions: ['A social network for gamers'],
+		resource: chooseYourGame
+	},
+	{
+		title: 'Java 2D Engine',
+		subtitle: '',
+		descriptions: ['Game development study'],
+		resource: javaEngine
+	},
+	{
+		title: 'Blood-clicker',
+		subtitle: '',
+		descriptions: ['Educational game about blood donation'],
+		resource: bloodClicker
+	},
+	{
+		title: '3Jobs',
+		subtitle: '',
+		descriptions: ['Completion of course work'],
+		resource: threeJobs
+	},
+	{
+		title: 'Prop Hunt 2D',
+		subtitle: '',
+		descriptions: ['Multiplayer game'],
+		resource: propHunt
 	}
 ];
 
 const ptDetails: { [key: string]: ProjectDetails } = {
 	'maze-bank': {
 		title: 'Réplica do site Maze-Bank | GTA V',
-
 		content: [
 			{
 				text: 'Projeto criado para praticar criação de <i>web pages</i> utilizando html e pré-processador de css, utilizando scss. A página se trata de uma réplica de um site dentro do jogo <i>grand theft auto V</i>, se tratando de uma página de banco onde o jogador tivesse a possibilidade de verificar seu saldo, sacar e depositar dinheiro dentro do jogo. O projeto se encontra disponível para navegação neste link: <a href="https://leonardobevilacqua.github.io/Maze-Bank">https://leonardobevilacqua.github.io/Maze-Bank</a>.'
@@ -57,12 +153,125 @@ const ptDetails: { [key: string]: ProjectDetails } = {
 				description: 'Maze bank | histórico de transações'
 			}
 		]
+	},
+	'lista-interativa': {
+		title: 'Lista interativa',
+		content: [
+			{
+				text: 'Este projeto pequeno se trata de uma lista de itens, na qual existe a possibilidade de editar e excluir de forma fácil e minimalista, utilizando apenas ícones, e adicionar itens sem atualizar a pagina atual. O projeto se encontra disponível para navegação neste link: <a href="https://leonardobevilacqua.github.io/Lista-interativa/index.html">https://leonardobevilacqua.github.io/Lista-interativa/index.html</a>'
+			},
+			{
+				image: '/images/portfolio/lista-interativa/lista-interativa.png',
+				description: 'Lista interativa'
+			}
+		]
+	},
+	'choose-your-game': {
+		title: 'Choose Your Game | Uma rede social para gamers',
+		content: [
+			{
+				text: 'Projeto do 5º semestre de CCO, com foco de criar uma aplicação web.'
+			},
+			{
+				text: 'O projeto se trata de uma Rede social com foco em games, voltado para discussão sobre o assunto, analises e outros. Foi realizado todo o planejamento como funcionaria o site usando a ferramenta "Trello", logo após foi criado todo o front-end, disponível para visualização e interação no seguinte link: <a href="https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages">https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages</a>, podendo clicar em "ENTRAR" e navegar nas páginas. Logo após, foi iniciado o processo de desenvolvimento, utilizando o <i>.net core</i>.'
+			},
+			{
+				image: '/images/portfolio/choose-your-game/choose_your_game_01.PNG',
+				description: 'Choose your game | página principal'
+			},
+			{
+				image: '/images/portfolio/choose-your-game/choose_your_game_02.PNG',
+				description: 'Choose your game | página de perfil'
+			}
+		]
+	},
+	'java-engine': {
+		title: 'Java 2D Engine | Game development',
+		content: [
+			{
+				text: 'Projeto criado para entender o funcionamento básico de uma engine, renderizando em 2D com suporte a multi jogador. A engine possui elementos baseados nas playlists do youtube de <a href="https://www.youtube.com/playlist?list=PL8CAB66181A502179"><i>Ryan van Zeben</i></a>, e <a href="https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ"><i>CodeNMore</i></a>.'
+			},
+			{
+				text: 'Uma <a href="https://youtube.com/playlist?list=PL-OBuwg5uiFJSVfHHk-YSgj0VZdtk95FK">playlist</a> foi criada criada para demonstrar o progresso do desenvolvimento.'
+			},
+			{
+				video: 'https://www.youtube.com/embed/rSEbEGXkw3E',
+				description: 'Teste com multijogador'
+			},
+			{
+				video: 'https://www.youtube.com/embed/rDvPbmYpiJ4',
+				description: 'Teste com interação com cenário'
+			},
+			{
+				video: 'https://www.youtube.com/embed/0USSEYA7gwI',
+				description: 'Alteração da arte'
+			}
+		]
+	},
+	'blood-clicker': {
+		title: 'Blood-clicker | Jogo educativo',
+		content: [
+			{
+				text: 'Em 2019, ocorreu na faculdade UniMetrocamp a <b>"mostra de responsabilidade social"</b>, na qual fomos incentivados a realizar a criação de um jogo para conscientizar a doação de sangue. O meu jogo foi inspirado no jogo <i>"cookie clicker"</i>, no qual seu objetivo é juntar pontos e comprar melhorias. No jogo, a cada melhoria comprada, uma mensagem é exibida dando informações sobre doação de sangue. O jogo foi criado utilizando a <i>Godot Engine</i> e se encontra disponível no link: <a href="https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html">https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html</a>.'
+			},
+			{
+				image: '/images/portfolio/blood-clicker/blood-clicker.png',
+				description: 'Jogo blood clicker'
+			}
+		]
+	},
+	'3jobs': {
+		title: '3Jobs | Trabalho de conclusão de curso',
+		content: [
+			{
+				text: '3Jobs é um projeto com a intenção de ser um facilitador para candidatos e vagas de emprego. Permitindo que os headhunters encontrem, avaliem e indiquem com facilidade, ao Departamento de Recursos Humanos (RH), os candidatos que melhor se adequam à determinada vaga.'
+			},
+			{
+				text: 'O projeto foi organizado utilizando Kanban, no qual eu fiquei responsavel em gerenciar as tarefas dos outros membros do grupo e também da criação do frontend do sistema.'
+			},
+			{
+				image: '/images/portfolio/3jobs/3jobs-01.png',
+				description: '3Jobs | página inicial'
+			},
+			{
+				image: '/images/portfolio/3jobs/3jobs-02.png',
+				description: '3Jobs | página principal após login'
+			},
+			{
+				image: '/images/portfolio/3jobs/3jobs-03.png',
+				description: '3Jobs | página de perfil'
+			}
+		]
+	},
+	'prop-hunt': {
+		title: 'Prop Hunt 2D | Jogo multiplayer',
+		content: [
+			{
+				text: 'No inicio de 2020 iniciei um estudo e criação de um jogo simples em 2D, utilizando a <i>engine Godot</i>'
+			},
+			{
+				text: 'O projeto teve como foco permitir o aprendizado da <i>engine</i> e o entendimento sobre o funcionamento básico de jogos multi jogador, sendo realizado o registro de cada evolução obtida durante o desenvolvimento. O projeto foi finalizado no fim de 2020.'
+			},
+			{
+				text: 'O jogo funciona de forma simples, duas equipes, onde uma deve ser esconder e a outra deve procurar.'
+			},
+			{
+				video: 'https://www.youtube.com/embed/K82m5CMF42M',
+				description: 'Início do projeto'
+			},
+			{
+				video: 'https://www.youtube.com/embed/ToQd3chaHd8',
+				description: 'Fim do projeto'
+			},
+			{
+				text: 'Foi criado uma <a href="https://youtube.com/playlist?list=PL-OBuwg5uiFIGYAxFF3GRB57KsoBDg6Hl">playlist</a> com pequenos videos da evolução do projeto.'
+			}
+		]
 	}
 };
 const enDetails: { [key: string]: ProjectDetails } = {
 	'maze-bank': {
 		title: 'Maze-Bank website replica | GTA V',
-
 		content: [
 			{
 				text: 'Project created to practice creating <i>web pages</i> using html and css pre-processor, using scss. The page is a replica of a website within the game <i>grand theft auto V</i>, being a bank page where the player has the possibility to check his balance, withdraw and deposit money within the game . The project is available for browsing at this link: <a href="https://leonardobevilacqua.github.io/Maze-Bank">https://leonardobevilacqua.github.io/Maze-Bank</a>.'
@@ -76,7 +285,122 @@ const enDetails: { [key: string]: ProjectDetails } = {
 				description: 'Maze bank | transaction history'
 			}
 		]
+	},
+	'lista-interativa': {
+		title: 'Interactive list',
+		content: [
+			{
+				text: 'This small project is about a list of items, in which there is the possibility to edit and delete in an easy and minimalist way, using only icons, and to add items without refreshing the current page. The project is available for browsing at this link: <a href="https://leonardobevilacqua.github.io/Lista-interativa/index.html">https://leonardobevilacqua.github.io/Lista-interativa/index.html</a>'
+			},
+			{
+				image: '/images/portfolio/lista-interativa/lista-interativa.png',
+				description: 'Interactive list'
+			}
+		]
+	},
+	'choose-your-game': {
+		title: 'Choose Your Game | A social network for gamers',
+		content: [
+			{
+				text: "CCO's 5th semester project, focusing on creating a web application."
+			},
+			{
+				text: 'The project is a social network focused on games, aimed at discussing the subject, analyzes and others. All planning was carried out on how the site would work using the "Trello" tool, right after the entire front-end was created, available for viewing and interaction at the following link: <a href="https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages">https://leonardobevilacqua.github.io/Metrocamp-Web-projeto/Template/pages</a>, being able to click on "ENTER" and browse the pages. Soon after, the development process was started, using <i>.net core</i>.'
+			},
+			{
+				image: '/images/portfolio/choose-your-game/choose_your_game_01.PNG',
+				description: 'Choose your game | main page'
+			},
+			{
+				image: '/images/portfolio/choose-your-game/choose_your_game_02.PNG',
+				description: 'Choose your game | profile page'
+			}
+		]
+	},
+	'java-engine': {
+		title: 'Java 2D Engine | Game development',
+		content: [
+			{
+				text: 'Project created to understand the basic operation of an engine, rendering in 2D with multiplayer support. The engine has elements based on the youtube playlists of <a href="https://www.youtube.com/playlist?list=PL8CAB66181A502179"><i>Ryan van Zeben</i></a>, and <a href="https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ"><i>CodeNMore</i></a>.'
+			},
+			{
+				text: 'A <a href="https://youtube.com/playlist?list=PL-OBuwg5uiFJSVfHHk-YSgj0VZdtk95FK">playlist</a> has been created to demonstrate development progress.'
+			},
+			{
+				video: 'https://www.youtube.com/embed/rSEbEGXkw3E',
+				description: 'test with multiplayer'
+			},
+			{
+				video: 'https://www.youtube.com/embed/rDvPbmYpiJ4',
+				description: 'Test with scenario interaction'
+			},
+			{
+				video: 'https://www.youtube.com/embed/0USSEYA7gwI',
+				description: 'Artwork alteration'
+			}
+		]
+	},
+	'blood-clicker': {
+		title: 'Blood-clicker | Educational game',
+		content: [
+			{
+				text: 'In 2019, the <b>"social responsibility show"</b> took place at UniMetrocamp College, in which we were encouraged to create a game to raise awareness about blood donation. My game was inspired by the game <i>"cookie clicker"</i>, in which your goal is to collect points and buy upgrades. In the game, with each purchased improvement, a message is displayed giving information about blood donation. The game was created using the <i>Godot Engine</i> and is available at the link: <a href="https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html">https://leonardobevilacqua.github.io/Blood-clicker/build/html/blood-clicker.html</a>.'
+			},
+			{
+				image: '/images/portfolio/blood-clicker/blood-clicker.png',
+				description: 'blood clicker game'
+			}
+		]
+	},
+	'3jobs': {
+		title: '3Jobs | Completion of course work',
+		content: [
+			{
+				text: '3Jobs is a project with the intention of being a facilitator for candidates and job openings. Allowing headhunters to easily find, evaluate and indicate, to the Human Resources (HR) Department, the candidates that best suit the given vacancy.'
+			},
+			{
+				text: 'The project was organized using Kanban, in which I was responsible for managing the tasks of the other members of the group and also for creating the frontend of the system.'
+			},
+			{
+				image: '/images/portfolio/3jobs/3jobs-01.png',
+				description: '3Jobs | home page'
+			},
+			{
+				image: '/images/portfolio/3jobs/3jobs-02.png',
+				description: '3Jobs | main page after login'
+			},
+			{
+				image: '/images/portfolio/3jobs/3jobs-03.png',
+				description: '3Jobs | profile page'
+			}
+		]
+	},
+	'prop-hunt': {
+		title: 'Prop Hunt 2D | Multiplayer game',
+		content: [
+			{
+				text: 'In early 2020 I started a study and creation of a simple 2D game, using the <i>Godot engine</i>'
+			},
+			{
+				text: 'The project was focused on allowing the learning of the <i>engine</i> and the understanding of the basic functioning of multiplayer games, with the recording of each evolution obtained during development. The project was completed at the end of 2020.'
+			},
+			{
+				text: 'The game works in a simple way, two teams, where one must hide and the other must seek.'
+			},
+			{
+				video: 'https://www.youtube.com/embed/K82m5CMF42M',
+				description: 'Start of the project'
+			},
+			{
+				video: 'https://www.youtube.com/embed/ToQd3chaHd8',
+				description: 'end of project'
+			},
+			{
+				text: 'A <a href="https://youtube.com/playlist?list=PL-OBuwg5uiFIGYAxFF3GRB57KsoBDg6Hl">playlist</a> was created with short videos of the project\'s evolution.'
+			}
+		]
 	}
 };
+
 export const projectSummaryData = { pt: ptSummary, en: enSummary };
 export const projectDetailsData = { pt: ptDetails, en: enDetails };
